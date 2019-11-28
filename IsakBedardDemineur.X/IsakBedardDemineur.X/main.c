@@ -4,7 +4,7 @@
  * @date   28 novembre 2019
  * @brief  Jeu : Démineur.
   * 
-  * 
+  * Un jeu.
  *
  * @version 1.0
  * Environnement:
