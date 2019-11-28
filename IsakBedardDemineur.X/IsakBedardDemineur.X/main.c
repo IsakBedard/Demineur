@@ -65,15 +65,4 @@ void initialisation(void)
     ADCON2bits.ADFM = 0; //Alignement à gauche des 10bits de la conversion (8 MSB dans ADRESH, 2 LSB à gauche dans ADRESL)
     ADCON2bits.ACQT = 0;//7; //20 TAD (on laisse le max de temps au Chold du convertisseur AN pour se charger)
     ADCON2bits.ADCS = 0;//6; //Fosc/64 (Fréquence pour la conversion la plus longue possible)
-    /**************Timer 0*****************/
-    T0CONbits.TMR0ON    = 1;
-    T0CONbits.T08BIT    = 0; // mode 16 bits
-    T0CONbits.T0CS      = 0;
-    T0CONbits.PSA       = 0; // prescaler enabled
-    T0CONbits.T0PS      = 0b010; // 1:8 pre-scaler
-    TMR0 = DELAI_TMR0;
-    INTCONbits.TMR0IE   = 1;  // timer 0 interrupt enable
-    INTCONbits.TMR0IF   = 0; // timer 0 interrupt flag
-    INTCONbits.PEIE = 1; //permet interruption des périphériques
-    INTCONbits.GIE = 1;  //interruptions globales permises
 }
