@@ -4891,13 +4891,14 @@ void main(void)
 initialisation();
 lcd_init();
 lcd_putMessage("LAB6 Isak Bedard");
+initTabVue();
 while(1)
 {
 _delay((unsigned long)((100)*(1000000/4000.0)));
 }
 }
 
-# 62
+# 63
 void initialisation(void)
 {
 TRISD = 0;
@@ -4919,49 +4920,56 @@ ADCON2bits.ACQT = 0;
 ADCON2bits.ADCS = 0;
 }
 
-# 90
+# 91
 void initTabVue(void)
 {
-
+for (char i = 0; i < 4; i++)
+{
+for(char j=0;j<(20);j++)
+{
+m_tabVue[i][j]=1;
+}
+m_tabVue[i][20]=0;
+}
 }
 
-# 102
+# 110
 void rempliMines(int nb)
 {
 
 }
 
-# 115
+# 123
 void metToucheCombien(void)
 {
 
 }
 
-# 124
+# 132
 char calculToucheCombien(int ligne, int colonne)
 {
 
 }
 
-# 134
+# 142
 void deplace(char* x, char* y)
 {
 
 }
 
-# 146
+# 154
 bool demine(char x, char y)
 {
 
 }
 
-# 156
+# 164
 void enleveTuilesAutour(char x, char y)
 {
 
 }
 
-# 167
+# 175
 bool gagne(int* pMines)
 {
 

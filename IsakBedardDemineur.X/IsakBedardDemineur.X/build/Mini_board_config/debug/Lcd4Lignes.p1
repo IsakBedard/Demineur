@@ -3024,24 +3024,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 :U ..
 "69
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 14 `i `uc
+-> -> 31 `i `uc
+-> -> 27 `i `uc
 -> -> 17 `i `uc
--> -> 21 `i `uc
--> -> 14 `i `uc
--> -> 10 `i `uc
--> -> 0 `i `uc
+-> -> 17 `i `uc
+-> -> 17 `i `uc
+-> -> 17 `i `uc
+-> -> 27 `i `uc
+-> -> 31 `i `uc
 ..
 :U ..
 "70
--> -> 17 `i `uc
--> -> 14 `i `uc
--> -> 17 `i `uc
--> -> 21 `i `uc
+-> -> 0 `i `uc
 -> -> 21 `i `uc
 -> -> 14 `i `uc
--> -> 10 `i `uc
+-> -> 31 `i `uc
+-> -> 31 `i `uc
+-> -> 14 `i `uc
+-> -> 21 `i `uc
 -> -> 0 `i `uc
 ..
 :U ..
@@ -3104,8 +3104,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Lcd4Lignes.c: 66: char matCGRAM[8][8] =
 [; ;Lcd4Lignes.c: 67: {
 [; ;Lcd4Lignes.c: 68: {8,4,4,0x0A,0x11,0x1F,0x11,0},
-[; ;Lcd4Lignes.c: 69: {0,0,0x0e,0x11,0x15,0x0e,0x0a,0},
-[; ;Lcd4Lignes.c: 70: {0x11,0x0e,0x11,0x15,0x15,0x0e,0x0a,0},
+[; ;Lcd4Lignes.c: 69: {0x1F,0x1B,0x11,0x11,0x11,0x11,0x1B,0x1F},
+[; ;Lcd4Lignes.c: 70: {0x00,0x15,0x0E,0x1F,0x1F,0x0E,0x15,0x00},
 [; ;Lcd4Lignes.c: 71: {0x0e,0x11,0x15,0x15,0x15,0x0e,0x15,0x04},
 [; ;Lcd4Lignes.c: 72: {0x04,0x04,0x04,0x04,0x0E,0x0E,0x1B,0x11},
 [; ;Lcd4Lignes.c: 73: {4,0x0A,0x0E,0x11,0x1F,0x10,0x0E,0},

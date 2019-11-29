@@ -5,7 +5,7 @@ Linker command line:
 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt -cs \
   -h+dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.sym \
   --cmf=dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.cmf -z \
-  -Q18F45K20 -oC:\Users\Drago\AppData\Local\Temp\sfi0.2 \
+  -Q18F45K20 -oC:\Users\Drago\AppData\Local\Temp\sus.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/Mini_board_config/debug/IsakBedardDemineur.X.debug.map -E1 \
   -ver=XC8 --acfsm=1493 -ASTACK=01A8h-05EEh -pstack=STACK -ACODE=00h-07D3Fh \
@@ -24,7 +24,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -pparam0=BANK0 \
-  C:\Users\Drago\AppData\Local\Temp\sfi0.o \
+  C:\Users\Drago\AppData\Local\Temp\sus.o \
   dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o 
 
 Object code version is 3.11
@@ -37,55 +37,57 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Drago\AppData\Local\Temp\sfi0.o
+C:\Users\Drago\AppData\Local\Temp\sus.o
                 init                                  0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
                 smallconst                          600      600       14      300       0
-                text14                              9E0      9E0       10      30A       0
-                text13                              906      906       34      30A       0
-                text12                              A00      A00        6      30A       0
-                text11                              890      890       42      30A       0
-                text10                              9C4      9C4       1C      30A       0
-                text9                               9F8      9F8        8      30A       0
-                text8                               722      722       6C      30A       0
-                text7                               9F0      9F0        8      30A       0
-                text6                               8D2      8D2       34      30A       0
-                text5                               614      614       A2      30A       0
-                text4                               78E      78E       6A      30A       0
-                text3                               99C      99C       28      30A       0
-                text2                               7F8      7F8       54      30A       0
-                text1                               6B6      6B6       6C      30A       0
-                text0                               96C      96C       30      30A       0
+                text15                              614      614       AC      30A       0
+                text14                              A90      A90       10      30A       0
+                text13                              9E6      9E6       34      30A       0
+                text12                              AB0      AB0        6      30A       0
+                text11                              93C      93C       42      30A       0
+                text10                              A74      A74       1C      30A       0
+                text9                               AA8      AA8        8      30A       0
+                text8                               7CE      7CE       6C      30A       0
+                text7                               AA0      AA0        8      30A       0
+                text6                               9B2      9B2       34      30A       0
+                text5                               6C0      6C0       A2      30A       0
+                text4                               83A      83A       6A      30A       0
+                text3                               A4C      A4C       28      30A       0
+                text2                               8A4      8A4       54      30A       0
+                text1                               762      762       6C      30A       0
+                text0                               97E      97E       34      30A       0
                 cstackBANK0                          A4       A4        B       60       1
                 bssBANK1                            100      100       A8      100       1
                 dataBANK0                            60       60       44       60       1
-                cinit                               93A      93A       32      30A       0
-                idataBANK0                          84C      84C       44      30A       0
+                cinit                               A1A      A1A       32      30A       0
+                idataBANK0                          8F8      8F8       44      30A       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 init                                  0        0        4         0
-                text14                              9E0      9E0       10         0
-                text13                              906      906       34         0
-                text12                              A00      A00        6         0
-                text11                              890      890       42         0
-                text10                              9C4      9C4       1C         0
-                text9                               9F8      9F8        8         0
-                text8                               722      722       6C         0
-                text7                               9F0      9F0        8         0
-                text6                               8D2      8D2       34         0
-                text5                               614      614       A2         0
-                text4                               78E      78E       6A         0
-                text3                               99C      99C       28         0
-                text2                               7F8      7F8       54         0
-                text1                               6B6      6B6       6C         0
-                text0                               96C      96C       30         0
-                cinit                               93A      93A       32         0
-                idataBANK0                          84C      84C       44         0
+                text15                              614      614       AC         0
+                text14                              A90      A90       10         0
+                text13                              9E6      9E6       34         0
+                text12                              AB0      AB0        6         0
+                text11                              93C      93C       42         0
+                text10                              A74      A74       1C         0
+                text9                               AA8      AA8        8         0
+                text8                               7CE      7CE       6C         0
+                text7                               AA0      AA0        8         0
+                text6                               9B2      9B2       34         0
+                text5                               6C0      6C0       A2         0
+                text4                               83A      83A       6A         0
+                text3                               A4C      A4C       28         0
+                text2                               8A4      8A4       54         0
+                text1                               762      762       6C         0
+                text0                               97E      97E       34         0
+                cinit                               A1A      A1A       32         0
+                idataBANK0                          8F8      8F8       44         0
 
         CLASS   CONST          
 
@@ -137,7 +139,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 dataBANK0                      000060  00004F  0000AF        60       1  BANK0   
                 bssBANK1                       000100  0000A8  0001A8       100       1  BANK1   
                 smallconst                     000600  000014  000614       300       0  SMALLCON
-                text5                          000614  0003F2  000A06       30A       0  CODE    
+                text15                         000614  0004A2  000AB6       30A       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -155,12 +157,12 @@ UNUSED ADDRESS RANGES
                          0000AF-0000FF               51
                          0001A8-0005EE              447
         CODE             000004-0005FF              5FC
-                         000A06-007D3F             733A
+                         000AB6-007D3F             728A
         COMRAM           000001-00005F               5F
         CONST            000004-0005FF              5FC
-                         000A06-007D3F             733A
+                         000AB6-007D3F             728A
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000A06-007D3F             733A
+        MEDIUMCONST      000AB6-007D3F             728A
         RAM              0000AF-0000FF               51
                          0001A8-0005EE              100
         SFR              000F60-000F9B               3C
@@ -169,7 +171,7 @@ UNUSED ADDRESS RANGES
                          000FE0-000FE2                3
                          000FE8-000FEA                3
                          000FF0-000FFB                C
-        SMALLCONST       000A06-007D3F              100
+        SMALLCONST       000AB6-007D3F              100
         STACK            0001A8-0005EE              447
 
                                   Symbol Table
@@ -296,6 +298,7 @@ __Htext11                     text11       000000
 __Htext12                     text12       000000
 __Htext13                     text13       000000
 __Htext14                     text14       000000
+__Htext15                     text15       000000
 __Htext2                      text2        000000
 __Htext3                      text3        000000
 __Htext4                      text4        000000
@@ -370,6 +373,7 @@ __Ltext11                     text11       000000
 __Ltext12                     text12       000000
 __Ltext13                     text13       000000
 __Ltext14                     text14       000000
+__Ltext15                     text15       000000
 __Ltext2                      text2        000000
 __Ltext3                      text3        000000
 __Ltext4                      text4        000000
@@ -388,46 +392,49 @@ ___rparam_used                (abs)        000000
 ___sp                         stack        000000
 __accesstop                   (abs)        000060
 __activetblptr                (abs)        000003
-__end_of__initialization      cinit        000966
-__end_of_initialisation       text13       00093A
-__end_of_lcd_busy             text11       0008D2
-__end_of_lcd_curseurHome      text7        0009F8
-__end_of_lcd_ecrireDonnees    text10       0009E0
-__end_of_lcd_ecritChar        text2        00084C
-__end_of_lcd_init             text3        0009C4
-__end_of_lcd_initCGRam        text5        0006B6
-__end_of_lcd_lireDonnees      text12       000A06
-__end_of_lcd_putMessage       text1        000722
-__end_of_lcd_resetSequence    text4        0007F8
-__end_of_lcd_strobeEnableBit  text9        000A00
-__end_of_lcd_wrCom            text8        00078E
-__end_of_lcd_wrData           text6        000906
-__end_of_main                 text0        00099C
-__end_of_srand                text14       0009F0
-__initialization              cinit        00093A
+__end_of__initialization      cinit        000A46
+__end_of_initTabVue           text15       0006C0
+__end_of_initialisation       text13       000A1A
+__end_of_lcd_busy             text11       00097E
+__end_of_lcd_curseurHome      text7        000AA8
+__end_of_lcd_ecrireDonnees    text10       000A90
+__end_of_lcd_ecritChar        text2        0008F8
+__end_of_lcd_init             text3        000A74
+__end_of_lcd_initCGRam        text5        000762
+__end_of_lcd_lireDonnees      text12       000AB6
+__end_of_lcd_putMessage       text1        0007CE
+__end_of_lcd_resetSequence    text4        0008A4
+__end_of_lcd_strobeEnableBit  text9        000AB0
+__end_of_lcd_wrCom            text8        00083A
+__end_of_lcd_wrData           text6        0009E6
+__end_of_main                 text0        0009B2
+__end_of_srand                text14       000AA0
+__initialization              cinit        000A1A
 __mediumconst                 mediumconst  000000
 __pbssBANK1                   bssBANK1     000100
-__pcinit                      cinit        00093A
+__pcinit                      cinit        000A1A
 __pcstackBANK0                cstackBANK0  0000A4
 __pdataBANK0                  dataBANK0    000060
-__pidataBANK0                 idataBANK0   00084C
+__pidataBANK0                 idataBANK0   0008F8
 __psmallconst                 smallconst   000600
-__ptext0                      text0        00096C
-__ptext1                      text1        0006B6
-__ptext10                     text10       0009C4
-__ptext11                     text11       000890
-__ptext12                     text12       000A00
-__ptext13                     text13       000906
-__ptext14                     text14       0009E0
-__ptext2                      text2        0007F8
-__ptext3                      text3        00099C
-__ptext4                      text4        00078E
-__ptext5                      text5        000614
-__ptext6                      text6        0008D2
-__ptext7                      text7        0009F0
-__ptext8                      text8        000722
-__ptext9                      text9        0009F8
+__ptext0                      text0        00097E
+__ptext1                      text1        000762
+__ptext10                     text10       000A74
+__ptext11                     text11       00093C
+__ptext12                     text12       000AB0
+__ptext13                     text13       0009E6
+__ptext14                     text14       000A90
+__ptext15                     text15       000614
+__ptext2                      text2        0008A4
+__ptext3                      text3        000A4C
+__ptext4                      text4        00083A
+__ptext5                      text5        0006C0
+__ptext6                      text6        0009B2
+__ptext7                      text7        000AA0
+__ptext8                      text8        0007CE
+__ptext9                      text9        000AA8
 __ramtop                      ramtop       000600
+__size_of_initTabVue          (abs)        000000
 __size_of_initialisation      (abs)        000000
 __size_of_lcd_busy            (abs)        000000
 __size_of_lcd_curseurHome     (abs)        000000
@@ -444,26 +451,29 @@ __size_of_lcd_wrData          (abs)        000000
 __size_of_main                (abs)        000000
 __size_of_srand               (abs)        000000
 __smallconst                  smallconst   000600
-_initialisation               text13       000906
-_lcd_busy                     text11       000890
-_lcd_curseurHome              text7        0009F0
-_lcd_ecrireDonnees            text10       0009C4
-_lcd_ecritChar                text2        0007F8
-_lcd_init                     text3        00099C
-_lcd_initCGRam                text5        000614
-_lcd_lireDonnees              text12       000A00
-_lcd_putMessage               text1        0006B6
-_lcd_resetSequence            text4        00078E
-_lcd_strobeEnableBit          text9        0009F8
-_lcd_wrCom                    text8        000722
-_lcd_wrData                   text6        0008D2
+_initTabVue                   text15       000614
+_initialisation               text13       0009E6
+_lcd_busy                     text11       00093C
+_lcd_curseurHome              text7        000AA0
+_lcd_ecrireDonnees            text10       000A74
+_lcd_ecritChar                text2        0008A4
+_lcd_init                     text3        000A4C
+_lcd_initCGRam                text5        0006C0
+_lcd_lireDonnees              text12       000AB0
+_lcd_putMessage               text1        000762
+_lcd_resetSequence            text4        00083A
+_lcd_strobeEnableBit          text9        000AA8
+_lcd_wrCom                    text8        0007CE
+_lcd_wrData                   text6        0009B2
 _m_tabMines                   bssBANK1     000100
 _m_tabVue                     bssBANK1     000154
-_main                         text0        00096C
+_main                         text0        00097E
 _matCGRAM                     dataBANK0    000060
 _randx                        dataBANK0    0000A0
-_srand                        text14       0009E0
-end_of_initialization         cinit        000966
+_srand                        text14       000A90
+end_of_initialization         cinit        000A46
+initTabVue@i                  cstackBANK0  0000A7
+initTabVue@j                  cstackBANK0  0000A6
 intlevel0                     text         000000
 intlevel1                     text         000000
 intlevel2                     text         000000
@@ -482,7 +492,7 @@ srand@x                       cstackBANK0  0000A4
 stackhi                       (abs)        0005EE
 stacklo                       (abs)        0001A8
 start                         init         000000
-start_initialization          cinit        00093A
+start_initialization          cinit        000A1A
 
 
 FUNCTION INFORMATION:
@@ -510,6 +520,7 @@ FUNCTION INFORMATION:
 Total ram usage:        1 bytes
  Hardware stack levels required when called:    6
  This function calls:
+		_initTabVue
 		_initialisation
 		_lcd_init
 		_lcd_putMessage
@@ -904,7 +915,7 @@ Total ram usage:        0 bytes
 
  *************** function _initialisation *****************
  Defined at:
-		line 62 in file "main.c"
+		line 63 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -961,39 +972,70 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
+ *************** function _initTabVue *****************
+ Defined at:
+		line 91 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  j               1    2[BANK0 ] unsigned char 
+  i               1    3[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       2       0       0       0       0       0
+      Temps:          0       2       0       0       0       0       0
+      Totals:         0       4       0       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 Lcd4Lignes.c
-		_lcd_ecrireDonnees		CODE           	09C4	0000	29
-		_lcd_busy      		CODE           	0890	0000	67
-		_lcd_curseurHome		CODE           	09F0	0000	9
-		_lcd_initCGRam 		CODE           	0614	0000	163
-		_lcd_wrData    		CODE           	08D2	0000	53
-		_lcd_putMessage		CODE           	06B6	0000	109
-		_lcd_resetSequence		CODE           	078E	0000	107
-		_lcd_lireDonnees		CODE           	0A00	0000	7
-		_lcd_wrCom     		CODE           	0722	0000	109
-		_lcd_ecritChar 		CODE           	07F8	0000	85
-		_lcd_init      		CODE           	099C	0000	41
-		_lcd_strobeEnableBit		CODE           	09F8	0000	9
+		_lcd_ecrireDonnees		CODE           	0A74	0000	29
+		_lcd_busy      		CODE           	093C	0000	67
+		_lcd_curseurHome		CODE           	0AA0	0000	9
+		_lcd_initCGRam 		CODE           	06C0	0000	163
+		_lcd_wrData    		CODE           	09B2	0000	53
+		_lcd_putMessage		CODE           	0762	0000	109
+		_lcd_resetSequence		CODE           	083A	0000	107
+		_lcd_lireDonnees		CODE           	0AB0	0000	7
+		_lcd_wrCom     		CODE           	07CE	0000	109
+		_lcd_ecritChar 		CODE           	08A4	0000	85
+		_lcd_init      		CODE           	0A4C	0000	41
+		_lcd_strobeEnableBit		CODE           	0AA8	0000	9
 
 Lcd4Lignes.c estimated size: 788
 
 shared
-		__initialization		CODE           	093A	0000	45
+		__initialization		CODE           	0A1A	0000	45
 
 shared estimated size: 45
 
 main.c
-		_initialisation		CODE           	0906	0000	53
-		_main          		CODE           	096C	0000	49
+		_initialisation		CODE           	09E6	0000	53
+		_main          		CODE           	097E	0000	53
+		_initTabVue    		CODE           	0614	0000	173
 
-main.c estimated size: 102
+main.c estimated size: 279
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-		_srand         		CODE           	09E0	0000	17
+		_srand         		CODE           	0A90	0000	17
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c estimated size: 17
 

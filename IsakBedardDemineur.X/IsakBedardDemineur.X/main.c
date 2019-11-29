@@ -48,6 +48,7 @@ void main(void)
     initialisation();
     lcd_init();
     lcd_putMessage("LAB6 Isak Bedard");
+    initTabVue();
     while(1)
     {
         __delay_ms(100);
@@ -89,7 +90,14 @@ void initialisation(void)
  */
 void initTabVue(void)
 {
-    
+    for (char i = 0; i < NB_LIGNE; i++)
+    {
+        for(char j=0;j<(NB_COL);j++)
+        {
+            m_tabVue[i][j]=TUILE;
+        }
+        m_tabVue[i][NB_COL]=0;
+    }
 }
  
 /*
