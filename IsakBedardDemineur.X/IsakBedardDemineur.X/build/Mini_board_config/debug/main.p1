@@ -3532,19 +3532,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 "177
 [e = _j -> 0 `i ]
 [e :U 337 ]
-[; ;main.c: 179: for(i;(i<=(ligne+1))&&(i<4);i++)
+[; ;main.c: 179: for(i=i;(i<=(ligne+1))&&(i<4);i++)
 "179
 {
-[e _i ]
+[e = _i _i ]
 [e $U 341  ]
 "180
 [e :U 338 ]
 [; ;main.c: 180: {
 {
-[; ;main.c: 181: for(j;(j<=(colonne+1))&&(j<20);j++)
+[; ;main.c: 181: for(j=j=colonne-1;(j<=(colonne+1))&&(j<20);j++)
 "181
 {
-[e _j ]
+[e = _j = _j - _colonne -> 1 `i ]
 [e $U 345  ]
 "182
 [e :U 342 ]

@@ -4991,9 +4991,9 @@ i=0;
 if(j<0)
 j=0;
 
-for(i;(i<=(ligne+1))&&(i<4);i++)
+for(i=i;(i<=(ligne+1))&&(i<4);i++)
 {
-for(j;(j<=(colonne+1))&&(j<20);j++)
+for(j=j=colonne-1;(j<=(colonne+1))&&(j<20);j++)
 {
 if (m_tabMines[i][j]==2)
 nbMines++;

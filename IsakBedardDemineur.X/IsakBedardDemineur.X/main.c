@@ -176,9 +176,9 @@ char calculToucheCombien(int ligne, int colonne)
     if(j<0)
         j=0;
     
-    for(i;(i<=(ligne+1))&&(i<NB_LIGNE);i++)
+    for(i=i;(i<=(ligne+1))&&(i<NB_LIGNE);i++)
     {
-        for(j;(j<=(colonne+1))&&(j<NB_COL);j++)
+        for(j=j=colonne-1;(j<=(colonne+1))&&(j<NB_COL);j++)
         {
             if (m_tabMines[i][j]==MINE)
                 nbMines++;
