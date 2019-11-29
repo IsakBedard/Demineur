@@ -46,11 +46,10 @@ bool gagne(int* pMines);
 void main(void)
 {
     initialisation();
-    
+    lcd_init();
+    lcd_putMessage("LAB6 Isak Bedard");
     while(1)
     {
-        lcd_gotoXY(1,1);
-        lcd_putMessage("LAB6 Isak Bedard");
         __delay_ms(100);
     }
 }

@@ -10,9 +10,9 @@ CND_CONF=Mini_board_config
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/IsakBedardAliens.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=IsakBedardAliens.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=isakbedardaliens.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/IsakBedardDemineur.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=IsakBedardDemineur.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=isakbedarddemineur.x/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/isakbedardaliens.x/bin
+makeDirectory ${TMPDIR}/isakbedarddemineur.x/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/isakbedardaliens.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/isakbedarddemineur.x.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/isakbedardaliens.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/isakbedarddemineur.x.tar *
 checkReturnCode
 
 # Cleanup

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=IsakBedardAliens.X
+PROJECTNAME=IsakBedardDemineur.X
 
 # Active Configuration
 DEFAULTCONF=Mini_board_config

@@ -2,8 +2,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
 "33 main.c
 [v _initialisation `(v ~T0 @X0 0 ef ]
-"34 Lcd4Lignes.h
-[v _lcd_gotoXY `(v ~T0 @X0 0 ef2`uc`uc ]
+"27 Lcd4Lignes.h
+[v _lcd_init `(v ~T0 @X0 0 ef ]
 "51
 [v _lcd_putMessage `(v ~T0 @X0 0 ef1`*Cuc ]
 [v F2525 `(v ~T0 @X0 1 tf1`ul ]
@@ -3143,208 +3143,208 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 48: initialisation();
 "48
 [e ( _initialisation ..  ]
-[; ;main.c: 50: while(1)
+[; ;main.c: 49: lcd_init();
+"49
+[e ( _lcd_init ..  ]
+[; ;main.c: 50: lcd_putMessage("LAB6 Isak Bedard");
 "50
-[e :U 302 ]
-[; ;main.c: 51: {
-"51
-{
-[; ;main.c: 52: lcd_gotoXY(1,1);
-"52
-[e ( _lcd_gotoXY (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 53: lcd_putMessage("LAB6 Isak Bedard");
-"53
 [e ( _lcd_putMessage (1 :s 1C ]
-[; ;main.c: 54: _delay((unsigned long)((100)*(1000000/4000.0)));
-"54
+[; ;main.c: 51: while(1)
+"51
+[e :U 302 ]
+[; ;main.c: 52: {
+"52
+{
+[; ;main.c: 53: _delay((unsigned long)((100)*(1000000/4000.0)));
+"53
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"55
+"54
 }
 [e :U 301 ]
-"50
+"51
 [e $U 302  ]
 [e :U 303 ]
+[; ;main.c: 54: }
 [; ;main.c: 55: }
-[; ;main.c: 56: }
-"56
+"55
 [e :UE 300 ]
 }
 [v F2724 `(v ~T0 @X0 1 tf ]
-"63
+"62
 [v _initialisation `AF2724 ~T0 @X0 1 e ]
-"64
+"63
 {
-[; ;main.c: 63: void initialisation(void)
-[; ;main.c: 64: {
+[; ;main.c: 62: void initialisation(void)
+[; ;main.c: 63: {
 [e :U _initialisation ]
 [f ]
-[; ;main.c: 65: TRISD = 0;
-"65
+[; ;main.c: 64: TRISD = 0;
+"64
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 66: ANSELH = 0;
-"66
+[; ;main.c: 65: ANSELH = 0;
+"65
 [e = _ANSELH -> -> 0 `i `uc ]
-[; ;main.c: 67: TRISB = 0xFF;
-"67
+[; ;main.c: 66: TRISB = 0xFF;
+"66
 [e = _TRISB -> -> 255 `i `uc ]
-[; ;main.c: 68: ANSEL = 0;
-"68
+[; ;main.c: 67: ANSEL = 0;
+"67
 [e = _ANSEL -> -> 0 `i `uc ]
-[; ;main.c: 69: TRISA = 0;
-"69
+[; ;main.c: 68: TRISA = 0;
+"68
 [e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 73: T1CONbits.TMR1ON = 1;
-"73
+[; ;main.c: 72: T1CONbits.TMR1ON = 1;
+"72
 [e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
-[; ;main.c: 74: srand(TMR1);
-"74
+[; ;main.c: 73: srand(TMR1);
+"73
 [e ( _srand (1 -> _TMR1 `ui ]
-[; ;main.c: 76: ANSELbits.ANS7 = 1;
-"76
+[; ;main.c: 75: ANSELbits.ANS7 = 1;
+"75
 [e = . . _ANSELbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 77: ADCON0bits.ADON = 1;
-"77
+[; ;main.c: 76: ADCON0bits.ADON = 1;
+"76
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-[; ;main.c: 78: ADCON1 = 0;
-"78
+[; ;main.c: 77: ADCON1 = 0;
+"77
 [e = _ADCON1 -> -> 0 `i `uc ]
-[; ;main.c: 79: ADCON2bits.ADFM = 0;
-"79
+[; ;main.c: 78: ADCON2bits.ADFM = 0;
+"78
 [e = . . _ADCON2bits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 80: ADCON2bits.ACQT = 0;
-"80
+[; ;main.c: 79: ADCON2bits.ACQT = 0;
+"79
 [e = . . _ADCON2bits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 81: ADCON2bits.ADCS = 0;
-"81
+[; ;main.c: 80: ADCON2bits.ADCS = 0;
+"80
 [e = . . _ADCON2bits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 82: }
-"82
+[; ;main.c: 81: }
+"81
 [e :UE 304 ]
 }
 [v F2726 `(v ~T0 @X0 1 tf ]
-"91
+"90
 [v _initTabVue `AF2726 ~T0 @X0 1 e ]
-"92
+"91
 {
-[; ;main.c: 91: void initTabVue(void)
-[; ;main.c: 92: {
+[; ;main.c: 90: void initTabVue(void)
+[; ;main.c: 91: {
 [e :U _initTabVue ]
 [f ]
-[; ;main.c: 94: }
-"94
+[; ;main.c: 93: }
+"93
 [e :UE 305 ]
 }
 [v F2728 `(v ~T0 @X0 1 tf1`i ]
-"103
+"102
 [v _rempliMines `AF2728 ~T0 @X0 1 e ]
-"104
-{
-[; ;main.c: 103: void rempliMines(int nb)
-[; ;main.c: 104: {
-[e :U _rempliMines ]
 "103
+{
+[; ;main.c: 102: void rempliMines(int nb)
+[; ;main.c: 103: {
+[e :U _rempliMines ]
+"102
 [v _nb `i ~T0 @X0 1 r1 ]
-"104
+"103
 [f ]
-[; ;main.c: 106: }
-"106
+[; ;main.c: 105: }
+"105
 [e :UE 306 ]
 }
 [v F2730 `(v ~T0 @X0 1 tf ]
-"116
+"115
 [v _metToucheCombien `AF2730 ~T0 @X0 1 e ]
-"117
+"116
 {
-[; ;main.c: 116: void metToucheCombien(void)
-[; ;main.c: 117: {
+[; ;main.c: 115: void metToucheCombien(void)
+[; ;main.c: 116: {
 [e :U _metToucheCombien ]
 [f ]
-[; ;main.c: 119: }
-"119
+[; ;main.c: 118: }
+"118
 [e :UE 307 ]
 }
 [v F2733 `(uc ~T0 @X0 1 tf2`i`i ]
-"125
+"124
 [v _calculToucheCombien `AF2733 ~T0 @X0 1 e ]
-"126
-{
-[; ;main.c: 125: char calculToucheCombien(int ligne, int colonne)
-[; ;main.c: 126: {
-[e :U _calculToucheCombien ]
 "125
+{
+[; ;main.c: 124: char calculToucheCombien(int ligne, int colonne)
+[; ;main.c: 125: {
+[e :U _calculToucheCombien ]
+"124
 [v _ligne `i ~T0 @X0 1 r1 ]
 [v _colonne `i ~T0 @X0 1 r2 ]
-"126
+"125
 [f ]
-[; ;main.c: 128: }
-"128
+[; ;main.c: 127: }
+"127
 [e :UE 308 ]
 }
 [v F2736 `(v ~T0 @X0 1 tf2`*uc`*uc ]
-"135
+"134
 [v _deplace `AF2736 ~T0 @X0 1 e ]
-"136
-{
-[; ;main.c: 135: void deplace(char* x, char* y)
-[; ;main.c: 136: {
-[e :U _deplace ]
 "135
+{
+[; ;main.c: 134: void deplace(char* x, char* y)
+[; ;main.c: 135: {
+[e :U _deplace ]
+"134
 [v _x `*uc ~T0 @X0 1 r1 ]
 [v _y `*uc ~T0 @X0 1 r2 ]
-"136
+"135
 [f ]
-[; ;main.c: 138: }
-"138
+[; ;main.c: 137: }
+"137
 [e :UE 309 ]
 }
 [v F2739 `(uc ~T0 @X0 1 tf2`uc`uc ]
-"147
+"146
 [v _demine `AF2739 ~T0 @X0 1 e ]
-"148
-{
-[; ;main.c: 147: bool demine(char x, char y)
-[; ;main.c: 148: {
-[e :U _demine ]
 "147
+{
+[; ;main.c: 146: bool demine(char x, char y)
+[; ;main.c: 147: {
+[e :U _demine ]
+"146
 [v _x `uc ~T0 @X0 1 r1 ]
 [v _y `uc ~T0 @X0 1 r2 ]
-"148
+"147
 [f ]
-[; ;main.c: 150: }
-"150
+[; ;main.c: 149: }
+"149
 [e :UE 310 ]
 }
 [v F2742 `(v ~T0 @X0 1 tf2`uc`uc ]
-"157
+"156
 [v _enleveTuilesAutour `AF2742 ~T0 @X0 1 e ]
-"158
-{
-[; ;main.c: 157: void enleveTuilesAutour(char x, char y)
-[; ;main.c: 158: {
-[e :U _enleveTuilesAutour ]
 "157
+{
+[; ;main.c: 156: void enleveTuilesAutour(char x, char y)
+[; ;main.c: 157: {
+[e :U _enleveTuilesAutour ]
+"156
 [v _x `uc ~T0 @X0 1 r1 ]
 [v _y `uc ~T0 @X0 1 r2 ]
-"158
+"157
 [f ]
-[; ;main.c: 160: }
-"160
+[; ;main.c: 159: }
+"159
 [e :UE 311 ]
 }
 [v F2744 `(uc ~T0 @X0 1 tf1`*i ]
-"168
+"167
 [v _gagne `AF2744 ~T0 @X0 1 e ]
-"169
-{
-[; ;main.c: 168: bool gagne(int* pMines)
-[; ;main.c: 169: {
-[e :U _gagne ]
 "168
+{
+[; ;main.c: 167: bool gagne(int* pMines)
+[; ;main.c: 168: {
+[e :U _gagne ]
+"167
 [v _pMines `*i ~T0 @X0 1 r1 ]
-"169
+"168
 [f ]
-[; ;main.c: 171: }
-"171
+[; ;main.c: 170: }
+"170
 [e :UE 312 ]
 }
 [a 1C 76 65 66 54 32 73 115 97 107 32 66 101 100 97 114 100 0 ]

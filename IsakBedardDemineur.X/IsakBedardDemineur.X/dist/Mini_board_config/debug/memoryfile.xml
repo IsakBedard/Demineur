@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/Mini_board_config/debug\IsakBedardAliens.X.debug.hex">
+  <executable name="dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>840</used>
-      <free>31928</free>
+      <used>1034</used>
+      <free>31734</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
