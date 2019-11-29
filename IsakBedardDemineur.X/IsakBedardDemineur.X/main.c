@@ -29,7 +29,7 @@
 #define PORT_SW PORTBbits.RB1 //sw de la manette
 #define TUILE 1 //caractère cgram d'une tuile
 #define MINE 2 //caractère cgram d'une mine
-#define NB_MINES 3 //nombre de mines dans le champ de mines
+#define NB_MINES 5 //nombre de mines dans le champ de mines
 /********************** PROTOTYPES *******************************************/
 void initialisation(void);
 void initTabVue(void);
@@ -167,22 +167,21 @@ void metToucheCombien(void)
  */
 char calculToucheCombien(int ligne, int colonne)
 {
-    int ligneVar=ligne-1;
-    int colonneVar=colonne-1;
+    int i=ligne-1;
+    int j=colonne-1;
     char nbMines=0;
     
-    for(ligneVar;ligneVar<=ligne+1;ligneVar++)
+    if(i<0)
+        i=0;
+    if(j<0)
+        j=0;
+    
+    for(i;(i<=(ligne+1))&&(i<NB_LIGNE);i++)
     {
-        for(colonneVar;colonneVar<=colonne+1;colonneVar++)
+        for(j;(j<=(colonne+1))&&(j<NB_COL);j++)
         {
-            if (colonneVar >=0 && colonneVar <NB_COL && ligneVar >=0 && ligneVar <NB_LIGNE) //si on ne dépasse pas la matrice
-            {
-                if (!(colonneVar==colonne && ligneVar==ligne)) //on ignore la case elle-même, on ne vérifie que celles autour
-                {
-                    if (m_tabMines[ligneVar][colonneVar]==MINE)
-                        nbMines++;
-                }
-            }
+            if (m_tabMines[i][j]==MINE)
+                nbMines++;
         }
     }
     return nbMines;

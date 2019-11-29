@@ -4892,7 +4892,7 @@ initialisation();
 lcd_init();
 lcd_putMessage("LAB6 Isak Bedard");
 initTabVue();
-rempliMines(3);
+rempliMines(5);
 metToucheCombien();
 for (char i = 0; i < 4; i++)
 {
@@ -4982,46 +4982,45 @@ m_tabMines[i][j]=' ';
 # 168
 char calculToucheCombien(int ligne, int colonne)
 {
-int ligneVar=ligne-1;
-int colonneVar=colonne-1;
+int i=ligne-1;
+int j=colonne-1;
 char nbMines=0;
 
-for(ligneVar;ligneVar<=ligne+1;ligneVar++)
+if(i<0)
+i=0;
+if(j<0)
+j=0;
+
+for(i;(i<=(ligne+1))&&(i<4);i++)
 {
-for(colonneVar;colonneVar<=colonne+1;colonneVar++)
+for(j;(j<=(colonne+1))&&(j<20);j++)
 {
-if (colonneVar >=0 && colonneVar <20 && ligneVar >=0 && ligneVar <4)
-{
-if (!(colonneVar==colonne && ligneVar==ligne))
-{
-if (m_tabMines[ligneVar][colonneVar]==2)
+if (m_tabMines[i][j]==2)
 nbMines++;
-}
-}
 }
 }
 return nbMines;
 }
 
-# 196
+# 195
 void deplace(char* x, char* y)
 {
 
 }
 
-# 208
+# 207
 bool demine(char x, char y)
 {
 
 }
 
-# 218
+# 217
 void enleveTuilesAutour(char x, char y)
 {
 
 }
 
-# 229
+# 228
 bool gagne(int* pMines)
 {
 

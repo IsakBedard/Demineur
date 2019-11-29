@@ -398,15 +398,15 @@
 [v _calculToucheCombien calculToucheCombien `A(uc  1 e 1 0 ]
 {
 "171
-[v calculToucheCombien@colonneVar colonneVar `i  1 a 2 16 ]
+[v calculToucheCombien@j j `i  1 a 2 16 ]
 "170
-[v calculToucheCombien@ligneVar ligneVar `i  1 a 2 14 ]
+[v calculToucheCombien@i i `i  1 a 2 14 ]
 "172
 [v calculToucheCombien@nbMines nbMines `uc  1 a 1 13 ]
 "168
 [v calculToucheCombien@ligne ligne `i  1 p 2 6 ]
 [v calculToucheCombien@colonne colonne `i  1 p 2 8 ]
-"189
+"188
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
