@@ -29,7 +29,7 @@
 #define PORT_SW PORTBbits.RB1 //sw de la manette
 #define TUILE 1 //caractère cgram d'une tuile
 #define MINE 2 //caractère cgram d'une mine
-#define NB_MINES 5 //nombre de mines dans le champ de mines
+#define NB_MINES 15 //nombre de mines dans le champ de mines
 /********************** PROTOTYPES *******************************************/
 void initialisation(void);
 void initTabVue(void);
@@ -40,18 +40,29 @@ void deplace(char* x, char* y);
 bool demine(char x, char y);
 void enleveTuilesAutour(char x, char y);
 bool gagne(int* pMines);
+char getAnalog(char canal);
 /****************** VARIABLES GLOBALES ****************************************/
  char m_tabVue[NB_LIGNE][NB_COL+1]; //Tableau des caractères affichés au LCD
  char m_tabMines[NB_LIGNE][NB_COL+1];//Tableau contenant les mines, les espaces et les chiffres
 /******************** PROGRAMME PRINCPAL **************************************/
 void main(void)
 {
+    char* posX = 10;
+    char* posY = 2;
+    
     initialisation();
     lcd_init();
     lcd_putMessage("LAB6 Isak Bedard");
     initTabVue();
     rempliMines(NB_MINES);
     metToucheCombien();
+    
+    for (char i = 0; i < NB_LIGNE; i++)
+    {
+        lcd_gotoXY(1,i+1);
+        lcd_putMessage(m_tabVue[i]);
+    }
+    
     for (char i = 0; i < NB_LIGNE; i++)
     {
         lcd_gotoXY(1,i+1);
@@ -59,6 +70,7 @@ void main(void)
     }
     while(1)
     {
+        deplace(&posX, &posY);
         __delay_ms(100);
     }
 }
@@ -194,7 +206,36 @@ char calculToucheCombien(int ligne, int colonne)
  */
 void deplace(char* x, char* y)
 {
+    unsigned char analogX = getAnalog(AXE_X);
+    unsigned char analogY = getAnalog(AXE_Y);
     
+    if (0 <= analogX && analogX <= 80) //si le joystick est vers la gauche
+    {
+        *x = (*x)-1; //décale la position de 1 vers la gauche
+        if ((*x)<=0) //si on dépasse de l'écran
+            *x=20; //on revient de l'autre côté
+    }
+    else if (175 <= analogX && analogX <= 255) //si le joystick est vers la droite
+    {
+        *x = (*x)+1; //décale la position de 1 vers la droite
+        if ((*x)>=21) //si on dépasse de l'écran
+            *x=1; //on revient de l'autre côté
+    }
+    
+    if (0 <= analogY && analogY <= 80) //si le joystick est vers le haut
+    {
+        *y = (*y)-1; //décale la position de 1 vers la gauche
+        if ((*y)<=0) //si on dépasse de l'écran
+            *y=4; //on revient de l'autre côté
+    }
+    else if (175 <= analogY && analogY <= 255) //si le joystick est vers le bas
+    {
+        *y = (*y)+1; //décale la position de 1 vers la droite
+        if ((*y)>=5) //si on dépasse de l'écran
+            *y=1; //on revient de l'autre côté
+    }
+    lcd_gotoXY(*x, *y); //on met le curseur à la nouvelle position. 4 correspond
+    //à la dernière ligne.
 }
 /*
  * @brief Dévoile une tuile (case) de m_tabVue. 
@@ -228,4 +269,18 @@ void enleveTuilesAutour(char x, char y)
 bool gagne(int* pMines)
 {
     
+}
+
+/*
+ * @brief Lit le port analogique. 
+ * @param Le no du port à lire
+ * @return La valeur des 8 bits de poids forts du port analogique
+ */
+char getAnalog(char canal)
+{ 
+    ADCON0bits.CHS = canal;
+    __delay_us(1);  
+    ADCON0bits.GO_DONE = 1;  //lance une conversion
+    while (ADCON0bits.GO_DONE == 1); //attend fin de la conversion
+    return  ADRESH; //retourne seulement les 8 MSB. On laisse tomber les 2 LSB de ADRESL
 }

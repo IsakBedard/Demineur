@@ -4882,18 +4882,29 @@ void deplace(char* x, char* y);
 bool demine(char x, char y);
 void enleveTuilesAutour(char x, char y);
 bool gagne(int* pMines);
+char getAnalog(char canal);
 
 char m_tabVue[4][20+1];
 char m_tabMines[4][20+1];
 
 void main(void)
 {
+char* posX = 10;
+char* posY = 2;
+
 initialisation();
 lcd_init();
 lcd_putMessage("LAB6 Isak Bedard");
 initTabVue();
-rempliMines(5);
+rempliMines(15);
 metToucheCombien();
+
+for (char i = 0; i < 4; i++)
+{
+lcd_gotoXY(1,i+1);
+lcd_putMessage(m_tabVue[i]);
+}
+
 for (char i = 0; i < 4; i++)
 {
 lcd_gotoXY(1,i+1);
@@ -4901,11 +4912,12 @@ lcd_putMessage(m_tabMines[i]);
 }
 while(1)
 {
+deplace(&posX, &posY);
 _delay((unsigned long)((100)*(1000000/4000.0)));
 }
 }
 
-# 71
+# 83
 void initialisation(void)
 {
 TRISD = 0;
@@ -4927,7 +4939,7 @@ ADCON2bits.ACQT = 0;
 ADCON2bits.ADCS = 0;
 }
 
-# 99
+# 111
 void initTabVue(void)
 {
 for (char i = 0; i < 4; i++)
@@ -4940,7 +4952,7 @@ m_tabVue[i][20]=0;
 }
 }
 
-# 118
+# 130
 void rempliMines(int nb)
 {
 char x,y;
@@ -4964,7 +4976,7 @@ nb--;
 }
 }
 
-# 150
+# 162
 void metToucheCombien(void)
 {
 for (char i = 0; i < 4; i++)
@@ -4979,7 +4991,7 @@ m_tabMines[i][j]=' ';
 }
 }
 
-# 168
+# 180
 char calculToucheCombien(int ligne, int colonne)
 {
 int i=ligne-1;
@@ -5002,26 +5014,65 @@ nbMines++;
 return nbMines;
 }
 
-# 195
+# 207
 void deplace(char* x, char* y)
 {
+unsigned char analogX = getAnalog(7);
+unsigned char analogY = getAnalog(6);
+
+if (0 <= analogX && analogX <= 80)
+{
+*x = (*x)-1;
+if ((*x)<=0)
+*x=20;
+}
+else if (175 <= analogX && analogX <= 255)
+{
+*x = (*x)+1;
+if ((*x)>=21)
+*x=1;
+}
+
+if (0 <= analogY && analogY <= 80)
+{
+*y = (*y)-1;
+if ((*y)<=0)
+*y=4;
+}
+else if (175 <= analogY && analogY <= 255)
+{
+*y = (*y)+1;
+if ((*y)>=5)
+*y=1;
+}
+lcd_gotoXY(*x, *y);
 
 }
 
-# 207
+# 248
 bool demine(char x, char y)
 {
 
 }
 
-# 217
+# 258
 void enleveTuilesAutour(char x, char y)
 {
 
 }
 
-# 228
+# 269
 bool gagne(int* pMines)
 {
 
+}
+
+# 279
+char getAnalog(char canal)
+{
+ADCON0bits.CHS = canal;
+_delay((unsigned long)((1)*(1000000/4000000.0)));
+ADCON0bits.GO_DONE = 1;
+while (ADCON0bits.GO_DONE == 1);
+return ADRESH;
 }
