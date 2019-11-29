@@ -46,6 +46,13 @@ bool gagne(int* pMines);
 void main(void)
 {
     initialisation();
+    
+    while(1)
+    {
+        lcd_gotoXY(1,1);
+        lcd_putMessage("LAB6 Isak Bedard");
+        __delay_ms(100);
+    }
 }
 
 /**
@@ -148,7 +155,9 @@ bool demine(char x, char y)
  * @return rien
  */
 void enleveTuilesAutour(char x, char y)
- 
+{
+    
+}
 /*
  * @brief Vérifie si gagné. On a gagné quand le nombre de tuiles non dévoilées
  * est égal au nombre de mines. On augmente de 1 le nombre de mines si on a 

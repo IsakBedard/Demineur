@@ -4872,63 +4872,33 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 
-# 55 "main.c"
+# 33 "main.c"
 void initialisation(void);
-void nouveauxAliens(void);
-void afficheAliens(void);
-void deplace(char* x);
-void feu(char x, unsigned long* pts);
-bool perdu(void);
-void affichePerdu(unsigned long pts);
-char getAnalog(char canal);
-int puissance(int x, int y);
-void videAliens(void);
-char niveau(unsigned long points);
+void initTabVue(void);
+void rempliMines(int nb);
+void metToucheCombien(void);
+char calculToucheCombien(int ligne, int colonne);
+void deplace(char* x, char* y);
+bool demine(char x, char y);
+void enleveTuilesAutour(char x, char y);
+bool gagne(int* pMines);
 
-char m_aliens[4][20+1] =
-{
-{"                    "},
-{"                    "},
-{"                    "},
-{"                    "}
-};
-char m_niveau=1;
-bool m_tempsDAfficher = 0;
+char m_tabVue[4][20+1];
+char m_tabMines[4][20+1];
 
 void main(void)
 {
-char* posX = 10;
-unsigned long* points=0;
-
 initialisation();
-lcd_init();
-lcd_putMessage("LAB5 Isak Bedard");
+
 while(1)
 {
-m_niveau= niveau(points);
-
-if (m_tempsDAfficher)
-{
-nouveauxAliens();
-if (perdu())
-{
-affichePerdu(points);
-posX = 10;
-videAliens();
-points=0;
-}
-afficheAliens();
-m_tempsDAfficher = 0;
-}
-if (PORTBbits.RB1 ==0)
-feu(posX, &points);
-
-deplace(&posX);
+lcd_gotoXY(1,1);
+lcd_putMessage("LAB6 Isak Bedard");
 _delay((unsigned long)((100)*(1000000/4000.0)));
 }
 }
 
-# 115
+# 63
 void initialisation(void)
 {
 TRISD = 0;
@@ -4948,218 +4918,52 @@ ADCON1 = 0;
 ADCON2bits.ADFM = 0;
 ADCON2bits.ACQT = 0;
 ADCON2bits.ADCS = 0;
-
-T0CONbits.TMR0ON = 1;
-T0CONbits.T08BIT = 0;
-T0CONbits.T0CS = 0;
-T0CONbits.PSA = 0;
-T0CONbits.T0PS = 0b010;
-TMR0 = 0x0BDC;
-INTCONbits.TMR0IE = 1;
-INTCONbits.TMR0IF = 0;
-INTCONbits.PEIE = 1;
-INTCONbits.GIE = 1;
 }
 
-# 153
-void nouveauxAliens(void)
+# 91
+void initTabVue(void)
 {
-char posAlien;
-bool alienPlace[20];
-char i = 0;
-char j = 0;
-
-for (i = 0; i < 20; i++)
-{
-alienPlace[i] = 0;
-}
-for (i = (4)-1; i > 0; i-=1)
-{
-for (j = 0; j < 20; j+=1)
-{
-m_aliens[i][j] = m_aliens[(i-1)][j];
 
 }
-}
-i=0;
-while (i < m_niveau)
-{
-posAlien = rand()%20;
 
-if (alienPlace[posAlien] == 0)
+# 103
+void rempliMines(int nb)
 {
-alienPlace[posAlien] = 1;
-i++;
-}
-}
-for (i = 0; i < 20; i++)
-{
-if (alienPlace[i] == 1)
-{
-m_aliens[0][i] = (rand()%3)+1;
-
-
-
 
 }
-else
-m_aliens[0][i] = ' ';
-}
+
+# 116
+void metToucheCombien(void)
+{
+
 }
 
-# 205
-void afficheAliens(void)
+# 125
+char calculToucheCombien(int ligne, int colonne)
 {
-lcd_cacheCurseur();
-for (char i = 0; i < 4; i++)
-{
-for (char j = 0; j < 20; j++)
-{
-lcd_gotoXY((j+1),(i+1));
-lcd_ecritChar(m_aliens[i][j]);
 
-# 219
-}
-}
-lcd_cacheCurseur();
 }
 
-# 229
-void deplace(char* x)
+# 135
+void deplace(char* x, char* y)
 {
-unsigned char analog = getAnalog(7);
 
-
-lcd_cacheCurseur();
-lcd_ecritChar(' ');
-if (0 <= analog && analog <= 80)
-{
-*x = (*x)-1;
-if ((*x)<=0)
-*x=20;
-}
-else if (175 <= analog && analog <= 255)
-{
-*x = (*x)+1;
-if ((*x)>=21)
-*x=1;
-}
-lcd_gotoXY(*x, 4);
-
-lcd_ecritChar(4);
-lcd_gotoXY(*x, 4);
-lcd_cacheCurseur();
 }
 
-# 260
-void feu(char x, unsigned long* pts)
+# 147
+bool demine(char x, char y)
 {
-lcd_cacheCurseur();
-for (char y =3; y >=1; y--)
-{
-if (m_aliens[y-1][x-1]!=' ')
 
-
-{
-(*pts)+= m_aliens[y-1][x-1];
-m_aliens[y-1][x-1]=' ';
-afficheAliens();
-while(PORTBbits.RB1 == 0);
-lcd_cacheCurseur();
-return;
-}
-}
 }
 
-# 285
-bool perdu(void)
+# 157
+void enleveTuilesAutour(char x, char y)
 {
-for (char i = 0; i < 20; i++)
-{
-if (m_aliens[3][i] != ' ')
-return 1;
-}
-return 0;
+
 }
 
-# 300
-void affichePerdu(unsigned long pts)
+# 168
+bool gagne(int* pMines)
 {
-char ptsString[10] = {'0','0','0','0','0','0','0','0','0','0'};
 
-char i =9;
-
-lcd_cacheCurseur();
-if (pts ==0)
-{
-lcd_effaceAffichage();
-lcd_gotoXY(1,2);
-
-lcd_putMessage("Score : 0");
-lcd_cacheCurseur();
-_delay((unsigned long)((3000)*(1000000/4000.0)));
-return;
-}
-if (pts !=0)
-{
-while (pts !=0)
-{
-ptsString[i] = (pts%10)+48;
-
-pts /=10;
-i--;
-}
-}
-lcd_effaceAffichage();
-lcd_gotoXY(1,2);
-lcd_putMessage("Score : ");
-i=0;
-while (ptsString[i]=='0')
-{
-i++;
-}
-for (i; i < 10; i++)
-lcd_ecritChar(ptsString[i]);
-lcd_cacheCurseur();
-_delay((unsigned long)((3000)*(1000000/4000.0)));
-}
-
-# 347
-void videAliens(void)
-{
-for (char i = 0; i < 4; i++)
-{
-for (char j = 0; j < 20; j++)
-{
-m_aliens[i][j] = ' ';
-}
-}
-}
-
-# 364
-char niveau(unsigned long points)
-{
-char niveau = (points/10)+1;
-return niveau;
-}
-
-# 375
-char getAnalog(char canal)
-{
-ADCON0bits.CHS = canal;
-_delay((unsigned long)((1)*(1000000/4000000.0)));
-ADCON0bits.GO_DONE = 1;
-while (ADCON0bits.GO_DONE == 1);
-return ADRESH;
-}
-
-# 391
-void interrupt high_isr(void)
-{
-if (INTCONbits.TMR0IF)
-{
-INTCONbits.TMR0IF = 0;
-TMR0 = 0x0BDC;
-m_tempsDAfficher = 1;
-}
 }

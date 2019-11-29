@@ -12,52 +12,27 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-cinit CODE 0 14D0 14D0 4E 1
-text0 CODE 0 C42 C42 E6 1
-text1 CODE 0 FD2 FD2 96 1
-text2 CODE 0 1376 1376 5C 1
-text3 CODE 0 626 626 22A 1
-text4 CODE 0 13D2 13D2 56 1
-text5 CODE 0 1164 1164 6C 1
-text6 CODE 0 D28 D28 B2 1
-text7 CODE 0 15A0 15A0 34 1
-text8 CODE 0 1634 1634 28 1
-text9 CODE 0 12A8 12A8 6A 1
-text10 CODE 0 F30 F30 A2 1
-text11 CODE 0 1696 1696 8 1
-text12 CODE 0 1428 1428 54 1
-text13 CODE 0 1678 1678 10 1
-text14 CODE 0 A1E A1E 138 1
-text15 CODE 0 DDA DDA B0 1
-text16 CODE 0 B56 B56 EC 1
-text17 CODE 0 1608 1608 2C 1
-text18 CODE 0 850 850 1CE 1
-text19 CODE 0 11D0 11D0 6C 1
-text20 CODE 0 147C 147C 54 1
-text21 CODE 0 15D4 15D4 34 1
-text22 CODE 0 10F2 10F2 72 1
-text23 CODE 0 1688 1688 E 1
-text24 CODE 0 169E 169E 8 1
-text25 CODE 0 123C 123C 6C 1
-text26 CODE 0 16A6 16A6 8 1
-text27 CODE 0 165C 165C 1C 1
-text28 CODE 0 151E 151E 42 1
-text29 CODE 0 16AE 16AE 6 1
-text30 CODE 0 1068 1068 8A 1
-text31 CODE 0 E8A E8A A6 1
-cstackBANK0 BANK0 1 C3 C3 36 1
-temp COMRAM 1 1 1 1 1
-bssBANK0 BANK0 1 F9 F9 1 1
-intcode CODE 0 8 8 24 1
-smallconst SMALLCONST 0 600 600 26 1
-idataBANK0 CODE 0 1312 1312 63 1
-idataBANK1 CODE 0 1560 1560 40 1
-dataBANK0 BANK0 1 60 60 63 1
-dataBANK1 BANK1 1 100 100 40 1
-$C:\Users\Drago\AppData\Local\Temp\sbvs.o
+cinit CODE 0 8D8 8D8 32 1
+text0 CODE 0 838 838 38 1
+text1 CODE 0 686 686 6C 1
+text2 CODE 0 75E 75E 54 1
+text3 CODE 0 870 870 34 1
+text4 CODE 0 614 614 72 1
+text5 CODE 0 6F2 6F2 6C 1
+text6 CODE 0 936 936 8 1
+text7 CODE 0 90A 90A 1C 1
+text8 CODE 0 7F6 7F6 42 1
+text9 CODE 0 93E 93E 6 1
+text10 CODE 0 8A4 8A4 34 1
+text11 CODE 0 926 926 10 1
+cstackBANK0 BANK0 1 A4 A4 B 1
+bssBANK1 BANK1 1 100 100 A8 1
+smallconst SMALLCONST 0 600 600 14 1
+idataBANK0 CODE 0 7B2 7B2 44 1
+dataBANK0 BANK0 1 60 60 44 1
+$C:\Users\Drago\AppData\Local\Temp\s5cc.o
 idloc IDLOC 0 200000 200000 8 1
-init CODE 0 2C 2C 4 1
-reset_vec CODE 0 0 0 4 1
+init CODE 0 0 0 4 1
 config CONFIG 0 300000 300000 E 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -65,38 +40,32 @@ config CONFIG 0 300000 300000 E 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM FA-FF 1
-RAM 140-5EE 1
+RAM AF-FF 1
+RAM 1A8-5EE 1
 SFR F60-F9B 1
 SFR F9D-FD3 1
 SFR FD5-FDA 1
 SFR FE0-FE2 1
 SFR FE8-FEA 1
 SFR FF0-FFB 1
-BANK0 FA-FF 1
-BANK1 140-1FF 1
+BANK0 AF-FF 1
+BANK1 1A8-1FF 1
 BANK2 200-2FF 1
 BANK3 300-3FF 1
 BANK4 400-4FF 1
 BANK5 500-5EE 1
-CONST 4-7 1
-CONST 30-5FF 1
-CONST 1375-1375 1
-CONST 16B4-7D3F 1
-STACK 140-5EE 1
-SMALLCONST 1375-1375 1
-SMALLCONST 16B4-7D3F 1
-CODE 4-7 1
-CODE 30-5FF 1
-CODE 1375-1375 1
-CODE 16B4-7D3F 1
-BIGRAM 2-5F 1
-BIGRAM FA-FF 1
-BIGRAM 140-5EE 1
-COMRAM 2-5F 1
+CONST 4-5FF 1
+CONST 944-7D3F 1
+STACK 1A8-5EE 1
+SMALLCONST 944-7D3F 1
+CODE 4-5FF 1
+CODE 944-7D3F 1
+BIGRAM 1-5F 1
+BIGRAM AF-FF 1
+BIGRAM 1A8-5EE 1
+COMRAM 1-5F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST 1375-1375 1
-MEDIUMCONST 16B4-7D3F 1
+MEDIUMCONST 944-7D3F 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -111,419 +80,146 @@ MEDIUMCONST 16B4-7D3F 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-8 intcode CODE >8112:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-8 intcode CODE >391:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-A intcode CODE >393:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-18 intcode CODE >395:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1A intcode CODE >396:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-22 intcode CODE >397:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-28 intcode CODE >399:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-E8A text31 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-E8A text31 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-E9C text31 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-EB2 text31 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-EB6 text31 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-EBA text31 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-EC4 text31 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-EC6 text31 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-ED4 text31 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-EDE text31 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-EFC text31 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-F0C text31 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-F0E text31 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-F18 text31 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-F1E text31 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-F1E text31 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-F2E text31 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
-1068 text30 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-1068 text30 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-1080 text30 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-1084 text30 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-1088 text30 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-1092 text30 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-1094 text30 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-10A2 text30 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-10C0 text30 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-10D0 text30 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-10DA text30 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-10E0 text30 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-10E0 text30 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-10F0 text30 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\llmod.c
-16AE text29 CODE >93:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-16AE text29 CODE >96:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-16B2 text29 CODE >98:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-151E text28 CODE >124:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-151E text28 CODE >128:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1520 text28 CODE >129:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1522 text28 CODE >131:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1522 text28 CODE >133:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1524 text28 CODE >134:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1526 text28 CODE >135:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1536 text28 CODE >136:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1538 text28 CODE >137:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1538 text28 CODE >138:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-153A text28 CODE >139:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-153C text28 CODE >140:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1544 text28 CODE >141:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1546 text28 CODE >142:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1546 text28 CODE >144:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1556 text28 CODE >146:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1558 text28 CODE >147:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-155E text28 CODE >148:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-165C text27 CODE >107:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1660 text27 CODE >110:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1676 text27 CODE >115:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-16A6 text26 CODE >431:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-16A6 text26 CODE >433:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-16A8 text26 CODE >434:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-16AA text26 CODE >435:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-16AC text26 CODE >436:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-123C text25 CODE >156:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1240 text25 CODE >158:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1244 text25 CODE >160:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1248 text25 CODE >161:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1248 text25 CODE >163:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-124A text25 CODE >164:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-124C text25 CODE >166:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1256 text25 CODE >167:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-125A text25 CODE >168:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-125A text25 CODE >170:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1262 text25 CODE >171:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1266 text25 CODE >172:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-126E text25 CODE >174:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1294 text25 CODE >175:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-129E text25 CODE >177:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12A2 text25 CODE >178:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12A2 text25 CODE >179:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12A6 text25 CODE >180:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-169E text24 CODE >401:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-169E text24 CODE >403:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-16A4 text24 CODE >404:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1688 text23 CODE >276:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1688 text23 CODE >278:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-168E text23 CODE >279:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1694 text23 CODE >280:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-10F2 text22 CODE >314:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-10F6 text22 CODE >316:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-10FA text22 CODE >319:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1106 text22 CODE >320:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-110A text22 CODE >322:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1116 text22 CODE >323:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-111A text22 CODE >325:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1126 text22 CODE >326:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-112A text22 CODE >328:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1136 text22 CODE >329:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-113A text22 CODE >316:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1162 text22 CODE >331:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15D4 text21 CODE >188:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15D8 text21 CODE >190:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15DC text21 CODE >191:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15E0 text21 CODE >192:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15E0 text21 CODE >194:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15E2 text21 CODE >195:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15E4 text21 CODE >197:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15EE text21 CODE >198:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15F2 text21 CODE >199:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15F2 text21 CODE >201:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15FA text21 CODE >202:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15FE text21 CODE >203:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15FE text21 CODE >205:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1602 text21 CODE >206:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1602 text21 CODE >207:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1606 text21 CODE >208:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-147C text20 CODE >359:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1480 text20 CODE >363:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-148C text20 CODE >364:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1490 text20 CODE >367:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1496 text20 CODE >368:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-149A text20 CODE >370:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-14A0 text20 CODE >371:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-14A4 text20 CODE >373:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-14AA text20 CODE >374:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-14AE text20 CODE >364:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-14CE text20 CODE >376:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-11D0 text19 CODE >387:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-11D0 text19 CODE >391:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-11DA text19 CODE >392:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1202 text19 CODE >391:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-123A text19 CODE >393:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-850 text18 CODE >300:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-850 text18 CODE >302:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-862 text18 CODE >304:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-868 text18 CODE >306:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-86C text18 CODE >307:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-884 text18 CODE >309:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-888 text18 CODE >310:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-894 text18 CODE >312:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-8A2 text18 CODE >313:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-8A6 text18 CODE >314:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-8C6 text18 CODE >317:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-8E2 text18 CODE >321:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-91E text18 CODE >323:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-954 text18 CODE >324:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-958 text18 CODE >319:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-970 text18 CODE >327:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-974 text18 CODE >328:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-980 text18 CODE >329:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-98E text18 CODE >330:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-994 text18 CODE >331:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-998 text18 CODE >333:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-99C text18 CODE >331:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-9BC text18 CODE >335:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-9D2 text18 CODE >336:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-9E6 text18 CODE >335:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-9FC text18 CODE >337:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-A00 text18 CODE >338:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-A1C text18 CODE >339:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1608 text17 CODE >375:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-160C text17 CODE >377:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1620 text17 CODE >378:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1620 text17 CODE >379:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1622 text17 CODE >380:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1630 text17 CODE >381:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1632 text17 CODE >382:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B56 text16 CODE >229:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B56 text16 CODE >231:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B60 text16 CODE >234:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B64 text16 CODE >235:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B6A text16 CODE >236:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B7C text16 CODE >238:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B96 text16 CODE >239:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-BAE text16 CODE >240:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-BBE text16 CODE >242:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-BD0 text16 CODE >244:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-BEA text16 CODE >245:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C02 text16 CODE >246:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C0E text16 CODE >248:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C22 text16 CODE >250:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C28 text16 CODE >251:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C3C text16 CODE >252:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C40 text16 CODE >253:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-DDA text15 CODE >205:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-DDA text15 CODE >207:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-DDE text15 CODE >208:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-DFA text15 CODE >210:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-E16 text15 CODE >212:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-E26 text15 CODE >213:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-E58 text15 CODE >210:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-E6E text15 CODE >208:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-E84 text15 CODE >221:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-E88 text15 CODE >222:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-A1E text14 CODE >260:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-A22 text14 CODE >262:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-A26 text14 CODE >263:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-A42 text14 CODE >265:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-A90 text14 CODE >269:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-AE4 text14 CODE >270:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B24 text14 CODE >271:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B28 text14 CODE >272:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B36 text14 CODE >273:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B3E text14 CODE >263:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-B54 text14 CODE >277:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1678 text13 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-1678 text13 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-1686 text13 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-1428 text12 CODE >115:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1428 text12 CODE >117:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-142C text12 CODE >118:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1430 text12 CODE >119:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1432 text12 CODE >120:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1436 text12 CODE >121:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-143A text12 CODE >125:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-143C text12 CODE >126:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1448 text12 CODE >128:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-144A text12 CODE >129:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-144C text12 CODE >130:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1450 text12 CODE >131:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1452 text12 CODE >132:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1456 text12 CODE >133:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-145A text12 CODE >135:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-145C text12 CODE >136:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-145E text12 CODE >137:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1460 text12 CODE >138:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1462 text12 CODE >139:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-146A text12 CODE >140:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1472 text12 CODE >141:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1474 text12 CODE >142:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1476 text12 CODE >143:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1478 text12 CODE >144:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-147A text12 CODE >145:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1696 text11 CODE >288:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1696 text11 CODE >290:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-169C text11 CODE >291:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-F30 text10 CODE >417:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-F30 text10 CODE >421:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-F36 text10 CODE >422:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-F52 text10 CODE >424:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-F6E text10 CODE >425:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-FA0 text10 CODE >424:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-FB6 text10 CODE >422:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-FCC text10 CODE >427:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-FD0 text10 CODE >428:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12A8 text9 CODE >221:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12A8 text9 CODE >226:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12AC text9 CODE >228:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12C0 text9 CODE >229:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12C2 text9 CODE >230:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12C4 text9 CODE >232:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12CA text9 CODE >233:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12CE text9 CODE >234:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12D6 text9 CODE >237:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12DC text9 CODE >238:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12E0 text9 CODE >239:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12E8 text9 CODE >241:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12EE text9 CODE >242:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12F2 text9 CODE >243:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-12FA text9 CODE >245:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1300 text9 CODE >246:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1304 text9 CODE >247:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-130C text9 CODE >249:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1310 text9 CODE >250:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1634 text8 CODE >258:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1634 text8 CODE >261:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1638 text8 CODE >262:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-163E text8 CODE >263:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1644 text8 CODE >264:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-164A text8 CODE >265:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1650 text8 CODE >266:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-1656 text8 CODE >267:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-165A text8 CODE >268:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\Lcd4Lignes.c
-15A0 text7 CODE >364:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-15A0 text7 CODE >366:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-15CE text7 CODE >367:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-15D2 text7 CODE >368:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-D28 text6 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D28 text6 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D2E text6 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D3C text6 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D44 text6 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D48 text6 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D56 text6 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D5E text6 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D70 text6 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D74 text6 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D78 text6 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D7E text6 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D80 text6 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-D8E text6 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-DA4 text6 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-DAC text6 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-DB2 text6 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-DB8 text6 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-DC8 text6 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-DD0 text6 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-DD8 text6 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1164 text5 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-1164 text5 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-1176 text5 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-1184 text5 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-1194 text5 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-119E text5 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-11A8 text5 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-11BE text5 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-11CE text5 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-13D2 text4 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-13D2 text4 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-1408 text4 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-141A text4 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-1426 text4 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-626 text3 CODE >153:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-626 text3 CODE >157:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-62C text3 CODE >158:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-632 text3 CODE >160:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-64E text3 CODE >162:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-660 text3 CODE >160:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-676 text3 CODE >164:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-690 text3 CODE >166:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-6AC text3 CODE >168:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-718 text3 CODE >166:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-72E text3 CODE >164:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-744 text3 CODE >172:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-74A text3 CODE >173:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-74E text3 CODE >175:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-770 text3 CODE >177:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-78E text3 CODE >179:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-7A0 text3 CODE >180:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-7A4 text3 CODE >173:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-7BA text3 CODE >183:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-7D6 text3 CODE >185:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-7F4 text3 CODE >187:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-822 text3 CODE >192:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-826 text3 CODE >194:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-838 text3 CODE >183:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-84E text3 CODE >196:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1376 text2 CODE >285:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1376 text2 CODE >287:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1392 text2 CODE >289:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-13B2 text2 CODE >290:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-13B8 text2 CODE >287:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-13CE text2 CODE >292:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-13D0 text2 CODE >293:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-FD2 text1 CODE >347:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-FD2 text1 CODE >349:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-FEE text1 CODE >351:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-100A text1 CODE >353:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-103A text1 CODE >351:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1050 text1 CODE >349:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-1066 text1 CODE >356:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C42 text0 CODE >77:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C42 text0 CODE >79:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C4C text0 CODE >80:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C56 text0 CODE >82:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C5A text0 CODE >83:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C5E text0 CODE >84:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C6C text0 CODE >87:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C82 text0 CODE >89:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C94 text0 CODE >91:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-C98 text0 CODE >92:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-CAC text0 CODE >94:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-CBE text0 CODE >95:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-CC8 text0 CODE >96:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-CCC text0 CODE >97:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-CD6 text0 CODE >99:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-CDA text0 CODE >100:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-CE0 text0 CODE >102:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-CEE text0 CODE >103:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-D00 text0 CODE >105:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-D0E text0 CODE >106:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBedard\IsakBedardAliens.X\IsakBedardAliens.X\main.c
-14D0 cinit CODE >1699:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14D0 cinit CODE >1701:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14D0 cinit CODE >1704:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14D0 cinit CODE >1749:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14D2 cinit CODE >1750:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14D4 cinit CODE >1751:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14D6 cinit CODE >1752:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14D8 cinit CODE >1753:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14DA cinit CODE >1754:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14DC cinit CODE >1755:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14E0 cinit CODE >1756:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14E4 cinit CODE >1757:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14E4 cinit CODE >1758:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14E6 cinit CODE >1759:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14EA cinit CODE >1760:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14EC cinit CODE >1761:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14EE cinit CODE >1762:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14F0 cinit CODE >1766:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14F2 cinit CODE >1767:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14F4 cinit CODE >1768:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14F6 cinit CODE >1769:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14F8 cinit CODE >1770:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14FA cinit CODE >1771:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-14FC cinit CODE >1772:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-1500 cinit CODE >1773:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-1504 cinit CODE >1774:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-1504 cinit CODE >1775:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-1506 cinit CODE >1776:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-150A cinit CODE >1777:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-150C cinit CODE >1778:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-150E cinit CODE >1779:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-1510 cinit CODE >1783:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-1512 cinit CODE >1784:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-1514 cinit CODE >1790:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-1514 cinit CODE >1792:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-1516 cinit CODE >1793:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-1518 cinit CODE >1794:C:\Users\Drago\AppData\Local\Temp\sbvs.s
-151A cinit CODE >1795:C:\Users\Drago\AppData\Local\Temp\sbvs.s
+926 text11 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
+926 text11 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
+934 text11 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
+8A4 text10 CODE >63:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8A4 text10 CODE >65:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8A8 text10 CODE >66:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8AC text10 CODE >67:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8AE text10 CODE >68:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8B2 text10 CODE >69:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8B6 text10 CODE >73:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8B8 text10 CODE >74:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8C4 text10 CODE >76:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8C6 text10 CODE >77:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8C8 text10 CODE >78:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8CC text10 CODE >79:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8CE text10 CODE >80:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8D2 text10 CODE >81:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8D6 text10 CODE >82:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+93E text9 CODE >93:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+93E text9 CODE >96:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+942 text9 CODE >98:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+7F6 text8 CODE >124:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+7F6 text8 CODE >128:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+7F8 text8 CODE >129:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+7FA text8 CODE >131:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+7FA text8 CODE >133:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+7FC text8 CODE >134:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+7FE text8 CODE >135:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+80E text8 CODE >136:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+810 text8 CODE >137:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+810 text8 CODE >138:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+812 text8 CODE >139:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+814 text8 CODE >140:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+81C text8 CODE >141:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+81E text8 CODE >142:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+81E text8 CODE >144:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+82E text8 CODE >146:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+830 text8 CODE >147:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+836 text8 CODE >148:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+90A text7 CODE >107:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+90E text7 CODE >110:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+924 text7 CODE >115:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+936 text6 CODE >431:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+936 text6 CODE >433:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+938 text6 CODE >434:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+93A text6 CODE >435:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+93C text6 CODE >436:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+6F2 text5 CODE >156:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+6F6 text5 CODE >158:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+6FA text5 CODE >160:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+6FE text5 CODE >161:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+6FE text5 CODE >163:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+700 text5 CODE >164:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+702 text5 CODE >166:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+70C text5 CODE >167:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+710 text5 CODE >168:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+710 text5 CODE >170:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+718 text5 CODE >171:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+71C text5 CODE >172:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+724 text5 CODE >174:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+74A text5 CODE >175:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+754 text5 CODE >177:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+758 text5 CODE >178:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+758 text5 CODE >179:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+75C text5 CODE >180:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+614 text4 CODE >314:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+618 text4 CODE >316:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+61C text4 CODE >319:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+628 text4 CODE >320:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+62C text4 CODE >322:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+638 text4 CODE >323:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+63C text4 CODE >325:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+648 text4 CODE >326:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+64C text4 CODE >328:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+658 text4 CODE >329:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+65C text4 CODE >316:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+684 text4 CODE >331:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+870 text3 CODE >188:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+874 text3 CODE >190:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+878 text3 CODE >191:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+87C text3 CODE >192:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+87C text3 CODE >194:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+87E text3 CODE >195:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+880 text3 CODE >197:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+88A text3 CODE >198:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+88E text3 CODE >199:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+88E text3 CODE >201:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+896 text3 CODE >202:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+89A text3 CODE >203:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+89A text3 CODE >205:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+89E text3 CODE >206:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+89E text3 CODE >207:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+8A2 text3 CODE >208:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+75E text2 CODE >359:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+762 text2 CODE >363:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+76E text2 CODE >364:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+772 text2 CODE >367:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+778 text2 CODE >368:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+77C text2 CODE >370:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+782 text2 CODE >371:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+786 text2 CODE >373:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+78C text2 CODE >374:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+790 text2 CODE >364:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+7B0 text2 CODE >376:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+686 text1 CODE >387:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+686 text1 CODE >391:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+690 text1 CODE >392:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+6B8 text1 CODE >391:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+6F0 text1 CODE >393:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
+838 text0 CODE >46:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+838 text0 CODE >48:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+83C text0 CODE >52:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+848 text0 CODE >53:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+856 text0 CODE >54:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+8D8 cinit CODE >1512:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8D8 cinit CODE >1514:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8D8 cinit CODE >1517:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8D8 cinit CODE >1548:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8DA cinit CODE >1549:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8DC cinit CODE >1550:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8DE cinit CODE >1551:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8E0 cinit CODE >1552:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8E2 cinit CODE >1553:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8E4 cinit CODE >1554:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8E8 cinit CODE >1555:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8EC cinit CODE >1556:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8EC cinit CODE >1557:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8EE cinit CODE >1558:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8F2 cinit CODE >1559:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8F4 cinit CODE >1560:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8F6 cinit CODE >1561:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8F8 cinit CODE >1565:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8FC cinit CODE >1566:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8FE cinit CODE >1567:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+8FE cinit CODE >1568:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+900 cinit CODE >1569:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+902 cinit CODE >1570:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+904 cinit CODE >1576:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+904 cinit CODE >1578:C:\Users\Drago\AppData\Local\Temp\s5cc.s
+906 cinit CODE >1579:C:\Users\Drago\AppData\Local\Temp\s5cc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -536,134 +232,80 @@ D0E text0 CODE >106:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab5_IsakBed
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-lcd_ecritChar@car C6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+lcd_ecritChar@car A7 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __LdataBANK0 0 0 ABS 0 dataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__LdataBANK1 0 0 ABS 0 dataBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_matCGRAM 100 0 BANK1 1 dataBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_matCGRAM 60 0 BANK0 1 dataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hspace_0 30000E 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Hspace_1 140 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__Hspace_1 1A8 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hspace_2 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_IESO$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_curseurHome 169E 0 CODE 0 text11 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__HidataBANK1 0 0 ABS 0 idataBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_ecrireDonnees 165C 0 CODE 0 text27 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Drago\AppData\Local\Temp\sbvs.o
+_lcd_ecrireDonnees 90A 0 CODE 0 text7 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Drago\AppData\Local\Temp\s5cc.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _T1CONbits FCD 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lsmallconst 600 0 SMALLCONST 0 smallconst dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _RCIF 7CF5 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_TMR0 FD6 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _TMR1 FCE 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\sbvs.o
-_main C42 0 CODE 0 text0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_rand 13D2 0 CODE 0 text4 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-btemp 1 0 COMRAM 1 temp dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-feu@x D3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-feu@y D4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-getAnalog@canal C4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-start 2C 0 CODE 0 init C:\Users\Drago\AppData\Local\Temp\sbvs.o
-niveau@niveau D4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of___awmod 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+___sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\s5cc.o
+_main 838 0 CODE 0 text0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+start 0 0 CODE 0 init C:\Users\Drago\AppData\Local\Temp\s5cc.o
 __size_of_main 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_rand 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of___lldiv 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of___llmod 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_WDTEN$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-?___lmul C3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-niveau@points D0 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-lcd_wrCom@commande C5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+lcd_wrCom@commande A6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__LidataBANK1 0 0 ABS 0 idataBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Hpowerup 2C 0 CODE 0 powerup dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___awmod@sign D6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_T0CONbits FD5 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_gotoXY 1164 0 CODE 0 text22 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-ttemp5 2 0 COMRAM 1 temp dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-ttemp6 5 0 COMRAM 1 temp dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-ttemp7 9 0 COMRAM 1 temp dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-affichePerdu@pts D0 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_wrCom 12A8 0 CODE 0 text25 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_curseurHome 1696 0 CODE 0 text11 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_wrData 15D4 0 CODE 0 text21 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__accesstop 60 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\sbvs.o
-intlevel0 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\sbvs.o
-intlevel1 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\sbvs.o
-intlevel2 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\sbvs.o
-intlevel3 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\sbvs.o
-deplace@analog CB 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__Hpowerup 0 0 CODE 0 powerup dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_lcd_gotoXY 686 0 CODE 0 text4 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_lcd_wrCom 75E 0 CODE 0 text5 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_lcd_wrData 870 0 CODE 0 text3 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__accesstop 60 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\s5cc.o
+intlevel0 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\s5cc.o
+intlevel1 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\s5cc.o
+intlevel2 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\s5cc.o
+intlevel3 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\s5cc.o
 __size_of_lcd_wrCom 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_resetSequence 12A8 0 CODE 0 text9 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-wtemp8 2 0 COMRAM 1 temp dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_EBTR0$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_EBTR1$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___llmod@divisor C7 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_EBTR2$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_EBTR3$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_EBTRB$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hifardata 0 0 CODE 0 ifardata dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hclrtext 0 0 ABS 0 clrtext dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_deplace B56 0 CODE 0 text16 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_wrCom 123C 0 CODE 0 text25 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_lcd_initCGRam 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-nouveauxAliens@i F3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-nouveauxAliens@j F2 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_lcd_wrCom 6F2 0 CODE 0 text5 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_FOSC$INTIO67 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _ADCON1 FC1 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_ADRESH FC4 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _ANSELH F7F 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\sbvs.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\sbvs.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\s5cc.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\s5cc.o
 __size_of_lcd_putMessage 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_initialisation 1428 0 CODE 0 text12 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of___lmul 11D0 0 CODE 0 text5 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_initialisation 8A4 0 CODE 0 text10 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_getAnalog 1634 0 CODE 0 text17 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _BAUDCONbits FB8 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_getAnalog 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Hintcodelo 2C 0 CODE 0 intcodelo dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_m_aliens 6F 0 BANK0 1 dataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of___awmod DDA 0 CODE 0 text6 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of___lldiv F30 0 CODE 0 text31 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of___llmod 10F2 0 CODE 0 text30 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_initCGRam FD2 0 CODE 0 text10 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_wrData 1608 0 CODE 0 text21 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-nouveauxAliens@posAlien F1 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_getAnalog 1608 0 CODE 0 text17 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_perdu 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__Hintcodelo 0 0 CODE 0 intcodelo dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_lcd_wrData 8A4 0 CODE 0 text3 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __size_of_lcd_strobeEnableBit 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __size_of_srand 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___lldiv@counter CF 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Lintcodelo 2C 0 CODE 0 intcodelo dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__Lintcodelo 0 0 CODE 0 intcodelo dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-start_initialization 14D0 0 CODE 0 cinit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_lcd_curseurHome 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+start_initialization 8D8 0 CODE 0 cinit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_PBADEN$ON 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_nouveauxAliens 626 0 CODE 0 text3 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_videAliens FD2 0 CODE 0 text1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _TRISCbits F94 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___lldiv@dividend C3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_initialisation 147C 0 CODE 0 text12 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-lcd_wrData@caractere C5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_initialisation 8D8 0 CODE 0 text10 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+lcd_wrData@caractere A6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 ___rparam_used 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-deplace@x C8 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-lcd_ecrireDonnees@donnee C4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+lcd_ecrireDonnees@donnee A5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_WDTPS$32768 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_niveau 15D4 0 CODE 0 text7 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _SPBRGH FB0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__pcstackBANK0 C3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_m_niveau 6E 0 BANK0 1 dataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-lcd_busy@adresse C4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-afficheAliens@i CA 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-afficheAliens@j CB 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_strobeEnableBit 16A6 0 CODE 0 text26 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__pcstackBANK0 A4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+lcd_busy@adresse A5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_lcd_strobeEnableBit 936 0 CODE 0 text6 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hbank0 0 0 ABS 0 bank0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hbank1 0 0 ABS 0 bank1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hbank2 0 0 ABS 0 bank2 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
@@ -688,18 +330,15 @@ __Htext6 0 0 ABS 0 text6 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Htext7 0 0 ABS 0 text7 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Htext8 0 0 ABS 0 text8 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Htext9 0 0 ABS 0 text9 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_m_tabVue 154 0 BANK1 1 bssBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hbigram 0 0 ABS 0 bigram dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__smallconst 600 0 SMALLCONST 0 smallconst C:\Users\Drago\AppData\Local\Temp\sbvs.o
-_afficheAliens DDA 0 CODE 0 text15 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__smallconst 600 0 SMALLCONST 0 smallconst C:\Users\Drago\AppData\Local\Temp\s5cc.o
 __size_of_lcd_busy 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_lcd_init 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hcomram 0 0 ABS 0 comram dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hconfig 30000E 0 CONFIG 0 config dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __size_of_lcd_gotoXY 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-affichePerdu@i E0 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_nouveauxAliens 850 0 CODE 0 text3 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lbank0 0 0 ABS 0 bank0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lbank1 0 0 ABS 0 bank1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lbank2 0 0 ABS 0 bank2 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
@@ -727,251 +366,128 @@ __Ltext9 0 0 ABS 0 text9 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hfarbss 0 0 FARRAM 0 farbss dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lintcode_body 0 0 ABS 0 intcode_body dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _PORTAbits F80 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_PORTBbits F81 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_videAliens 1068 0 CODE 0 text1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_INTCONbits FF2 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Habs1 0 0 ABS 0 abs1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hdata 0 0 ABS 0 data dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Hinit 30 0 CODE 0 init dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__Hinit 4 0 CODE 0 init dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hrbit 0 0 COMRAM 1 rbit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hrbss 0 0 COMRAM 1 rbss dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htemp 2 0 COMRAM 1 temp dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__Htemp 0 0 COMRAM 1 temp dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Htext 0 0 ABS 0 text dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Labs1 0 0 ABS 0 abs1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Ldata 0 0 ABS 0 data dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Linit 2C 0 CODE 0 init dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__Linit 0 0 CODE 0 init dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lrbit 0 0 COMRAM 1 rbit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lrbss 0 0 COMRAM 1 rbss dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltemp 1 0 COMRAM 1 temp dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__Ltemp 0 0 COMRAM 1 temp dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Ltext 0 0 ABS 0 text dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_XINST$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___lmul 1164 0 CODE 0 text5 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_m_tempsDAfficher F9 0 BANK0 1 bssBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-int$flags 1 0 COMRAM 1 temp dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hintret 0 0 ABS 0 intret dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hirdata 0 0 CODE 0 irdata dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __S0 30000E 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__S1 140 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__S1 1A8 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __S2 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_feu A1E 0 CODE 0 text14 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_m_tabMines 100 0 BANK1 1 bssBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_affichePerdu 850 0 CODE 0 text18 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_feu B56 0 CODE 0 text14 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hparam0 0 0 BANK0 1 param0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_CCP2MX$PORTC 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_busy 151E 0 CODE 0 text28 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_init 1634 0 CODE 0 text8 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_lcd_busy 7F6 0 CODE 0 text8 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lintentry 0 0 ABS 0 intentry dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___lldiv@divisor C7 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hramtop 600 0 RAM 0 ramtop dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_high_isr 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __pdataBANK0 60 0 BANK0 1 dataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__pdataBANK1 100 0 BANK1 1 dataBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __activetblptr 3 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __size_of_lcd_wrData 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hstruct 0 0 COMRAM 1 struct dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of___lmul 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_busy 1560 0 CODE 0 text28 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__LbssBANK0 0 0 ABS 0 bssBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_init 165C 0 CODE 0 text8 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_lcd_busy 838 0 CODE 0 text8 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__LbssBANK1 0 0 ABS 0 bssBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Htext10 0 0 ABS 0 text10 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Htext11 0 0 ABS 0 text11 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext12 0 0 ABS 0 text12 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext13 0 0 ABS 0 text13 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext14 0 0 ABS 0 text14 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext15 0 0 ABS 0 text15 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext16 0 0 ABS 0 text16 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext17 0 0 ABS 0 text17 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext18 0 0 ABS 0 text18 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext19 0 0 ABS 0 text19 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext20 0 0 ABS 0 text20 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext21 0 0 ABS 0 text21 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext22 0 0 ABS 0 text22 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext23 0 0 ABS 0 text23 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext24 0 0 ABS 0 text24 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext25 0 0 ABS 0 text25 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext26 0 0 ABS 0 text26 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext27 0 0 ABS 0 text27 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext28 0 0 ABS 0 text28 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext29 0 0 ABS 0 text29 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext30 0 0 ABS 0 text30 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Htext31 0 0 ABS 0 text31 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-lcd_putMessage@chaine C8 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-videAliens@i C5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-videAliens@j C6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___awmod@counter D5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+lcd_putMessage@chaine A9 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _RCSTAbits FAB 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_strobeEnableBit 16AE 0 CODE 0 text26 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_lcd_strobeEnableBit 93E 0 CODE 0 text6 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_HFOFST$ON 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext10 F30 0 CODE 0 text10 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext11 1696 0 CODE 0 text11 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext12 1428 0 CODE 0 text12 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext13 1678 0 CODE 0 text13 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext14 A1E 0 CODE 0 text14 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext15 DDA 0 CODE 0 text15 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext16 B56 0 CODE 0 text16 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext17 1608 0 CODE 0 text17 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext18 850 0 CODE 0 text18 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext19 11D0 0 CODE 0 text19 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext20 147C 0 CODE 0 text20 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext21 15D4 0 CODE 0 text21 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext22 10F2 0 CODE 0 text22 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext23 1688 0 CODE 0 text23 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext24 169E 0 CODE 0 text24 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext25 123C 0 CODE 0 text25 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext26 16A6 0 CODE 0 text26 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext27 165C 0 CODE 0 text27 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext28 151E 0 CODE 0 text28 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext29 16AE 0 CODE 0 text29 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext30 1068 0 CODE 0 text30 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext31 E8A 0 CODE 0 text31 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_lcd_effaceAffichage 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-affichePerdu@F2752 60 0 BANK0 1 dataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_niveau 15A0 0 CODE 0 text7 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext10 8A4 0 CODE 0 text10 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext11 926 0 CODE 0 text11 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __size_of_lcd_ecrireDonnees 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_lireDonnees 16B4 0 CODE 0 text29 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___awmod D28 0 CODE 0 text6 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___lldiv E8A 0 CODE 0 text31 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___llmod 1068 0 CODE 0 text30 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_lcd_lireDonnees 944 0 CODE 0 text9 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lbigram 0 0 ABS 0 bigram dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_BORV$18 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___lmul@multiplier C3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_afficheAliens 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_deplace 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_affichePerdu 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-?_rand CF 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lcomram 0 0 ABS 0 comram dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lconfig 300000 0 CONFIG 0 config dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_ecritChar 147C 0 CODE 0 text20 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-feu@pts CC 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-perdu@i C4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-lcd_initCGRam@i C8 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-lcd_initCGRam@j C9 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-main@posX F7 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_lcd_ecritChar 75E 0 CODE 0 text2 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_cacheCurseur 169E 0 CODE 0 text24 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_putMessage 11D0 0 CODE 0 text19 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-srand@x C3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_lcd_putMessage 686 0 CODE 0 text1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+srand@x A4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lfardata 0 0 FARRAM 0 fardata dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-stackhi 5EE 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\sbvs.o
-stacklo 140 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\sbvs.o
-__Lintcode 8 0 CODE 0 intcode dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+stackhi 5EE 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\s5cc.o
+stacklo 1A8 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\s5cc.o
+__Lintcode 0 0 CODE 0 intcode dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lintret 0 0 ABS 0 intret dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lirdata 0 0 CODE 0 irdata dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _ADCON0bits FC2 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _ADCON2bits FC0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_affichePerdu A1E 0 CODE 0 text18 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_LVP$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_high_isr 8 0 CODE 0 intcode dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-affichePerdu@ptsString D6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lspace_0 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lspace_1 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lspace_2 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_afficheAliens E8A 0 CODE 0 text15 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_effaceAffichage 1688 0 CODE 0 text23 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_niveau 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_high_isr 2C 0 CODE 0 intcode dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_lcd_resetSequence 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-end_of_initialization 1514 0 CODE 0 cinit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_lireDonnees 16AE 0 CODE 0 text29 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-lcd_putMessage@j CC 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+end_of_initialization 904 0 CODE 0 cinit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_lcd_lireDonnees 93E 0 CODE 0 text9 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+lcd_putMessage@j AD 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hintentry 0 0 ABS 0 intentry dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_STVREN$ON 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-nouveauxAliens@alienPlace DD 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-?___awmod D1 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lparam0 0 0 BANK0 1 param0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-?___lldiv C3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-?___llmod C3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Hreset_vec 4 0 CODE 0 reset_vec dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__HbssBANK0 0 0 ABS 0 bssBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___awmod@dividend D1 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__Hreset_vec 0 0 CODE 0 reset_vec dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__HbssBANK1 0 0 ABS 0 bssBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lramtop 600 0 RAM 0 ramtop dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __size_of_initialisation 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__pcinit 14D0 0 CODE 0 cinit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_videAliens 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_putMessage 123C 0 CODE 0 text19 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext0 C42 0 CODE 0 text0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext1 FD2 0 CODE 0 text1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext2 1376 0 CODE 0 text2 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext3 626 0 CODE 0 text3 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext4 13D2 0 CODE 0 text4 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext5 1164 0 CODE 0 text5 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext6 D28 0 CODE 0 text6 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext7 15A0 0 CODE 0 text7 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext8 1634 0 CODE 0 text8 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ptext9 12A8 0 CODE 0 text9 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__pcinit 8D8 0 CODE 0 cinit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_lcd_putMessage 6F2 0 CODE 0 text1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext0 838 0 CODE 0 text0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext1 686 0 CODE 0 text1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext2 75E 0 CODE 0 text2 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext3 870 0 CODE 0 text3 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext4 614 0 CODE 0 text4 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext5 6F2 0 CODE 0 text5 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext6 936 0 CODE 0 text6 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext7 90A 0 CODE 0 text7 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext8 7F6 0 CODE 0 text8 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ptext9 93E 0 CODE 0 text9 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lstruct 0 0 COMRAM 1 struct dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Ltext10 0 0 ABS 0 text10 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Ltext11 0 0 ABS 0 text11 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext12 0 0 ABS 0 text12 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext13 0 0 ABS 0 text13 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext14 0 0 ABS 0 text14 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext15 0 0 ABS 0 text15 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext16 0 0 ABS 0 text16 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext17 0 0 ABS 0 text17 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext18 0 0 ABS 0 text18 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext19 0 0 ABS 0 text19 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext20 0 0 ABS 0 text20 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext21 0 0 ABS 0 text21 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext22 0 0 ABS 0 text22 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext23 0 0 ABS 0 text23 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext24 0 0 ABS 0 text24 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext25 0 0 ABS 0 text25 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext26 0 0 ABS 0 text26 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext27 0 0 ABS 0 text27 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext28 0 0 ABS 0 text28 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext29 0 0 ABS 0 text29 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext30 0 0 ABS 0 text30 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Ltext31 0 0 ABS 0 text31 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__ramtop 600 0 RAM 0 ramtop C:\Users\Drago\AppData\Local\Temp\sbvs.o
-__Lpowerup 2C 0 CODE 0 powerup dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__ramtop 600 0 RAM 0 ramtop C:\Users\Drago\AppData\Local\Temp\s5cc.o
+__Lpowerup 0 0 CODE 0 powerup dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __psmallconst 600 0 SMALLCONST 0 smallconst dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_deplace C42 0 CODE 0 text16 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-main@points F5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_cacheCurseur 16A6 0 CODE 0 text24 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __size_of_lcd_ecritChar 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 ___param_bank 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of__initialization 1514 0 CODE 0 cinit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___awmod@divisor D3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of__initialization 904 0 CODE 0 cinit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_WRT0$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_WRT1$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_WRT2$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_WRT3$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_ecrireDonnees 1678 0 CODE 0 text27 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_lcd_ecrireDonnees 926 0 CODE 0 text7 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_WRTB$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Libigdata 0 0 CODE 0 ibigdata dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_WRTC$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_WRTD$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__pidataBANK0 1312 0 CODE 0 idataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__pidataBANK1 1560 0 CODE 0 idataBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_lcd_cacheCurseur 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__pidataBANK0 7B2 0 CODE 0 idataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lclrtext 0 0 ABS 0 clrtext dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___lmul@product CB 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_nouveauxAliens 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___lmul@multiplicand C7 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_PWRT$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _ANSELbits F7E 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___lldiv@quotient CB 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _TXSTAbits FAC 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___llmod@dividend C3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-lcd_gotoXY@x C7 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-lcd_gotoXY@y C6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+lcd_gotoXY@x A8 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+lcd_gotoXY@y A7 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_BOREN$SBORDIS 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-___llmod@counter CB 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_main D28 0 CODE 0 text0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_rand 1428 0 CODE 0 text4 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__pintcode 8 0 CODE 0 intcode dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_ecritChar 14D0 0 CODE 0 text20 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_main 870 0 CODE 0 text0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_lcd_ecritChar 7B2 0 CODE 0 text2 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _ANSEL F7E 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_effaceAffichage 1696 0 CODE 0 text23 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __size_of_lcd_lireDonnees 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _PORTD F83 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _RCREG FAE 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
@@ -980,8 +496,7 @@ _TRISA F92 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _TRISB F93 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _TRISD F95 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 _TXREG FAD 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_perdu 13D2 0 CODE 0 text2 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_srand 1688 0 CODE 0 text13 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__end_of_srand 936 0 CODE 0 text11 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_CP0$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_CP1$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __HRAM 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
@@ -995,24 +510,19 @@ __Lsfr 0 0 ABS 0 sfr dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_CP2$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_CP3$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_CPB$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_perdu 1376 0 CODE 0 text2 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __CFG_CPD$OFF 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_randx 6A 0 BANK0 1 dataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_srand 1678 0 CODE 0 text13 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-lcd_ecritChar@posRam C7 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__size_of_feu 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_randx A0 0 BANK0 1 dataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_srand 926 0 CODE 0 text11 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+lcd_ecritChar@posRam A8 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__HdataBANK1 0 0 ABS 0 dataBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__end_of_lcd_resetSequence 1312 0 CODE 0 text9 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__initialization 14D0 0 CODE 0 cinit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__pbssBANK0 F9 0 BANK0 1 bssBANK0 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__initialization 8D8 0 CODE 0 cinit dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__pbssBANK1 100 0 BANK1 1 bssBANK1 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hfardata 0 0 FARRAM 0 fardata dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Hsmallconst 626 0 SMALLCONST 0 smallconst dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__Hsmallconst 614 0 SMALLCONST 0 smallconst dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Lifardata 0 0 CODE 0 ifardata dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_gotoXY 10F2 0 CODE 0 text22 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-_lcd_initCGRam F30 0 CODE 0 text10 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+_lcd_gotoXY 614 0 CODE 0 text4 dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
-__Hintcode 2C 0 CODE 0 intcode dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
+__Hintcode 0 0 CODE 0 intcode dist/Mini_board_config/debug\IsakBedardAliens.X.debug.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1038,14 +548,11 @@ __Hintcode 2C 0 CODE 0 intcode dist/Mini_board_config/debug\IsakBedardAliens.X.d
 # All other numeric quantities are in decimal.
 %SEGMENTS
 idloc 0 200000 200000 8 1
-text2 0 1376 1376 33E 1
-text3 0 626 626 D4F 1
-temp 1 1 1 1 1
+text4 0 614 614 330 1
 reset_vec 0 0 0 4 1
-intcode 0 8 8 28 1
-smallconst 0 600 600 26 1
-dataBANK0 1 60 60 9A 1
-dataBANK1 1 100 100 40 1
+bssBANK1 1 100 100 A8 1
+smallconst 0 600 600 14 1
+dataBANK0 1 60 60 4F 1
 config 0 300000 300000 E 1
 # OTES Section
 # This section contains data of all the note-psects.  The beginning of the section
