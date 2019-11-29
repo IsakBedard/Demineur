@@ -224,18 +224,17 @@ void deplace(char* x, char* y)
     
     if (0 <= analogY && analogY <= 80) //si le joystick est vers le haut
     {
-        *y = (*y)-1; //décale la position de 1 vers la gauche
+        *y = (*y)-1; //décale la position de 1 vers le haut
         if ((*y)<=0) //si on dépasse de l'écran
             *y=4; //on revient de l'autre côté
     }
     else if (175 <= analogY && analogY <= 255) //si le joystick est vers le bas
     {
-        *y = (*y)+1; //décale la position de 1 vers la droite
+        *y = (*y)+1; //décale la position de 1 vers le bas
         if ((*y)>=5) //si on dépasse de l'écran
             *y=1; //on revient de l'autre côté
     }
-    lcd_gotoXY(*x, *y); //on met le curseur à la nouvelle position. 4 correspond
-    //à la dernière ligne.
+    lcd_gotoXY(*x, *y); //on met le curseur à la nouvelle position.
 }
 /*
  * @brief Dévoile une tuile (case) de m_tabVue. 
@@ -247,7 +246,12 @@ void deplace(char* x, char* y)
  */
 bool demine(char x, char y)
 {
-    
+    if (m_tabMines[x-1][y-1]==MINE)
+        return false;
+    else
+    {
+        enleveTuilesAutour(x,y);
+    }
 }
 /*
  * @brief Dévoile les cases non minées autour de la tuile reçue en paramètre.

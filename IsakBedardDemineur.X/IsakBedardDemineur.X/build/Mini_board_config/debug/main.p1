@@ -3737,94 +3737,94 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 236: }
 [; ;main.c: 237: lcd_gotoXY(*x, *y);
 [e ( _lcd_gotoXY (2 , *U _x *U _y ]
-[; ;main.c: 239: }
-"239
+[; ;main.c: 238: }
+"238
 [e :UE 350 ]
 }
 [v F2758 `(uc ~T0 @X0 1 tf2`uc`uc ]
-"248
+"247
 [v _demine `AF2758 ~T0 @X0 1 e ]
-"249
-{
-[; ;main.c: 248: bool demine(char x, char y)
-[; ;main.c: 249: {
-[e :U _demine ]
 "248
+{
+[; ;main.c: 247: bool demine(char x, char y)
+[; ;main.c: 248: {
+[e :U _demine ]
+"247
 [v _x `uc ~T0 @X0 1 r1 ]
 [v _y `uc ~T0 @X0 1 r2 ]
-"249
+"248
 [f ]
-[; ;main.c: 251: }
-"251
+[; ;main.c: 250: }
+"250
 [e :UE 361 ]
 }
 [v F2761 `(v ~T0 @X0 1 tf2`uc`uc ]
-"258
+"257
 [v _enleveTuilesAutour `AF2761 ~T0 @X0 1 e ]
-"259
-{
-[; ;main.c: 258: void enleveTuilesAutour(char x, char y)
-[; ;main.c: 259: {
-[e :U _enleveTuilesAutour ]
 "258
+{
+[; ;main.c: 257: void enleveTuilesAutour(char x, char y)
+[; ;main.c: 258: {
+[e :U _enleveTuilesAutour ]
+"257
 [v _x `uc ~T0 @X0 1 r1 ]
 [v _y `uc ~T0 @X0 1 r2 ]
-"259
+"258
 [f ]
-[; ;main.c: 261: }
-"261
+[; ;main.c: 260: }
+"260
 [e :UE 362 ]
 }
 [v F2763 `(uc ~T0 @X0 1 tf1`*i ]
-"269
+"268
 [v _gagne `AF2763 ~T0 @X0 1 e ]
-"270
-{
-[; ;main.c: 269: bool gagne(int* pMines)
-[; ;main.c: 270: {
-[e :U _gagne ]
 "269
+{
+[; ;main.c: 268: bool gagne(int* pMines)
+[; ;main.c: 269: {
+[e :U _gagne ]
+"268
 [v _pMines `*i ~T0 @X0 1 r1 ]
-"270
+"269
 [f ]
-[; ;main.c: 272: }
-"272
+[; ;main.c: 271: }
+"271
 [e :UE 363 ]
 }
 [v F2765 `(uc ~T0 @X0 1 tf1`uc ]
-"279
+"278
 [v _getAnalog `AF2765 ~T0 @X0 1 e ]
-"280
-{
-[; ;main.c: 279: char getAnalog(char canal)
-[; ;main.c: 280: {
-[e :U _getAnalog ]
 "279
+{
+[; ;main.c: 278: char getAnalog(char canal)
+[; ;main.c: 279: {
+[e :U _getAnalog ]
+"278
 [v _canal `uc ~T0 @X0 1 r1 ]
-"280
+"279
 [f ]
-[; ;main.c: 281: ADCON0bits.CHS = canal;
-"281
+[; ;main.c: 280: ADCON0bits.CHS = canal;
+"280
 [e = . . _ADCON0bits 1 2 _canal ]
-[; ;main.c: 282: _delay((unsigned long)((1)*(1000000/4000000.0)));
-"282
+[; ;main.c: 281: _delay((unsigned long)((1)*(1000000/4000000.0)));
+"281
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 1000000 `l `d .4000000.0 `ul ]
-[; ;main.c: 283: ADCON0bits.GO_DONE = 1;
-"283
+[; ;main.c: 282: ADCON0bits.GO_DONE = 1;
+"282
 [e = . . _ADCON0bits 5 1 -> -> 1 `i `uc ]
-[; ;main.c: 284: while (ADCON0bits.GO_DONE == 1);
-"284
+[; ;main.c: 283: while (ADCON0bits.GO_DONE == 1);
+"283
 [e $U 365  ]
 [e :U 366 ]
 [e :U 365 ]
 [e $ == -> . . _ADCON0bits 5 1 `i -> 1 `i 366  ]
 [e :U 367 ]
-[; ;main.c: 285: return ADRESH;
-"285
+[; ;main.c: 284: return ADRESH;
+"284
 [e ) _ADRESH ]
 [e $UE 364  ]
-[; ;main.c: 286: }
-"286
+[; ;main.c: 285: }
+"285
 [e :UE 364 ]
 }
 [a 1C 76 65 66 54 32 73 115 97 107 32 66 101 100 97 114 100 0 ]

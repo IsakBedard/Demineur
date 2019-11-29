@@ -75,7 +75,7 @@
 [v _calculToucheCombien calculToucheCombien `A(uc  1 e 1 0 ]
 "207
 [v _deplace deplace `A(v  1 e 1 0 ]
-"279
+"278
 [v _getAnalog getAnalog `A(uc  1 e 1 0 ]
 "446 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f45k20.h
 [v _ANSEL ANSEL `VEuc  1 e 1 @3966 ]
@@ -513,7 +513,7 @@
 "207
 [v deplace@x x `*.39uc  1 p 2 5 ]
 [v deplace@y y `*.39uc  1 p 2 7 ]
-"239
+"238
 } 0
 "314 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
 [v _lcd_gotoXY lcd_gotoXY `A(v  1 e 1 0 ]
@@ -559,12 +559,12 @@
 {
 "98
 } 0
-"279 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"278 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _getAnalog getAnalog `A(uc  1 e 1 0 ]
 {
 [v getAnalog@canal canal `uc  1 a 1 wreg ]
 [v getAnalog@canal canal `uc  1 a 1 wreg ]
-"281
+"280
 [v getAnalog@canal canal `uc  1 a 1 1 ]
-"286
+"285
 } 0

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Fri Nov 29 15:51:15 2019
+                                                                                               Fri Nov 29 16:08:11 2019
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F45K20
@@ -3639,7 +3639,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3625                           
   3626 ;; *************** function _getAnalog *****************
   3627 ;; Defined at:
-  3628 ;;		line 279 in file "main.c"
+  3628 ;;		line 278 in file "main.c"
   3629 ;; Parameters:    Size  Location     Type
   3630 ;;  canal           1    wreg     unsigned char 
   3631 ;; Auto vars:     Size  Location     Type
@@ -3677,7 +3677,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3663  001398  0100               	movlb	0	; force () banked
   3664  00139A  6FB5               	movwf	getAnalog@canal& (0+255),b
   3665  00139C                     
-  3666                           ;main.c: 281: ADCON0bits.CHS = canal;
+  3666                           ;main.c: 280: ADCON0bits.CHS = canal;
   3667  00139C  C0B5  F0B4         	movff	getAnalog@canal,??_getAnalog
   3668  0013A0  0100               	movlb	0	; force () banked
   3669  0013A2  47B4               	rlncf	??_getAnalog& (0+255),f,b
@@ -3688,7 +3688,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3674  0013AC  19B4               	xorwf	??_getAnalog& (0+255),w,b
   3675  0013AE  6EC2               	movwf	194,c	;volatile
   3676  0013B0                     
-  3677                           ;main.c: 283: ADCON0bits.GO_DONE = 1;
+  3677                           ;main.c: 282: ADCON0bits.GO_DONE = 1;
   3678  0013B0  82C2               	bsf	194,1,c	;volatile
   3679  0013B2                     l137:
   3680  0013B2  B2C2               	btfsc	194,1,c	;volatile
@@ -3698,7 +3698,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3684  0013BC  EFD9  F009         	goto	l137
   3685  0013C0                     u730:
   3686  0013C0                     
-  3687                           ;main.c: 285: return ADRESH;
+  3687                           ;main.c: 284: return ADRESH;
   3688  0013C0  50C4               	movf	196,w,c	;volatile
   3689  0013C2  0012               	return		;funcret
   3690  0013C4                     __end_of_getAnalog:
@@ -4052,7 +4052,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Fri Nov 29 15:51:15 2019
+Symbol Table                                                                                   Fri Nov 29 16:08:11 2019
 
  __end_of_calculToucheCombien 07B6                            l76 0F4E                            l69 1396  
                           l87 0BE8                            l96 0A8C           ___wmul@multiplicand 00B6  

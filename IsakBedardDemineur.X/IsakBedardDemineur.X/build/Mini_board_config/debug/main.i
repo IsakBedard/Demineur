@@ -5046,28 +5046,27 @@ if ((*y)>=5)
 *y=1;
 }
 lcd_gotoXY(*x, *y);
-
 }
 
-# 248
+# 247
 bool demine(char x, char y)
 {
 
 }
 
-# 258
+# 257
 void enleveTuilesAutour(char x, char y)
 {
 
 }
 
-# 269
+# 268
 bool gagne(int* pMines)
 {
 
 }
 
-# 279
+# 278
 char getAnalog(char canal)
 {
 ADCON0bits.CHS = canal;
