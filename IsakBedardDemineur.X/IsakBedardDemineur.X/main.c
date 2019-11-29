@@ -29,6 +29,7 @@
 #define PORT_SW PORTBbits.RB1 //sw de la manette
 #define TUILE 1 //caractère cgram d'une tuile
 #define MINE 2 //caractère cgram d'une mine
+#define NB_MINES 10 //nombre de mines dans le champ de mines
 /********************** PROTOTYPES *******************************************/
 void initialisation(void);
 void initTabVue(void);
@@ -49,6 +50,7 @@ void main(void)
     lcd_init();
     lcd_putMessage("LAB6 Isak Bedard");
     initTabVue();
+    rempliMines(NB_MINES);
     while(1)
     {
         __delay_ms(100);
@@ -109,8 +111,27 @@ void initTabVue(void)
  */
 void rempliMines(int nb)
 {
+    char x,y;
     
+    for (char i = 0; i < NB_LIGNE; i++)
+    {
+        for(char j=0;j<(NB_COL);j++)
+        {
+            m_tabMines[i][j]=' ';
+        }
+    }
+    while(nb>0)
+    {
+        x=rand()%20;
+        y=rand()%4;
+        if (m_tabMines[y][x]!=MINE)
+        {
+            m_tabMines[y][x]=MINE;
+            nb--;
+        }
+    }
 }
+
 /*
  * @brief Rempli le tableau m_tabMines avec le nombre de mines que touche la case.
  * Si une case touche à 3 mines, alors la méthode place le code ascii de 3 dans

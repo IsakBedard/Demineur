@@ -4872,7 +4872,7 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 
-# 33 "main.c"
+# 34 "main.c"
 void initialisation(void);
 void initTabVue(void);
 void rempliMines(int nb);
@@ -4892,13 +4892,14 @@ initialisation();
 lcd_init();
 lcd_putMessage("LAB6 Isak Bedard");
 initTabVue();
+rempliMines(1);
 while(1)
 {
 _delay((unsigned long)((100)*(1000000/4000.0)));
 }
 }
 
-# 63
+# 65
 void initialisation(void)
 {
 TRISD = 0;
@@ -4920,7 +4921,7 @@ ADCON2bits.ACQT = 0;
 ADCON2bits.ADCS = 0;
 }
 
-# 91
+# 93
 void initTabVue(void)
 {
 for (char i = 0; i < 4; i++)
@@ -4933,43 +4934,61 @@ m_tabVue[i][20]=0;
 }
 }
 
-# 110
+# 112
 void rempliMines(int nb)
 {
+char x,y;
 
+for (char i = 0; i < 4; i++)
+{
+for(char j=0;j<(20);j++)
+{
+m_tabMines[i][j]=' ';
+}
+}
+while(nb>0)
+{
+x=rand()%20;
+y=rand()%4;
+if (m_tabMines[y][x]!=2)
+{
+m_tabMines[y][x]=2;
+nb--;
+}
+}
 }
 
-# 123
+# 144
 void metToucheCombien(void)
 {
 
 }
 
-# 132
+# 153
 char calculToucheCombien(int ligne, int colonne)
 {
 
 }
 
-# 142
+# 163
 void deplace(char* x, char* y)
 {
 
 }
 
-# 154
+# 175
 bool demine(char x, char y)
 {
 
 }
 
-# 164
+# 185
 void enleveTuilesAutour(char x, char y)
 {
 
 }
 
-# 175
+# 196
 bool gagne(int* pMines)
 {
 

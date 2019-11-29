@@ -1,13 +1,15 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"33 main.c
+"34 main.c
 [v _initialisation `(v ~T0 @X0 0 ef ]
 "27 Lcd4Lignes.h
 [v _lcd_init `(v ~T0 @X0 0 ef ]
 "51
 [v _lcd_putMessage `(v ~T0 @X0 0 ef1`*Cuc ]
-"34 main.c
+"35 main.c
 [v _initTabVue `(v ~T0 @X0 0 ef ]
+"36
+[v _rempliMines `(v ~T0 @X0 0 ef1`i ]
 [v F2525 `(v ~T0 @X0 1 tf1`ul ]
 "187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
 [v __delay `JF2525 ~T0 @X0 0 e ]
@@ -93,6 +95,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S197 . . . ]
 "5074
 [v _ADCON2bits `VS197 ~T0 @X0 0 e@4032 ]
+"75 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdlib.h
+[v _rand `(i ~T0 @X0 0 ef ]
 [; ;xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3115,288 +3119,374 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdlib.h: 119: extern char * ltoa(char * buf, long val, int base);
 [; ;stdlib.h: 120: extern char * ultoa(char * buf, unsigned long val, int base);
 [; ;stdlib.h: 122: extern char * ftoa(float f, int * status);
-[; ;main.c: 33: void initialisation(void);
-[; ;main.c: 34: void initTabVue(void);
-[; ;main.c: 35: void rempliMines(int nb);
-[; ;main.c: 36: void metToucheCombien(void);
-[; ;main.c: 37: char calculToucheCombien(int ligne, int colonne);
-[; ;main.c: 38: void deplace(char* x, char* y);
-[; ;main.c: 39: bool demine(char x, char y);
-[; ;main.c: 40: void enleveTuilesAutour(char x, char y);
-[; ;main.c: 41: bool gagne(int* pMines);
+[; ;main.c: 34: void initialisation(void);
+[; ;main.c: 35: void initTabVue(void);
+[; ;main.c: 36: void rempliMines(int nb);
+[; ;main.c: 37: void metToucheCombien(void);
+[; ;main.c: 38: char calculToucheCombien(int ligne, int colonne);
+[; ;main.c: 39: void deplace(char* x, char* y);
+[; ;main.c: 40: bool demine(char x, char y);
+[; ;main.c: 41: void enleveTuilesAutour(char x, char y);
+[; ;main.c: 42: bool gagne(int* pMines);
 [v F2716 `uc ~T0 @X0 + -> 20 `i -> 1 `i t ]
-"43 main.c
+"44 main.c
 [v _m_tabVue `AF2716 ~T0 @X0 -> 4 `i e ]
-[; ;main.c: 43: char m_tabVue[4][20+1];
+[; ;main.c: 44: char m_tabVue[4][20+1];
 [v F2718 `uc ~T0 @X0 + -> 20 `i -> 1 `i t ]
-"44
+"45
 [v _m_tabMines `AF2718 ~T0 @X0 -> 4 `i e ]
-[; ;main.c: 44: char m_tabMines[4][20+1];
+[; ;main.c: 45: char m_tabMines[4][20+1];
 [v $root$_main `(v ~T0 @X0 0 e ]
 [v F2721 `(v ~T0 @X0 1 tf ]
-"46
-[v _main `AF2721 ~T0 @X0 1 e ]
 "47
+[v _main `AF2721 ~T0 @X0 1 e ]
+"48
 {
-[; ;main.c: 46: void main(void)
-[; ;main.c: 47: {
+[; ;main.c: 47: void main(void)
+[; ;main.c: 48: {
 [e :U _main ]
 [f ]
-[; ;main.c: 48: initialisation();
-"48
-[e ( _initialisation ..  ]
-[; ;main.c: 49: lcd_init();
+[; ;main.c: 49: initialisation();
 "49
-[e ( _lcd_init ..  ]
-[; ;main.c: 50: lcd_putMessage("LAB6 Isak Bedard");
+[e ( _initialisation ..  ]
+[; ;main.c: 50: lcd_init();
 "50
-[e ( _lcd_putMessage (1 :s 1C ]
-[; ;main.c: 51: initTabVue();
+[e ( _lcd_init ..  ]
+[; ;main.c: 51: lcd_putMessage("LAB6 Isak Bedard");
 "51
-[e ( _initTabVue ..  ]
-[; ;main.c: 52: while(1)
+[e ( _lcd_putMessage (1 :s 1C ]
+[; ;main.c: 52: initTabVue();
 "52
-[e :U 302 ]
-[; ;main.c: 53: {
+[e ( _initTabVue ..  ]
+[; ;main.c: 53: rempliMines(1);
 "53
-{
-[; ;main.c: 54: _delay((unsigned long)((100)*(1000000/4000.0)));
+[e ( _rempliMines (1 -> 1 `i ]
+[; ;main.c: 54: while(1)
 "54
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[e :U 302 ]
+[; ;main.c: 55: {
 "55
+{
+[; ;main.c: 56: _delay((unsigned long)((100)*(1000000/4000.0)));
+"56
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+"57
 }
 [e :U 301 ]
-"52
+"54
 [e $U 302  ]
 [e :U 303 ]
-[; ;main.c: 55: }
-[; ;main.c: 56: }
-"56
+[; ;main.c: 57: }
+[; ;main.c: 58: }
+"58
 [e :UE 300 ]
 }
 [v F2724 `(v ~T0 @X0 1 tf ]
-"63
+"65
 [v _initialisation `AF2724 ~T0 @X0 1 e ]
-"64
+"66
 {
-[; ;main.c: 63: void initialisation(void)
-[; ;main.c: 64: {
+[; ;main.c: 65: void initialisation(void)
+[; ;main.c: 66: {
 [e :U _initialisation ]
 [f ]
-[; ;main.c: 65: TRISD = 0;
-"65
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 66: ANSELH = 0;
-"66
-[e = _ANSELH -> -> 0 `i `uc ]
-[; ;main.c: 67: TRISB = 0xFF;
+[; ;main.c: 67: TRISD = 0;
 "67
-[e = _TRISB -> -> 255 `i `uc ]
-[; ;main.c: 68: ANSEL = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 68: ANSELH = 0;
 "68
-[e = _ANSEL -> -> 0 `i `uc ]
-[; ;main.c: 69: TRISA = 0;
+[e = _ANSELH -> -> 0 `i `uc ]
+[; ;main.c: 69: TRISB = 0xFF;
 "69
+[e = _TRISB -> -> 255 `i `uc ]
+[; ;main.c: 70: ANSEL = 0;
+"70
+[e = _ANSEL -> -> 0 `i `uc ]
+[; ;main.c: 71: TRISA = 0;
+"71
 [e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 73: T1CONbits.TMR1ON = 1;
-"73
+[; ;main.c: 75: T1CONbits.TMR1ON = 1;
+"75
 [e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
-[; ;main.c: 74: srand(TMR1);
-"74
-[e ( _srand (1 -> _TMR1 `ui ]
-[; ;main.c: 76: ANSELbits.ANS7 = 1;
+[; ;main.c: 76: srand(TMR1);
 "76
-[e = . . _ANSELbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 77: ADCON0bits.ADON = 1;
-"77
-[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-[; ;main.c: 78: ADCON1 = 0;
+[e ( _srand (1 -> _TMR1 `ui ]
+[; ;main.c: 78: ANSELbits.ANS7 = 1;
 "78
-[e = _ADCON1 -> -> 0 `i `uc ]
-[; ;main.c: 79: ADCON2bits.ADFM = 0;
+[e = . . _ANSELbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 79: ADCON0bits.ADON = 1;
 "79
-[e = . . _ADCON2bits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 80: ADCON2bits.ACQT = 0;
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;main.c: 80: ADCON1 = 0;
 "80
-[e = . . _ADCON2bits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 81: ADCON2bits.ADCS = 0;
+[e = _ADCON1 -> -> 0 `i `uc ]
+[; ;main.c: 81: ADCON2bits.ADFM = 0;
 "81
-[e = . . _ADCON2bits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 82: }
+[e = . . _ADCON2bits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 82: ADCON2bits.ACQT = 0;
 "82
+[e = . . _ADCON2bits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 83: ADCON2bits.ADCS = 0;
+"83
+[e = . . _ADCON2bits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 84: }
+"84
 [e :UE 304 ]
 }
 [v F2726 `(v ~T0 @X0 1 tf ]
-"91
+"93
 [v _initTabVue `AF2726 ~T0 @X0 1 e ]
-"92
+"94
 {
-[; ;main.c: 91: void initTabVue(void)
-[; ;main.c: 92: {
+[; ;main.c: 93: void initTabVue(void)
+[; ;main.c: 94: {
 [e :U _initTabVue ]
 [f ]
-[; ;main.c: 93: for (char i = 0; i < 4; i++)
-"93
+[; ;main.c: 95: for (char i = 0; i < 4; i++)
+"95
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 4 `i 306  ]
 [e $U 307  ]
-"94
+"96
 [e :U 306 ]
-[; ;main.c: 94: {
+[; ;main.c: 96: {
 {
-[; ;main.c: 95: for(char j=0;j<(20);j++)
-"95
+[; ;main.c: 97: for(char j=0;j<(20);j++)
+"97
 {
 [v _j `uc ~T0 @X0 1 a ]
 [e = _j -> -> 0 `i `uc ]
 [e $ < -> _j `i -> 20 `i 309  ]
 [e $U 310  ]
-"96
-[e :U 309 ]
-[; ;main.c: 96: {
-{
-[; ;main.c: 97: m_tabVue[i][j]=1;
-"97
-[e = *U + &U *U + &U _m_tabVue * -> _i `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _j `ux -> -> # *U &U *U + &U _m_tabVue * -> _i `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 1 `i `uc ]
 "98
+[e :U 309 ]
+[; ;main.c: 98: {
+{
+[; ;main.c: 99: m_tabVue[i][j]=1;
+"99
+[e = *U + &U *U + &U _m_tabVue * -> _i `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _j `ux -> -> # *U &U *U + &U _m_tabVue * -> _i `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 1 `i `uc ]
+"100
 }
-"95
+"97
 [e ++ _j -> -> 1 `i `uc ]
 [e $ < -> _j `i -> 20 `i 309  ]
 [e :U 310 ]
-"98
-}
-[; ;main.c: 98: }
-[; ;main.c: 99: m_tabVue[i][20]=0;
-"99
-[e = *U + &U *U + &U _m_tabVue * -> _i `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> -> 20 `i `ui `ux -> -> # *U &U *U + &U _m_tabVue * -> _i `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
-"100
-}
-"93
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 4 `i 306  ]
-[e :U 307 ]
 "100
 }
 [; ;main.c: 100: }
-[; ;main.c: 101: }
+[; ;main.c: 101: m_tabVue[i][20]=0;
 "101
+[e = *U + &U *U + &U _m_tabVue * -> _i `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> -> 20 `i `ui `ux -> -> # *U &U *U + &U _m_tabVue * -> _i `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
+"102
+}
+"95
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 4 `i 306  ]
+[e :U 307 ]
+"102
+}
+[; ;main.c: 102: }
+[; ;main.c: 103: }
+"103
 [e :UE 305 ]
 }
 [v F2730 `(v ~T0 @X0 1 tf1`i ]
-"110
+"112
 [v _rempliMines `AF2730 ~T0 @X0 1 e ]
-"111
-{
-[; ;main.c: 110: void rempliMines(int nb)
-[; ;main.c: 111: {
-[e :U _rempliMines ]
-"110
-[v _nb `i ~T0 @X0 1 r1 ]
-"111
-[f ]
-[; ;main.c: 113: }
 "113
-[e :UE 312 ]
+{
+[; ;main.c: 112: void rempliMines(int nb)
+[; ;main.c: 113: {
+[e :U _rempliMines ]
+"112
+[v _nb `i ~T0 @X0 1 r1 ]
+"113
+[f ]
+"114
+[v _x `uc ~T0 @X0 1 a ]
+[v _y `uc ~T0 @X0 1 a ]
+[; ;main.c: 114: char x,y;
+[; ;main.c: 116: for (char i = 0; i < 4; i++)
+"116
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 4 `i 313  ]
+[e $U 314  ]
+"117
+[e :U 313 ]
+[; ;main.c: 117: {
+{
+[; ;main.c: 118: for(char j=0;j<(20);j++)
+"118
+{
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+[e $ < -> _j `i -> 20 `i 316  ]
+[e $U 317  ]
+"119
+[e :U 316 ]
+[; ;main.c: 119: {
+{
+[; ;main.c: 120: m_tabMines[i][j]=' ';
+"120
+[e = *U + &U *U + &U _m_tabMines * -> _i `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _j `ux -> -> # *U &U *U + &U _m_tabMines * -> _i `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 32 `ui `uc ]
+"121
 }
-[v F2732 `(v ~T0 @X0 1 tf ]
+"118
+[e ++ _j -> -> 1 `i `uc ]
+[e $ < -> _j `i -> 20 `i 316  ]
+[e :U 317 ]
+"121
+}
+"122
+}
+"116
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 4 `i 313  ]
+[e :U 314 ]
+"122
+}
+[; ;main.c: 121: }
+[; ;main.c: 122: }
+[; ;main.c: 123: while(nb>0)
 "123
-[v _metToucheCombien `AF2732 ~T0 @X0 1 e ]
+[e $U 319  ]
+[e :U 320 ]
+[; ;main.c: 124: {
 "124
 {
-[; ;main.c: 123: void metToucheCombien(void)
-[; ;main.c: 124: {
+[; ;main.c: 125: x=rand()%20;
+"125
+[e = _x -> % ( _rand ..  -> 20 `i `uc ]
+[; ;main.c: 126: y=rand()%4;
+"126
+[e = _y -> % ( _rand ..  -> 4 `i `uc ]
+[; ;main.c: 127: if (m_tabMines[y][x]!=2)
+"127
+[e $ ! != -> *U + &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _x `ux -> -> # *U &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 322  ]
+[; ;main.c: 128: {
+"128
+{
+[; ;main.c: 129: m_tabMines[y][x]=2;
+"129
+[e = *U + &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _x `ux -> -> # *U &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 2 `i `uc ]
+[; ;main.c: 130: nb--;
+"130
+[e -- _nb -> 1 `i ]
+"131
+}
+[e :U 322 ]
+"132
+}
+[e :U 319 ]
+"123
+[e $ > _nb -> 0 `i 320  ]
+[e :U 321 ]
+[; ;main.c: 131: }
+[; ;main.c: 132: }
+[; ;main.c: 133: }
+"133
+[e :UE 312 ]
+}
+[v F2736 `(v ~T0 @X0 1 tf ]
+"144
+[v _metToucheCombien `AF2736 ~T0 @X0 1 e ]
+"145
+{
+[; ;main.c: 144: void metToucheCombien(void)
+[; ;main.c: 145: {
 [e :U _metToucheCombien ]
 [f ]
-[; ;main.c: 126: }
-"126
-[e :UE 313 ]
+[; ;main.c: 147: }
+"147
+[e :UE 323 ]
 }
-[v F2735 `(uc ~T0 @X0 1 tf2`i`i ]
-"132
-[v _calculToucheCombien `AF2735 ~T0 @X0 1 e ]
-"133
+[v F2739 `(uc ~T0 @X0 1 tf2`i`i ]
+"153
+[v _calculToucheCombien `AF2739 ~T0 @X0 1 e ]
+"154
 {
-[; ;main.c: 132: char calculToucheCombien(int ligne, int colonne)
-[; ;main.c: 133: {
+[; ;main.c: 153: char calculToucheCombien(int ligne, int colonne)
+[; ;main.c: 154: {
 [e :U _calculToucheCombien ]
-"132
+"153
 [v _ligne `i ~T0 @X0 1 r1 ]
 [v _colonne `i ~T0 @X0 1 r2 ]
-"133
+"154
 [f ]
-[; ;main.c: 135: }
-"135
-[e :UE 314 ]
+[; ;main.c: 156: }
+"156
+[e :UE 324 ]
 }
-[v F2738 `(v ~T0 @X0 1 tf2`*uc`*uc ]
-"142
-[v _deplace `AF2738 ~T0 @X0 1 e ]
-"143
+[v F2742 `(v ~T0 @X0 1 tf2`*uc`*uc ]
+"163
+[v _deplace `AF2742 ~T0 @X0 1 e ]
+"164
 {
-[; ;main.c: 142: void deplace(char* x, char* y)
-[; ;main.c: 143: {
+[; ;main.c: 163: void deplace(char* x, char* y)
+[; ;main.c: 164: {
 [e :U _deplace ]
-"142
+"163
 [v _x `*uc ~T0 @X0 1 r1 ]
 [v _y `*uc ~T0 @X0 1 r2 ]
-"143
-[f ]
-[; ;main.c: 145: }
-"145
-[e :UE 315 ]
-}
-[v F2741 `(uc ~T0 @X0 1 tf2`uc`uc ]
-"154
-[v _demine `AF2741 ~T0 @X0 1 e ]
-"155
-{
-[; ;main.c: 154: bool demine(char x, char y)
-[; ;main.c: 155: {
-[e :U _demine ]
-"154
-[v _x `uc ~T0 @X0 1 r1 ]
-[v _y `uc ~T0 @X0 1 r2 ]
-"155
-[f ]
-[; ;main.c: 157: }
-"157
-[e :UE 316 ]
-}
-[v F2744 `(v ~T0 @X0 1 tf2`uc`uc ]
 "164
-[v _enleveTuilesAutour `AF2744 ~T0 @X0 1 e ]
-"165
-{
-[; ;main.c: 164: void enleveTuilesAutour(char x, char y)
-[; ;main.c: 165: {
-[e :U _enleveTuilesAutour ]
-"164
-[v _x `uc ~T0 @X0 1 r1 ]
-[v _y `uc ~T0 @X0 1 r2 ]
-"165
 [f ]
-[; ;main.c: 167: }
-"167
-[e :UE 317 ]
+[; ;main.c: 166: }
+"166
+[e :UE 325 ]
 }
-[v F2746 `(uc ~T0 @X0 1 tf1`*i ]
+[v F2745 `(uc ~T0 @X0 1 tf2`uc`uc ]
 "175
-[v _gagne `AF2746 ~T0 @X0 1 e ]
+[v _demine `AF2745 ~T0 @X0 1 e ]
 "176
 {
-[; ;main.c: 175: bool gagne(int* pMines)
+[; ;main.c: 175: bool demine(char x, char y)
 [; ;main.c: 176: {
-[e :U _gagne ]
+[e :U _demine ]
 "175
-[v _pMines `*i ~T0 @X0 1 r1 ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[v _y `uc ~T0 @X0 1 r2 ]
 "176
 [f ]
 [; ;main.c: 178: }
 "178
-[e :UE 318 ]
+[e :UE 326 ]
+}
+[v F2748 `(v ~T0 @X0 1 tf2`uc`uc ]
+"185
+[v _enleveTuilesAutour `AF2748 ~T0 @X0 1 e ]
+"186
+{
+[; ;main.c: 185: void enleveTuilesAutour(char x, char y)
+[; ;main.c: 186: {
+[e :U _enleveTuilesAutour ]
+"185
+[v _x `uc ~T0 @X0 1 r1 ]
+[v _y `uc ~T0 @X0 1 r2 ]
+"186
+[f ]
+[; ;main.c: 188: }
+"188
+[e :UE 327 ]
+}
+[v F2750 `(uc ~T0 @X0 1 tf1`*i ]
+"196
+[v _gagne `AF2750 ~T0 @X0 1 e ]
+"197
+{
+[; ;main.c: 196: bool gagne(int* pMines)
+[; ;main.c: 197: {
+[e :U _gagne ]
+"196
+[v _pMines `*i ~T0 @X0 1 r1 ]
+"197
+[f ]
+[; ;main.c: 199: }
+"199
+[e :UE 328 ]
 }
 [a 1C 76 65 66 54 32 73 115 97 107 32 66 101 100 97 114 100 0 ]
 
