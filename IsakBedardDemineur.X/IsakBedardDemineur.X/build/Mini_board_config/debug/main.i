@@ -4889,7 +4889,6 @@ void afficheTabMines(void);
 char m_tabVue[4][20 + 1];
 char m_tabMines[4][20 + 1];
 
-
 void main(void)
 {
 char* posX = 10;
@@ -4901,6 +4900,7 @@ initTabVue();
 rempliMines(15);
 metToucheCombien();
 afficheTabVue();
+
 while (1)
 {
 deplace(&posX, &posY);
@@ -5032,24 +5032,38 @@ bool demine(char x, char y)
 {
 if (m_tabMines[x - 1][y - 1] == 2)
 return 0;
-else {
+else
+{
 enleveTuilesAutour(x, y);
 }
 }
 
-# 244
+# 245
 void enleveTuilesAutour(char x, char y)
 {
+int i = x - 2;
+int j = y - 2;
 
+if (i < 0)
+i = 0;
+if (j < 0)
+j = 0;
+
+for (i = i; i <=x && i< 20; i++)
+{
+for (j = j; j<=y && j < 4; j++)
+if(m_tabMines[j][i]!=2)
+m_tabVue[j][i]=m_tabMines[j][i];
+}
 }
 
-# 256
+# 270
 bool gagne(int* pMines)
 {
 
 }
 
-# 266
+# 280
 char getAnalog(char canal)
 {
 ADCON0bits.CHS = canal;
@@ -5059,7 +5073,7 @@ while (ADCON0bits.GO_DONE == 1);
 return ADRESH;
 }
 
-# 281
+# 295
 void afficheTabVue(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -5068,7 +5082,7 @@ lcd_putMessage(m_tabVue[i]);
 }
 }
 
-# 294
+# 308
 void afficheTabMines(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -5076,4 +5090,3 @@ lcd_gotoXY(1, i + 1);
 lcd_putMessage(m_tabMines[i]);
 }
 }
-
