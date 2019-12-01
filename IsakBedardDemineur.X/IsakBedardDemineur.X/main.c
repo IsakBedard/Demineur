@@ -233,6 +233,7 @@ bool demine(char x, char y)
     else 
     {
         enleveTuilesAutour(x, y);
+        return true;
     }
 }
 
@@ -269,7 +270,21 @@ void enleveTuilesAutour(char x, char y)
  */
 bool gagne(int* pMines) 
 {
+    char nbTuile=0;
     
+    for (char i = 0; i < NB_LIGNE; i++) {
+        for (char j = 0; j < NB_COL; j++) {
+            if(m_tabVue[i][j]==TUILE)
+                nbTuile++;
+        }
+    }
+    if (nbTuile == *pMines)
+    {
+        (*pMines)++;
+        return true;
+    }
+    else
+        return false;
 }
 
 /*
