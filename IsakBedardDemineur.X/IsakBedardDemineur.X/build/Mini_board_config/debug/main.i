@@ -4883,9 +4883,12 @@ bool demine(char x, char y);
 void enleveTuilesAutour(char x, char y);
 bool gagne(int* pMines);
 char getAnalog(char canal);
+void afficheTabVue(void);
+void afficheTabMines(void);
 
-char m_tabVue[4][20+1];
-char m_tabMines[4][20+1];
+char m_tabVue[4][20 + 1];
+char m_tabMines[4][20 + 1];
+
 
 void main(void)
 {
@@ -4894,30 +4897,18 @@ char* posY = 2;
 
 initialisation();
 lcd_init();
-lcd_putMessage("LAB6 Isak Bedard");
 initTabVue();
 rempliMines(15);
 metToucheCombien();
-
-for (char i = 0; i < 4; i++)
-{
-lcd_gotoXY(1,i+1);
-lcd_putMessage(m_tabVue[i]);
-}
-
-for (char i = 0; i < 4; i++)
-{
-lcd_gotoXY(1,i+1);
-lcd_putMessage(m_tabMines[i]);
-}
-while(1)
+afficheTabVue();
+while (1)
 {
 deplace(&posX, &posY);
 _delay((unsigned long)((100)*(1000000/4000.0)));
 }
 }
 
-# 83
+# 74
 void initialisation(void)
 {
 TRISD = 0;
@@ -4939,82 +4930,72 @@ ADCON2bits.ACQT = 0;
 ADCON2bits.ADCS = 0;
 }
 
-# 111
+# 102
 void initTabVue(void)
 {
-for (char i = 0; i < 4; i++)
-{
-for(char j=0;j<20;j++)
-{
-m_tabVue[i][j]=1;
+for (char i = 0; i < 4; i++) {
+for (char j = 0; j < 20; j++) {
+m_tabVue[i][j] = 1;
 }
-m_tabVue[i][20]=0;
+m_tabVue[i][20] = 0;
 }
 }
 
-# 130
+# 119
 void rempliMines(int nb)
 {
-char x,y;
+char x, y;
 
-for (char i = 0; i < 4; i++)
-{
-for(char j=0;j<20;j++)
-{
-m_tabMines[i][j]=' ';
+for (char i = 0; i < 4; i++) {
+for (char j = 0; j < 20; j++) {
+m_tabMines[i][j] = ' ';
 }
 }
-while(nb>0)
-{
-x=rand()%20;
-y=rand()%4;
-if (m_tabMines[y][x]!=2)
-{
-m_tabMines[y][x]=2;
+while (nb > 0) {
+x = rand() % 20;
+y = rand() % 4;
+if (m_tabMines[y][x] != 2) {
+m_tabMines[y][x] = 2;
 nb--;
 }
 }
 }
 
-# 162
+# 147
 void metToucheCombien(void)
 {
-for (char i = 0; i < 4; i++)
-{
-for(char j=0;j<20;j++)
-{
-if(m_tabMines[i][j]!=2)
-m_tabMines[i][j]=calculToucheCombien(i,j)+48;
-if(m_tabMines[i][j]=='0')
-m_tabMines[i][j]=' ';
+for (char i = 0; i < 4; i++) {
+for (char j = 0; j < 20; j++) {
+if (m_tabMines[i][j] != 2)
+m_tabMines[i][j] = calculToucheCombien(i, j) + 48;
+if (m_tabMines[i][j] == '0')
+m_tabMines[i][j] = ' ';
 }
 }
 }
 
-# 180
+# 164
 char calculToucheCombien(int ligne, int colonne)
 {
-int i=ligne-1;
-int j=colonne-1;
-char nbMines=0;
+int i = ligne - 1;
+int j = colonne - 1;
+char nbMines = 0;
 
-if(i<0)
-i=0;
-if(j<0)
-j=0;
+if (i < 0)
+i = 0;
+if (j < 0)
+j = 0;
 
-for(i=i;(i<=(ligne+1))&&(i<4);i++)
-{
-for(j=j=colonne-1;(j<=(colonne+1))&&(j<20);j++)
-{
-if (m_tabMines[i][j]==2)
+for (i = i; (i <= (ligne + 1))&&(i < 4); i++) {
+for (j = j = colonne - 1; (j <= (colonne + 1))&&(j < 20); j++) {
+if (m_tabMines[i][j] == 2)
 nbMines++;
 }
 }
 return nbMines;
 }
 
-# 207
+# 190
 void deplace(char* x, char* y)
 {
 unsigned char analogX = getAnalog(7);
@@ -5022,51 +5003,53 @@ unsigned char analogY = getAnalog(6);
 
 if (0 <= analogX && analogX <= 80)
 {
-*x = (*x)-1;
-if ((*x)<=0)
-*x=20;
-}
-else if (175 <= analogX && analogX <= 255)
+*x = (*x) - 1;
+if ((*x) <= 0)
+*x = 20;
+} else if (175 <= analogX && analogX <= 255)
 {
-*x = (*x)+1;
-if ((*x)>=21)
-*x=1;
+*x = (*x) + 1;
+if ((*x) >= 21)
+*x = 1;
 }
 
 if (0 <= analogY && analogY <= 80)
 {
-*y = (*y)-1;
-if ((*y)<=0)
-*y=4;
-}
-else if (175 <= analogY && analogY <= 255)
+*y = (*y) - 1;
+if ((*y) <= 0)
+*y = 4;
+} else if (175 <= analogY && analogY <= 255)
 {
-*y = (*y)+1;
-if ((*y)>=5)
-*y=1;
+*y = (*y) + 1;
+if ((*y) >= 5)
+*y = 1;
 }
 lcd_gotoXY(*x, *y);
 }
 
-# 247
+# 229
 bool demine(char x, char y)
 {
-
+if (m_tabMines[x - 1][y - 1] == 2)
+return 0;
+else {
+enleveTuilesAutour(x, y);
+}
 }
 
-# 257
+# 244
 void enleveTuilesAutour(char x, char y)
 {
 
 }
 
-# 268
+# 256
 bool gagne(int* pMines)
 {
 
 }
 
-# 278
+# 266
 char getAnalog(char canal)
 {
 ADCON0bits.CHS = canal;
@@ -5075,3 +5058,22 @@ ADCON0bits.GO_DONE = 1;
 while (ADCON0bits.GO_DONE == 1);
 return ADRESH;
 }
+
+# 281
+void afficheTabVue(void)
+{
+for (char i = 0; i < 4; i++) {
+lcd_gotoXY(1, i + 1);
+lcd_putMessage(m_tabVue[i]);
+}
+}
+
+# 294
+void afficheTabMines(void)
+{
+for (char i = 0; i < 4; i++) {
+lcd_gotoXY(1, i + 1);
+lcd_putMessage(m_tabMines[i]);
+}
+}
+

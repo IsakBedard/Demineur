@@ -5,7 +5,7 @@ Linker command line:
 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt -cs \
   -h+dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.sym \
   --cmf=dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.cmf -z \
-  -Q18F45K20 -oC:\Users\Drago\AppData\Local\Temp\sh0o.2 \
+  -Q18F45K20 -oC:\Users\Drago\AppData\Local\Temp\s3bk.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/Mini_board_config/debug/IsakBedardDemineur.X.debug.map -E1 \
   -ver=XC8 --acfsm=1493 -ASTACK=0194h-05EEh -pstack=STACK -ACODE=00h-07D3Fh \
@@ -24,7 +24,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -pparam0=BANK0 \
-  C:\Users\Drago\AppData\Local\Temp\sh0o.o \
+  C:\Users\Drago\AppData\Local\Temp\s3bk.o \
   dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o 
 
 Object code version is 3.11
@@ -37,86 +37,86 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Drago\AppData\Local\Temp\sh0o.o
+C:\Users\Drago\AppData\Local\Temp\s3bk.o
                 init                                  0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
-                smallconst                          600      600       14      300       0
-                text25                             1398     1398       2C      30A       0
-                text24                             1450     1450        6      30A       0
-                text23                             12AE     12AE       42      30A       0
-                text22                             1414     1414       1C      30A       0
-                text21                             1448     1448        8      30A       0
-                text20                             10D0     10D0       6C      30A       0
-                text19                              FF2      FF2       72      30A       0
-                text18                              7B6      7B6      17A      30A       0
-                text17                              EA4      EA4       AC      30A       0
-                text16                             1430     1430       10      30A       0
-                text15                             1364     1364       34      30A       0
-                text14                             1440     1440        8      30A       0
-                text13                             1330     1330       34      30A       0
-                text12                              F50      F50       A2      30A       0
-                text11                             113C     113C       6A      30A       0
-                text10                             13EC     13EC       28      30A       0
-                text9                              125A     125A       54      30A       0
-                text8                               D3E      D3E       B4      30A       0
-                text7                              13C4     13C4       28      30A       0
-                text6                               614      614      1A2      30A       0
-                text5                               930      930      15E      30A       0
-                text4                               DF2      DF2       B2      30A       0
-                text3                              1064     1064       6C      30A       0
-                text2                              1204     1204       56      30A       0
-                text1                               A8E      A8E      15C      30A       0
-                text0                               BEA      BEA      154      30A       0
-                cstackBANK0                          B4       B4       25       60       1
+                text26                             6FF6     6FF6        6     37FB       0
+                text25                             715C     715C       42     38AE       0
+                text24                             701C     701C       1C     380E       0
+                text23                             6FFC     6FFC        8     37FE       0
+                text22                             7420     7420       6C     3A10       0
+                text21                             74F8     74F8       72     3A7C       0
+                text20                             70B4     70B4       34     385A       0
+                text19                             71EC     71EC       54     38F6       0
+                text18                             719E     719E       4E     38CF       0
+                text17                             7296     7296       5A     394B       0
+                text16                             7088     7088       2C     3844       0
+                text15                             7A24     7A24      17A     3D12       0
+                text14                             760C     760C       AC     3B06       0
+                text13                             700C     700C       10     3806       0
+                text12                             70E8     70E8       34     3874       0
+                text11                             7004     7004        8     3802       0
+                text10                             756A     756A       A2     3AB5       0
+                text9                              73B6     73B6       6A     39DB       0
+                text8                              7038     7038       28     381C       0
+                text7                              7060     7060       28     3830       0
+                text6                              7B9E     7B9E      1A2     3DCF       0
+                text5                              78C6     78C6      15E     3C63       0
+                text4                              76B8     76B8       B2     3B5C       0
+                text3                              748C     748C       6C     3A46       0
+                text2                              7240     7240       56     3920       0
+                text1                              776A     776A      15C     3BB5       0
+                text0                              734E     734E       68     39A7       0
+                cstackBANK0                          B4       B4       22       60       1
                 dataBANK1                           154      154       40      100       1
                 bssBANK1                            100      100       54      100       1
-                dataBANK0                            D9       D9        4       60       1
+                dataBANK0                            D6       D6        4       60       1
                 bssBANK0                             60       60       54       60       1
-                cinit                              11A6     11A6       5E      30A       0
-                idataBANK1                         12F0     12F0       40      30A       0
-                idataBANK0                         1456     1456        4      30A       0
+                cinit                              72F0     72F0       5E     3978       0
+                idataBANK1                         711C     711C       40     711C       0
+                idataBANK0                         6FF2     6FF2        4     6FF2       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 init                                  0        0        4         0
-                text25                             1398     1398       2C         0
-                text24                             1450     1450        6         0
-                text23                             12AE     12AE       42         0
-                text22                             1414     1414       1C         0
-                text21                             1448     1448        8         0
-                text20                             10D0     10D0       6C         0
-                text19                              FF2      FF2       72         0
-                text18                              7B6      7B6      17A         0
-                text17                              EA4      EA4       AC         0
-                text16                             1430     1430       10         0
-                text15                             1364     1364       34         0
-                text14                             1440     1440        8         0
-                text13                             1330     1330       34         0
-                text12                              F50      F50       A2         0
-                text11                             113C     113C       6A         0
-                text10                             13EC     13EC       28         0
-                text9                              125A     125A       54         0
-                text8                               D3E      D3E       B4         0
-                text7                              13C4     13C4       28         0
-                text6                               614      614      1A2         0
-                text5                               930      930      15E         0
-                text4                               DF2      DF2       B2         0
-                text3                              1064     1064       6C         0
-                text2                              1204     1204       56         0
-                text1                               A8E      A8E      15C         0
-                text0                               BEA      BEA      154         0
-                cinit                              11A6     11A6       5E         0
-                idataBANK1                         12F0     12F0       40         0
-                idataBANK0                         1456     1456        4         0
+                text26                             6FF6     6FF6        6         0
+                text25                             715C     715C       42         0
+                text24                             701C     701C       1C         0
+                text23                             6FFC     6FFC        8         0
+                text22                             7420     7420       6C         0
+                text21                             74F8     74F8       72         0
+                text20                             70B4     70B4       34         0
+                text19                             71EC     71EC       54         0
+                text18                             719E     719E       4E         0
+                text17                             7296     7296       5A         0
+                text16                             7088     7088       2C         0
+                text15                             7A24     7A24      17A         0
+                text14                             760C     760C       AC         0
+                text13                             700C     700C       10         0
+                text12                             70E8     70E8       34         0
+                text11                             7004     7004        8         0
+                text10                             756A     756A       A2         0
+                text9                              73B6     73B6       6A         0
+                text8                              7038     7038       28         0
+                text7                              7060     7060       28         0
+                text6                              7B9E     7B9E      1A2         0
+                text5                              78C6     78C6      15E         0
+                text4                              76B8     76B8       B2         0
+                text3                              748C     748C       6C         0
+                text2                              7240     7240       56         0
+                text1                              776A     776A      15C         0
+                text0                              734E     734E       68         0
+                cinit                              72F0     72F0       5E         0
+                idataBANK1                         711C     711C       40         0
+                idataBANK0                         6FF2     6FF2        4         0
 
         CLASS   CONST          
 
         CLASS   SMALLCONST     
-                smallconst                          600      600       14         0
 
         CLASS   MEDIUMCONST    
 
@@ -129,8 +129,8 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   RAM            
 
         CLASS   BANK0          
-                cstackBANK0                          B4       B4       25         1
-                dataBANK0                            D9       D9        4         1
+                cstackBANK0                          B4       B4       22         1
+                dataBANK0                            D6       D6        4         1
                 bssBANK0                             60       60       54         1
 
         CLASS   BANK1          
@@ -162,10 +162,38 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                bssBANK0                       000060  00007D  0000DD        60       1  BANK0   
+                bssBANK0                       000060  00007A  0000DA        60       1  BANK0   
                 bssBANK1                       000100  000094  000194       100       1  BANK1   
-                smallconst                     000600  000014  000614       300       0  SMALLCON
-                text6                          000614  000E46  00145A       30A       0  CODE    
+                idataBANK0                     006FF2  000004  006FF6      6FF2       0  CODE    
+                text26                         006FF6  000006  006FFC      37FB       0  CODE    
+                text23                         006FFC  000008  007004      37FE       0  CODE    
+                text11                         007004  000008  00700C      3802       0  CODE    
+                text13                         00700C  000010  00701C      3806       0  CODE    
+                text24                         00701C  00001C  007038      380E       0  CODE    
+                text8                          007038  000028  007060      381C       0  CODE    
+                text7                          007060  000028  007088      3830       0  CODE    
+                text16                         007088  00002C  0070B4      3844       0  CODE    
+                text20                         0070B4  000034  0070E8      385A       0  CODE    
+                text12                         0070E8  000034  00711C      3874       0  CODE    
+                idataBANK1                     00711C  000040  00715C      711C       0  CODE    
+                text25                         00715C  000042  00719E      38AE       0  CODE    
+                text18                         00719E  00004E  0071EC      38CF       0  CODE    
+                text19                         0071EC  000054  007240      38F6       0  CODE    
+                text2                          007240  000056  007296      3920       0  CODE    
+                text17                         007296  00005A  0072F0      394B       0  CODE    
+                cinit                          0072F0  00005E  00734E      3978       0  CODE    
+                text0                          00734E  000068  0073B6      39A7       0  CODE    
+                text9                          0073B6  00006A  007420      39DB       0  CODE    
+                text22                         007420  00006C  00748C      3A10       0  CODE    
+                text3                          00748C  00006C  0074F8      3A46       0  CODE    
+                text21                         0074F8  000072  00756A      3A7C       0  CODE    
+                text10                         00756A  0000A2  00760C      3AB5       0  CODE    
+                text14                         00760C  0000AC  0076B8      3B06       0  CODE    
+                text4                          0076B8  0000B2  00776A      3B5C       0  CODE    
+                text1                          00776A  00015C  0078C6      3BB5       0  CODE    
+                text5                          0078C6  00015E  007A24      3C63       0  CODE    
+                text15                         007A24  00017A  007B9E      3D12       0  CODE    
+                text6                          007B9E  0001A2  007D40      3DCF       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -173,23 +201,21 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            0000DD-0000FF               23
+        BANK0            0000DA-0000FF               26
         BANK1            000194-0001FF               6C
         BANK2            000200-0002FF              100
         BANK3            000300-0003FF              100
         BANK4            000400-0004FF              100
         BANK5            000500-0005EE               EF
         BIGRAM           000001-00005F               5F
-                         0000DD-0000FF               23
+                         0000DA-0000FF               26
                          000194-0005EE              45B
-        CODE             000004-0005FF              5FC
-                         00145A-007D3F             68E6
+        CODE             000004-006FF1             6FEE
         COMRAM           000001-00005F               5F
-        CONST            000004-0005FF              5FC
-                         00145A-007D3F             68E6
+        CONST            000004-006FF1             6FEE
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      00145A-007D3F             68E6
-        RAM              0000DD-0000FF               23
+        MEDIUMCONST      000600-006FF1             69F2
+        RAM              0000DA-0000FF               26
                          000194-0005EE              100
         SFR              000F60-000F9B               3C
                          000F9D-000FD3               37
@@ -197,7 +223,7 @@ UNUSED ADDRESS RANGES
                          000FE0-000FE2                3
                          000FE8-000FEA                3
                          000FF0-000FFB                C
-        SMALLCONST       00145A-007D3F              100
+        SMALLCONST       000600-006FF1              100
         STACK            000194-0005EE              45B
 
                                   Symbol Table
@@ -317,7 +343,7 @@ __Hrbss                       rbss         000000
 __Hrdata                      rdata        000000
 __Hreset_vec                  reset_vec    000000
 __Hsfr                        sfr          000000
-__Hsmallconst                 smallconst   000614
+__Hsmallconst                 smallconst   000000
 __Hspace_0                    (abs)        30000E
 __Hspace_1                    (abs)        000194
 __Hspace_2                    (abs)        000000
@@ -344,6 +370,7 @@ __Htext22                     text22       000000
 __Htext23                     text23       000000
 __Htext24                     text24       000000
 __Htext25                     text25       000000
+__Htext26                     text26       000000
 __Htext3                      text3        000000
 __Htext4                      text4        000000
 __Htext5                      text5        000000
@@ -405,7 +432,7 @@ __Lrbss                       rbss         000000
 __Lrdata                      rdata        000000
 __Lreset_vec                  reset_vec    000000
 __Lsfr                        sfr          000000
-__Lsmallconst                 smallconst   000600
+__Lsmallconst                 smallconst   000000
 __Lspace_0                    (abs)        000000
 __Lspace_1                    (abs)        000000
 __Lspace_2                    (abs)        000000
@@ -432,6 +459,7 @@ __Ltext22                     text22       000000
 __Ltext23                     text23       000000
 __Ltext24                     text24       000000
 __Ltext25                     text25       000000
+__Ltext26                     text26       000000
 __Ltext3                      text3        000000
 __Ltext4                      text4        000000
 __Ltext5                      text5        000000
@@ -442,94 +470,96 @@ __Ltext9                      text9        000000
 __S0                          (abs)        30000E
 __S1                          (abs)        000194
 __S2                          (abs)        000000
-___awmod                      text4        000DF2
+___awmod                      text4        0076B8
 ___awmod@counter              cstackBANK0  0000C6
 ___awmod@dividend             cstackBANK0  0000C2
 ___awmod@divisor              cstackBANK0  0000C4
 ___awmod@sign                 cstackBANK0  0000C7
 ___inthi_sp                   stack        000000
 ___intlo_sp                   stack        000000
-___lmul                       text3        001064
+___lmul                       text3        00748C
 ___lmul@multiplicand          cstackBANK0  0000B8
 ___lmul@multiplier            cstackBANK0  0000B4
 ___lmul@product               cstackBANK0  0000BC
 ___param_bank                 (abs)        000000
 ___rparam_used                (abs)        000000
 ___sp                         stack        000000
-___wmul                       text7        0013C4
+___wmul                       text7        007060
 ___wmul@multiplicand          cstackBANK0  0000B6
 ___wmul@multiplier            cstackBANK0  0000B4
 ___wmul@product               cstackBANK0  0000B8
 __accesstop                   (abs)        000060
 __activetblptr                (abs)        000003
-__end_of___awmod              text4        000EA4
-__end_of___lmul               text3        0010D0
-__end_of___wmul               text7        0013EC
-__end_of__initialization      cinit        0011FE
-__end_of_calculToucheCombien  text6        0007B6
-__end_of_deplace              text18       000930
-__end_of_getAnalog            text25       0013C4
-__end_of_initTabVue           text17       000F50
-__end_of_initialisation       text15       001398
-__end_of_lcd_busy             text23       0012F0
-__end_of_lcd_curseurHome      text14       001448
-__end_of_lcd_ecrireDonnees    text22       001430
-__end_of_lcd_ecritChar        text9        0012AE
-__end_of_lcd_gotoXY           text19       001064
-__end_of_lcd_init             text10       001414
-__end_of_lcd_initCGRam        text12       000FF2
-__end_of_lcd_lireDonnees      text24       001456
-__end_of_lcd_putMessage       text8        000DF2
-__end_of_lcd_resetSequence    text11       0011A6
-__end_of_lcd_strobeEnableBit  text21       001450
-__end_of_lcd_wrCom            text20       00113C
-__end_of_lcd_wrData           text13       001364
-__end_of_main                 text0        000D3E
-__end_of_metToucheCombien     text5        000A8E
-__end_of_rand                 text2        00125A
-__end_of_rempliMines          text1        000BEA
-__end_of_srand                text16       001440
-__initialization              cinit        0011A6
+__end_of___awmod              text4        00776A
+__end_of___lmul               text3        0074F8
+__end_of___wmul               text7        007088
+__end_of__initialization      cinit        007348
+__end_of_afficheTabVue        text17       0072F0
+__end_of_calculToucheCombien  text6        007D40
+__end_of_deplace              text15       007B9E
+__end_of_getAnalog            text16       0070B4
+__end_of_initTabVue           text14       0076B8
+__end_of_initialisation       text12       00711C
+__end_of_lcd_busy             text25       00719E
+__end_of_lcd_curseurHome      text11       00700C
+__end_of_lcd_ecrireDonnees    text24       007038
+__end_of_lcd_ecritChar        text19       007240
+__end_of_lcd_gotoXY           text21       00756A
+__end_of_lcd_init             text8        007060
+__end_of_lcd_initCGRam        text10       00760C
+__end_of_lcd_lireDonnees      text26       006FFC
+__end_of_lcd_putMessage       text18       0071EC
+__end_of_lcd_resetSequence    text9        007420
+__end_of_lcd_strobeEnableBit  text23       007004
+__end_of_lcd_wrCom            text22       00748C
+__end_of_lcd_wrData           text20       0070E8
+__end_of_main                 text0        0073B6
+__end_of_metToucheCombien     text5        007A24
+__end_of_rand                 text2        007296
+__end_of_rempliMines          text1        0078C6
+__end_of_srand                text13       00701C
+__initialization              cinit        0072F0
 __mediumconst                 mediumconst  000000
 __pbssBANK0                   bssBANK0     000060
 __pbssBANK1                   bssBANK1     000100
-__pcinit                      cinit        0011A6
+__pcinit                      cinit        0072F0
 __pcstackBANK0                cstackBANK0  0000B4
-__pdataBANK0                  dataBANK0    0000D9
+__pdataBANK0                  dataBANK0    0000D6
 __pdataBANK1                  dataBANK1    000154
-__pidataBANK0                 idataBANK0   001456
-__pidataBANK1                 idataBANK1   0012F0
-__psmallconst                 smallconst   000600
-__ptext0                      text0        000BEA
-__ptext1                      text1        000A8E
-__ptext10                     text10       0013EC
-__ptext11                     text11       00113C
-__ptext12                     text12       000F50
-__ptext13                     text13       001330
-__ptext14                     text14       001440
-__ptext15                     text15       001364
-__ptext16                     text16       001430
-__ptext17                     text17       000EA4
-__ptext18                     text18       0007B6
-__ptext19                     text19       000FF2
-__ptext2                      text2        001204
-__ptext20                     text20       0010D0
-__ptext21                     text21       001448
-__ptext22                     text22       001414
-__ptext23                     text23       0012AE
-__ptext24                     text24       001450
-__ptext25                     text25       001398
-__ptext3                      text3        001064
-__ptext4                      text4        000DF2
-__ptext5                      text5        000930
-__ptext6                      text6        000614
-__ptext7                      text7        0013C4
-__ptext8                      text8        000D3E
-__ptext9                      text9        00125A
+__pidataBANK0                 idataBANK0   006FF2
+__pidataBANK1                 idataBANK1   00711C
+__ptext0                      text0        00734E
+__ptext1                      text1        00776A
+__ptext10                     text10       00756A
+__ptext11                     text11       007004
+__ptext12                     text12       0070E8
+__ptext13                     text13       00700C
+__ptext14                     text14       00760C
+__ptext15                     text15       007A24
+__ptext16                     text16       007088
+__ptext17                     text17       007296
+__ptext18                     text18       00719E
+__ptext19                     text19       0071EC
+__ptext2                      text2        007240
+__ptext20                     text20       0070B4
+__ptext21                     text21       0074F8
+__ptext22                     text22       007420
+__ptext23                     text23       006FFC
+__ptext24                     text24       00701C
+__ptext25                     text25       00715C
+__ptext26                     text26       006FF6
+__ptext3                      text3        00748C
+__ptext4                      text4        0076B8
+__ptext5                      text5        0078C6
+__ptext6                      text6        007B9E
+__ptext7                      text7        007060
+__ptext8                      text8        007038
+__ptext9                      text9        0073B6
 __ramtop                      ramtop       000600
 __size_of___awmod             (abs)        000000
 __size_of___lmul              (abs)        000000
 __size_of___wmul              (abs)        000000
+__size_of_afficheTabVue       (abs)        000000
 __size_of_calculToucheCombien (abs)        000000
 __size_of_deplace             (abs)        000000
 __size_of_getAnalog           (abs)        000000
@@ -553,34 +583,36 @@ __size_of_metToucheCombien    (abs)        000000
 __size_of_rand                (abs)        000000
 __size_of_rempliMines         (abs)        000000
 __size_of_srand               (abs)        000000
-__smallconst                  smallconst   000600
-_calculToucheCombien          text6        000614
-_deplace                      text18       0007B6
-_getAnalog                    text25       001398
-_initTabVue                   text17       000EA4
-_initialisation               text15       001364
-_lcd_busy                     text23       0012AE
-_lcd_curseurHome              text14       001440
-_lcd_ecrireDonnees            text22       001414
-_lcd_ecritChar                text9        00125A
-_lcd_gotoXY                   text19       000FF2
-_lcd_init                     text10       0013EC
-_lcd_initCGRam                text12       000F50
-_lcd_lireDonnees              text24       001450
-_lcd_putMessage               text8        000D3E
-_lcd_resetSequence            text11       00113C
-_lcd_strobeEnableBit          text21       001448
-_lcd_wrCom                    text20       0010D0
-_lcd_wrData                   text13       001330
+__smallconst                  smallconst   000000
+_afficheTabVue                text17       007296
+_calculToucheCombien          text6        007B9E
+_deplace                      text15       007A24
+_getAnalog                    text16       007088
+_initTabVue                   text14       00760C
+_initialisation               text12       0070E8
+_lcd_busy                     text25       00715C
+_lcd_curseurHome              text11       007004
+_lcd_ecrireDonnees            text24       00701C
+_lcd_ecritChar                text19       0071EC
+_lcd_gotoXY                   text21       0074F8
+_lcd_init                     text8        007038
+_lcd_initCGRam                text10       00756A
+_lcd_lireDonnees              text26       006FF6
+_lcd_putMessage               text18       00719E
+_lcd_resetSequence            text9        0073B6
+_lcd_strobeEnableBit          text23       006FFC
+_lcd_wrCom                    text22       007420
+_lcd_wrData                   text20       0070B4
 _m_tabMines                   bssBANK0     000060
 _m_tabVue                     bssBANK1     000100
-_main                         text0        000BEA
+_main                         text0        00734E
 _matCGRAM                     dataBANK1    000154
-_metToucheCombien             text5        000930
-_rand                         text2        001204
-_randx                        dataBANK0    0000D9
-_rempliMines                  text1        000A8E
-_srand                        text16       001430
+_metToucheCombien             text5        0078C6
+_rand                         text2        007240
+_randx                        dataBANK0    0000D6
+_rempliMines                  text1        00776A
+_srand                        text13       00700C
+afficheTabVue@i               cstackBANK0  0000BC
 calculToucheCombien@colonne   cstackBANK0  0000BC
 calculToucheCombien@i         cstackBANK0  0000C2
 calculToucheCombien@j         cstackBANK0  0000C4
@@ -590,7 +622,7 @@ deplace@analogX               cstackBANK0  0000BE
 deplace@analogY               cstackBANK0  0000BF
 deplace@x                     cstackBANK0  0000B9
 deplace@y                     cstackBANK0  0000BB
-end_of_initialization         cinit        0011FE
+end_of_initialization         cinit        007348
 getAnalog@canal               cstackBANK0  0000B5
 initTabVue@i                  cstackBANK0  0000B7
 initTabVue@j                  cstackBANK0  0000B6
@@ -607,13 +639,11 @@ lcd_gotoXY@y                  cstackBANK0  0000B7
 lcd_initCGRam@i               cstackBANK0  0000B9
 lcd_initCGRam@j               cstackBANK0  0000BA
 lcd_putMessage@chaine         cstackBANK0  0000B9
-lcd_putMessage@j              cstackBANK0  0000C1
+lcd_putMessage@j              cstackBANK0  0000BB
 lcd_wrCom@commande            cstackBANK0  0000B6
 lcd_wrData@caractere          cstackBANK0  0000B6
-main@i                        cstackBANK0  0000D7
-main@i_278                    cstackBANK0  0000D8
-main@posX                     cstackBANK0  0000D3
-main@posY                     cstackBANK0  0000D5
+main@posX                     cstackBANK0  0000D2
+main@posY                     cstackBANK0  0000D4
 metToucheCombien@i            cstackBANK0  0000C9
 metToucheCombien@j            cstackBANK0  0000CA
 rempliMines@i                 cstackBANK0  0000CF
@@ -625,45 +655,42 @@ srand@x                       cstackBANK0  0000B4
 stackhi                       (abs)        0005EE
 stacklo                       (abs)        000194
 start                         init         000000
-start_initialization          cinit        0011A6
+start_initialization          cinit        0072F0
 
 
 FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 48 in file "main.c"
+		line 51 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  i               1   36[BANK0 ] unsigned char 
-  i               1   35[BANK0 ] unsigned char 
-  posY            2   33[BANK0 ] PTR unsigned char 
+  posY            2   32[BANK0 ] PTR unsigned char 
 		 -> RAM(1535), 
-  posX            2   31[BANK0 ] PTR unsigned char 
+  posX            2   30[BANK0 ] PTR unsigned char 
 		 -> RAM(1535), 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
       Params:         0       0       0       0       0       0       0
-      Locals:         0       6       0       0       0       0       0
-      Temps:          0       2       0       0       0       0       0
-      Totals:         0       8       0       0       0       0       0
-Total ram usage:        8 bytes
+      Locals:         0       4       0       0       0       0       0
+      Temps:          0       1       0       0       0       0       0
+      Totals:         0       5       0       0       0       0       0
+Total ram usage:        5 bytes
  Hardware stack levels required when called:    6
  This function calls:
+		_afficheTabVue
 		_deplace
 		_initTabVue
 		_initialisation
-		_lcd_gotoXY
 		_lcd_init
-		_lcd_putMessage
 		_metToucheCombien
 		_rempliMines
  This function is called by:
@@ -673,7 +700,7 @@ Total ram usage:        8 bytes
 
  *************** function _rempliMines *****************
  Defined at:
-		line 130 in file "main.c"
+		line 119 in file "main.c"
  Parameters:    Size  Location     Type
   nb              2   20[BANK0 ] int 
  Auto vars:     Size  Location     Type
@@ -798,7 +825,7 @@ Total ram usage:        6 bytes
 
  *************** function _metToucheCombien *****************
  Defined at:
-		line 162 in file "main.c"
+		line 147 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -829,7 +856,7 @@ Total ram usage:        5 bytes
 
  *************** function _calculToucheCombien *****************
  Defined at:
-		line 180 in file "main.c"
+		line 164 in file "main.c"
  Parameters:    Size  Location     Type
   ligne           2    6[BANK0 ] int 
   colonne         2    8[BANK0 ] int 
@@ -887,69 +914,6 @@ Total ram usage:        6 bytes
 		Nothing
  This function is called by:
 		_calculToucheCombien
- This function uses a non-reentrant model
-
-
- *************** function _lcd_putMessage *****************
- Defined at:
-		line 387 in file "Lcd4Lignes.c"
- Parameters:    Size  Location     Type
-  chaine          3    5[BANK0 ] PTR const unsigned char 
-		 -> m_tabMines(84), m_tabVue(84), STR_1(17), 
- Auto vars:     Size  Location     Type
-  j               1   13[BANK0 ] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
-      Params:         0       3       0       0       0       0       0
-      Locals:         0       1       0       0       0       0       0
-      Temps:          0       5       0       0       0       0       0
-      Totals:         0       9       0       0       0       0       0
-Total ram usage:        9 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    4
- This function calls:
-		_lcd_ecritChar
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _lcd_ecritChar *****************
- Defined at:
-		line 359 in file "Lcd4Lignes.c"
- Parameters:    Size  Location     Type
-  car             1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  car             1    3[BANK0 ] unsigned char 
-  posRam          1    4[BANK0 ] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
-      Params:         0       0       0       0       0       0       0
-      Locals:         0       2       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0
-      Totals:         0       2       0       0       0       0       0
-Total ram usage:        2 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    3
- This function calls:
-		_lcd_wrCom
-		_lcd_wrData
- This function is called by:
-		_lcd_putMessage
  This function uses a non-reentrant model
 
 
@@ -1049,40 +1013,6 @@ Total ram usage:        4 bytes
  This function uses a non-reentrant model
 
 
- *************** function _lcd_wrData *****************
- Defined at:
-		line 188 in file "Lcd4Lignes.c"
- Parameters:    Size  Location     Type
-  caractere       1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  caractere       1    2[BANK0 ] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      unsigned char 
- Registers used:
-		wreg, status,2, status,0, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
-      Params:         0       0       0       0       0       0       0
-      Locals:         0       1       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0
-      Totals:         0       1       0       0       0       0       0
-Total ram usage:        1 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    2
- This function calls:
-		_lcd_busy
-		_lcd_ecrireDonnees
-		_lcd_strobeEnableBit
- This function is called by:
-		_lcd_ecritChar
-		_lcd_initCGRam
-		_lcd_effaceChar
- This function uses a non-reentrant model
-
-
  *************** function _lcd_curseurHome *****************
  Defined at:
 		line 288 in file "Lcd4Lignes.c"
@@ -1115,7 +1045,7 @@ Total ram usage:        0 bytes
 
  *************** function _initialisation *****************
  Defined at:
-		line 83 in file "main.c"
+		line 74 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1174,7 +1104,7 @@ Total ram usage:        2 bytes
 
  *************** function _initTabVue *****************
  Defined at:
-		line 111 in file "main.c"
+		line 102 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1204,7 +1134,7 @@ Total ram usage:        4 bytes
 
  *************** function _deplace *****************
  Defined at:
-		line 207 in file "main.c"
+		line 190 in file "main.c"
  Parameters:    Size  Location     Type
   x               2    5[BANK0 ] PTR unsigned char 
 		 -> main@posX(2), 
@@ -1237,6 +1167,164 @@ Total ram usage:        7 bytes
  This function uses a non-reentrant model
 
 
+ *************** function _getAnalog *****************
+ Defined at:
+		line 266 in file "main.c"
+ Parameters:    Size  Location     Type
+  canal           1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  canal           1    1[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0       0
+      Temps:          0       1       0       0       0       0       0
+      Totals:         0       2       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_deplace
+ This function uses a non-reentrant model
+
+
+ *************** function _afficheTabVue *****************
+ Defined at:
+		line 281 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               1    8[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       1       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_lcd_gotoXY
+		_lcd_putMessage
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _lcd_putMessage *****************
+ Defined at:
+		line 387 in file "Lcd4Lignes.c"
+ Parameters:    Size  Location     Type
+  chaine          2    5[BANK0 ] PTR const unsigned char 
+		 -> m_tabMines(84), m_tabVue(84), 
+ Auto vars:     Size  Location     Type
+  j               1    7[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       2       0       0       0       0       0
+      Locals:         0       1       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       3       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_lcd_ecritChar
+ This function is called by:
+		_afficheTabVue
+		_afficheTabMines
+ This function uses a non-reentrant model
+
+
+ *************** function _lcd_ecritChar *****************
+ Defined at:
+		line 359 in file "Lcd4Lignes.c"
+ Parameters:    Size  Location     Type
+  car             1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  car             1    3[BANK0 ] unsigned char 
+  posRam          1    4[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       2       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       2       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_lcd_wrCom
+		_lcd_wrData
+ This function is called by:
+		_lcd_putMessage
+ This function uses a non-reentrant model
+
+
+ *************** function _lcd_wrData *****************
+ Defined at:
+		line 188 in file "Lcd4Lignes.c"
+ Parameters:    Size  Location     Type
+  caractere       1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  caractere       1    2[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         0       0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         0       1       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_lcd_busy
+		_lcd_ecrireDonnees
+		_lcd_strobeEnableBit
+ This function is called by:
+		_lcd_ecritChar
+		_lcd_initCGRam
+		_lcd_effaceChar
+ This function uses a non-reentrant model
+
+
  *************** function _lcd_gotoXY *****************
  Defined at:
 		line 314 in file "Lcd4Lignes.c"
@@ -1264,8 +1352,9 @@ Total ram usage:        2 bytes
  This function calls:
 		_lcd_wrCom
  This function is called by:
-		_main
 		_deplace
+		_afficheTabVue
+		_afficheTabMines
 		_lcd_effaceLigne
  This function uses a non-reentrant model
 
@@ -1431,91 +1520,63 @@ Total ram usage:        0 bytes
  This function uses a non-reentrant model
 
 
- *************** function _getAnalog *****************
- Defined at:
-		line 278 in file "main.c"
- Parameters:    Size  Location     Type
-  canal           1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  canal           1    1[BANK0 ] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      unsigned char 
- Registers used:
-		wreg, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
-      Params:         0       0       0       0       0       0       0
-      Locals:         0       1       0       0       0       0       0
-      Temps:          0       1       0       0       0       0       0
-      Totals:         0       2       0       0       0       0       0
-Total ram usage:        2 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_deplace
- This function uses a non-reentrant model
-
-
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
-		___wmul        		CODE           	13C4	0000	41
+		___wmul        		CODE           	7060	0000	41
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c estimated size: 41
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-		___lmul        		CODE           	1064	0000	109
+		___lmul        		CODE           	748C	0000	109
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c estimated size: 109
 
 Lcd4Lignes.c
-		_lcd_ecrireDonnees		CODE           	1414	0000	29
-		_lcd_busy      		CODE           	12AE	0000	67
-		_lcd_curseurHome		CODE           	1440	0000	9
-		_lcd_initCGRam 		CODE           	0F50	0000	163
-		_lcd_wrData    		CODE           	1330	0000	53
-		_lcd_putMessage		CODE           	0D3E	0000	181
-		_lcd_resetSequence		CODE           	113C	0000	107
-		_lcd_lireDonnees		CODE           	1450	0000	7
-		_lcd_gotoXY    		CODE           	0FF2	0000	115
-		_lcd_wrCom     		CODE           	10D0	0000	109
-		_lcd_ecritChar 		CODE           	125A	0000	85
-		_lcd_init      		CODE           	13EC	0000	41
-		_lcd_strobeEnableBit		CODE           	1448	0000	9
+		_lcd_ecrireDonnees		CODE           	701C	0000	29
+		_lcd_busy      		CODE           	715C	0000	67
+		_lcd_curseurHome		CODE           	7004	0000	9
+		_lcd_initCGRam 		CODE           	756A	0000	163
+		_lcd_wrData    		CODE           	70B4	0000	53
+		_lcd_putMessage		CODE           	719E	0000	79
+		_lcd_resetSequence		CODE           	73B6	0000	107
+		_lcd_lireDonnees		CODE           	6FF6	0000	7
+		_lcd_gotoXY    		CODE           	74F8	0000	115
+		_lcd_wrCom     		CODE           	7420	0000	109
+		_lcd_ecritChar 		CODE           	71EC	0000	85
+		_lcd_init      		CODE           	7038	0000	41
+		_lcd_strobeEnableBit		CODE           	6FFC	0000	9
 
-Lcd4Lignes.c estimated size: 975
+Lcd4Lignes.c estimated size: 873
 
 shared
-		__initialization		CODE           	11A6	0000	89
+		__initialization		CODE           	72F0	0000	89
 
 shared estimated size: 89
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-		___awmod       		CODE           	0DF2	0000	179
+		___awmod       		CODE           	76B8	0000	179
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c estimated size: 179
 
 main.c
-		_initialisation		CODE           	1364	0000	53
-		_metToucheCombien		CODE           	0930	0000	351
-		_main          		CODE           	0BEA	0000	341
-		_initTabVue    		CODE           	0EA4	0000	173
-		_rempliMines   		CODE           	0A8E	0000	349
-		_getAnalog     		CODE           	1398	0000	45
-		_calculToucheCombien		CODE           	0614	0000	419
-		_deplace       		CODE           	07B6	0000	379
+		_initialisation		CODE           	70E8	0000	53
+		_afficheTabVue 		CODE           	7296	0000	91
+		_metToucheCombien		CODE           	78C6	0000	351
+		_main          		CODE           	734E	0000	105
+		_initTabVue    		CODE           	760C	0000	173
+		_rempliMines   		CODE           	776A	0000	349
+		_getAnalog     		CODE           	7088	0000	45
+		_calculToucheCombien		CODE           	7B9E	0000	419
+		_deplace       		CODE           	7A24	0000	379
 
-main.c estimated size: 2110
+main.c estimated size: 1965
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-		_srand         		CODE           	1430	0000	17
-		_rand          		CODE           	1204	0000	87
+		_srand         		CODE           	700C	0000	17
+		_rand          		CODE           	7240	0000	87
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c estimated size: 104
 

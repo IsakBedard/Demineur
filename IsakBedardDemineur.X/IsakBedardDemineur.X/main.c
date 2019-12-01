@@ -1,18 +1,18 @@
- /**
+/**
  * @file main.c  
  * @author Isak Bédard
  * @date   28 novembre 2019
  * @brief  Jeu : Démineur.
-  * 
-  * Le joueur doit trouver l'emplacement de mines.
+ * 
+ * Le joueur doit trouver l'emplacement de mines.
  *
  * @version 1.0
  * Environnement:
  *     Développement: MPLAB X IDE (version 5.25)
  *     Compilateur: XC8 (version 2.10)
  *     Matériel: Carte démo du Pickit3, PIC 18F45K20, écran LCD 4x20, power pack
-  * 5V/3V3, joystick XY avec bouton poussoir
-  */
+ * 5V/3V3, joystick XY avec bouton poussoir
+ */
 /****************** Liste des INCLUDES ****************************************/
 #include <xc.h>
 #include <stdbool.h>  // pour l'utilisation du type bool
@@ -41,35 +41,26 @@ bool demine(char x, char y);
 void enleveTuilesAutour(char x, char y);
 bool gagne(int* pMines);
 char getAnalog(char canal);
+void afficheTabVue(void);
+void afficheTabMines(void);
 /****************** VARIABLES GLOBALES ****************************************/
- char m_tabVue[NB_LIGNE][NB_COL+1]; //Tableau des caractères affichés au LCD
- char m_tabMines[NB_LIGNE][NB_COL+1];//Tableau contenant les mines, les espaces et les chiffres
+char m_tabVue[NB_LIGNE][NB_COL + 1]; //Tableau des caractères affichés au LCD
+char m_tabMines[NB_LIGNE][NB_COL + 1]; //Tableau contenant les mines, les espaces et les chiffres
+
 /******************** PROGRAMME PRINCPAL **************************************/
-void main(void)
+void main(void) 
 {
     char* posX = 10;
     char* posY = 2;
-    
+
     initialisation();
     lcd_init();
-    lcd_putMessage("LAB6 Isak Bedard");
     initTabVue();
     rempliMines(NB_MINES);
     metToucheCombien();
-    
-    for (char i = 0; i < NB_LIGNE; i++)
-    {
-        lcd_gotoXY(1,i+1);
-        lcd_putMessage(m_tabVue[i]);
-    }
-    
-    for (char i = 0; i < NB_LIGNE; i++)
-    {
-        lcd_gotoXY(1,i+1);
-        lcd_putMessage(m_tabMines[i]);
-    }
-    while(1)
-    {
+    afficheTabVue();
+    while (1) 
+    {  
         deplace(&posX, &posY);
         __delay_ms(100);
     }
@@ -80,25 +71,25 @@ void main(void)
  * @param Aucun
  * @return Aucun
  */
-void initialisation(void)
+void initialisation(void) 
 {
     TRISD = 0; //Tout le port D en sortie
-    ANSELH = 0;  // RB0 à RB4 en mode digital. Sur 18F45K20 AN et PortB sont sur les memes broches
+    ANSELH = 0; // RB0 à RB4 en mode digital. Sur 18F45K20 AN et PortB sont sur les memes broches
     TRISB = 0xFF; //tout le port B en entree
-    ANSEL = 0;  // PORTA en mode digital. Sur 18F45K20 AN et PortA sont sur les memes broches
+    ANSEL = 0; // PORTA en mode digital. Sur 18F45K20 AN et PortA sont sur les memes broches
     TRISA = 0; //tout le port A en sortie
-   
+
     //Pour du vrai hasard, on doit rajouter ces lignes. 
     //Ne fonctionne pas en mode simulateur.
     T1CONbits.TMR1ON = 1;
     srand(TMR1);
-   //Configuration du port analogique
-    ANSELbits.ANS7 = 1;  //A7 en mode analogique
+    //Configuration du port analogique
+    ANSELbits.ANS7 = 1; //A7 en mode analogique
     ADCON0bits.ADON = 1; //Convertisseur AN à on
-	ADCON1 = 0; //Vref+ = VDD et Vref- = VSS
+    ADCON1 = 0; //Vref+ = VDD et Vref- = VSS
     ADCON2bits.ADFM = 0; //Alignement à gauche des 10bits de la conversion (8 MSB dans ADRESH, 2 LSB à gauche dans ADRESL)
-    ADCON2bits.ACQT = 0;//7; //20 TAD (on laisse le max de temps au Chold du convertisseur AN pour se charger)
-    ADCON2bits.ADCS = 0;//6; //Fosc/64 (Fréquence pour la conversion la plus longue possible)
+    ADCON2bits.ACQT = 0; //7; //20 TAD (on laisse le max de temps au Chold du convertisseur AN pour se charger)
+    ADCON2bits.ADCS = 0; //6; //Fosc/64 (Fréquence pour la conversion la plus longue possible)
 }
 
 /*
@@ -108,18 +99,16 @@ void initialisation(void)
  * @param rien
  * @return rien
  */
-void initTabVue(void)
+void initTabVue(void) 
 {
-    for (char i = 0; i < NB_LIGNE; i++)
-    {
-        for(char j=0;j<NB_COL;j++)
-        {
-            m_tabVue[i][j]=TUILE;
+    for (char i = 0; i < NB_LIGNE; i++) {
+        for (char j = 0; j < NB_COL; j++) {
+            m_tabVue[i][j] = TUILE;
         }
-        m_tabVue[i][NB_COL]=0;
+        m_tabVue[i][NB_COL] = 0;
     }
 }
- 
+
 /*
  * @brief Rempli le tableau m_tabMines d'un nombre (nb) de mines au hasard.
  *  Les cases vides contiendront le code ascii d'un espace et les cases avec
@@ -127,24 +116,20 @@ void initTabVue(void)
  * @param int nb, le nombre de mines à mettre dans le tableau 
  * @return rien
  */
-void rempliMines(int nb)
+void rempliMines(int nb) 
 {
-    char x,y;
-    
-    for (char i = 0; i < NB_LIGNE; i++)
-    {
-        for(char j=0;j<NB_COL;j++)
-        {
-            m_tabMines[i][j]=' ';
+    char x, y;
+
+    for (char i = 0; i < NB_LIGNE; i++) {
+        for (char j = 0; j < NB_COL; j++) {
+            m_tabMines[i][j] = ' ';
         }
     }
-    while(nb>0)
-    {
-        x=rand()%20;
-        y=rand()%4;
-        if (m_tabMines[y][x]!=MINE)
-        {
-            m_tabMines[y][x]=MINE;
+    while (nb > 0) {
+        x = rand() % 20;
+        y = rand() % 4;
+        if (m_tabMines[y][x] != MINE) {
+            m_tabMines[y][x] = MINE;
             nb--;
         }
     }
@@ -159,83 +144,80 @@ void rempliMines(int nb)
  * @param rien
  * @return rien
  */
-void metToucheCombien(void)
+void metToucheCombien(void) 
 {
-    for (char i = 0; i < NB_LIGNE; i++)
-    {
-        for(char j=0;j<NB_COL;j++)
-        {
-            if(m_tabMines[i][j]!=MINE)
-                m_tabMines[i][j]=calculToucheCombien(i,j)+48; //on met le caractère ASCII du nombre de mines autour de la case dans la case
-            if(m_tabMines[i][j]=='0') //s'il y a 0 mines autour (afficherait 0)
-                m_tabMines[i][j]=' '; //on remplace par un espace pour être plus fidèle au jeu original
+    for (char i = 0; i < NB_LIGNE; i++) {
+        for (char j = 0; j < NB_COL; j++) {
+            if (m_tabMines[i][j] != MINE)
+                m_tabMines[i][j] = calculToucheCombien(i, j) + 48; //on met le caractère ASCII du nombre de mines autour de la case dans la case
+            if (m_tabMines[i][j] == '0') //s'il y a 0 mines autour (afficherait 0)
+                m_tabMines[i][j] = ' '; //on remplace par un espace pour être plus fidèle au jeu original
         }
     }
 }
+
 /*
  * @brief Calcul à combien de mines touche la case. Cette méthode est appelée par metToucheCombien()
  * @param int ligne, int colonne La position dans le tableau m_tabMines a vérifier
  * @return char nombre. Le nombre de mines touchées par la case
  */
-char calculToucheCombien(int ligne, int colonne)
+char calculToucheCombien(int ligne, int colonne) 
 {
-    int i=ligne-1;
-    int j=colonne-1;
-    char nbMines=0;
-    
-    if(i<0)
-        i=0;
-    if(j<0)
-        j=0;
-    
-    for(i=i;(i<=(ligne+1))&&(i<NB_LIGNE);i++)
-    {
-        for(j=j=colonne-1;(j<=(colonne+1))&&(j<NB_COL);j++)
-        {
-            if (m_tabMines[i][j]==MINE)
+    int i = ligne - 1;
+    int j = colonne - 1;
+    char nbMines = 0;
+
+    if (i < 0)
+        i = 0;
+    if (j < 0)
+        j = 0;
+
+    for (i = i; (i <= (ligne + 1))&&(i < NB_LIGNE); i++) {
+        for (j = j = colonne - 1; (j <= (colonne + 1))&&(j < NB_COL); j++) {
+            if (m_tabMines[i][j] == MINE)
                 nbMines++;
         }
     }
     return nbMines;
 }
+
 /**
  * @brief Si la manette est vers la droite ou la gauche, on déplace le curseur 
  * d'une position (gauche, droite, bas et haut)
  * @param char* x, char* y Les positions X et y  sur l'afficheur
  * @return rien
  */
-void deplace(char* x, char* y)
+void deplace(char* x, char* y) 
 {
     unsigned char analogX = getAnalog(AXE_X);
     unsigned char analogY = getAnalog(AXE_Y);
-    
+
     if (0 <= analogX && analogX <= 80) //si le joystick est vers la gauche
     {
-        *x = (*x)-1; //décale la position de 1 vers la gauche
-        if ((*x)<=0) //si on dépasse de l'écran
-            *x=20; //on revient de l'autre côté
-    }
-    else if (175 <= analogX && analogX <= 255) //si le joystick est vers la droite
+        *x = (*x) - 1; //décale la position de 1 vers la gauche
+        if ((*x) <= 0) //si on dépasse de l'écran
+            *x = 20; //on revient de l'autre côté
+    } else if (175 <= analogX && analogX <= 255) //si le joystick est vers la droite
     {
-        *x = (*x)+1; //décale la position de 1 vers la droite
-        if ((*x)>=21) //si on dépasse de l'écran
-            *x=1; //on revient de l'autre côté
+        *x = (*x) + 1; //décale la position de 1 vers la droite
+        if ((*x) >= 21) //si on dépasse de l'écran
+            *x = 1; //on revient de l'autre côté
     }
-    
+
     if (0 <= analogY && analogY <= 80) //si le joystick est vers le haut
     {
-        *y = (*y)-1; //décale la position de 1 vers le haut
-        if ((*y)<=0) //si on dépasse de l'écran
-            *y=4; //on revient de l'autre côté
-    }
-    else if (175 <= analogY && analogY <= 255) //si le joystick est vers le bas
+        *y = (*y) - 1; //décale la position de 1 vers le haut
+        if ((*y) <= 0) //si on dépasse de l'écran
+            *y = 4; //on revient de l'autre côté
+    } else if (175 <= analogY && analogY <= 255) //si le joystick est vers le bas
     {
-        *y = (*y)+1; //décale la position de 1 vers le bas
-        if ((*y)>=5) //si on dépasse de l'écran
-            *y=1; //on revient de l'autre côté
+        *y = (*y) + 1; //décale la position de 1 vers le bas
+        if ((*y) >= 5) //si on dépasse de l'écran
+            *y = 1; //on revient de l'autre côté
     }
     lcd_gotoXY(*x, *y); //on met le curseur à la nouvelle position.
 }
+
 /*
  * @brief Dévoile une tuile (case) de m_tabVue. 
  * S'il y a une mine, retourne Faux. Sinon remplace la case et les cases autour
@@ -244,25 +226,26 @@ void deplace(char* x, char* y)
  * @param char x, char y Les positions X et y sur l'afficheur LCD
  * @return faux s'il y avait une mine, vrai sinon
  */
-bool demine(char x, char y)
+bool demine(char x, char y) 
 {
-    if (m_tabMines[x-1][y-1]==MINE)
+    if (m_tabMines[x - 1][y - 1] == MINE)
         return false;
-    else
-    {
-        enleveTuilesAutour(x,y);
+    else {
+        enleveTuilesAutour(x, y);
     }
 }
+
 /*
  * @brief Dévoile les cases non minées autour de la tuile reçue en paramètre.
  * Cette méthode est appelée par demine().
  * @param char x, char y Les positions X et y sur l'afficheur LCD.
  * @return rien
  */
-void enleveTuilesAutour(char x, char y)
+void enleveTuilesAutour(char x, char y) 
 {
-    
+
 }
+
 /*
  * @brief Vérifie si gagné. On a gagné quand le nombre de tuiles non dévoilées
  * est égal au nombre de mines. On augmente de 1 le nombre de mines si on a 
@@ -270,9 +253,9 @@ void enleveTuilesAutour(char x, char y)
  * @param int* pMines. Le nombre de mine.
  * @return vrai si gagné, faux sinon
  */
-bool gagne(int* pMines)
+bool gagne(int* pMines) 
 {
-    
+
 }
 
 /*
@@ -280,11 +263,39 @@ bool gagne(int* pMines)
  * @param Le no du port à lire
  * @return La valeur des 8 bits de poids forts du port analogique
  */
-char getAnalog(char canal)
-{ 
+char getAnalog(char canal) 
+{
     ADCON0bits.CHS = canal;
-    __delay_us(1);  
-    ADCON0bits.GO_DONE = 1;  //lance une conversion
+    __delay_us(1);
+    ADCON0bits.GO_DONE = 1; //lance une conversion
     while (ADCON0bits.GO_DONE == 1); //attend fin de la conversion
-    return  ADRESH; //retourne seulement les 8 MSB. On laisse tomber les 2 LSB de ADRESL
+    return ADRESH; //retourne seulement les 8 MSB. On laisse tomber les 2 LSB de ADRESL
 }
+
+
+/*
+ * @brief Affiche le tableau m_tabVue.
+ * @param rien
+ * @return rien
+ */
+void afficheTabVue(void) 
+{
+    for (char i = 0; i < NB_LIGNE; i++) {
+        lcd_gotoXY(1, i + 1);
+        lcd_putMessage(m_tabVue[i]);
+    }
+}
+
+/*
+ * @brief Affiche le tableau m_tabVue.
+ * @param rien
+ * @return rien
+ */
+void afficheTabMines(void) 
+{
+    for (char i = 0; i < NB_LIGNE; i++) {
+        lcd_gotoXY(1, i + 1);
+        lcd_putMessage(m_tabMines[i]);
+    }
+}
+
