@@ -29,7 +29,6 @@
 #define PORT_SW PORTBbits.RB1 //sw de la manette
 #define TUILE 1 //caractère cgram d'une tuile
 #define MINE 2 //caractère cgram d'une mine
-#define NB_MINES 15 //nombre de mines dans le champ de mines
 /********************** PROTOTYPES *******************************************/
 void initialisation(void);
 void initTabVue(void);
@@ -51,17 +50,28 @@ void main(void)
 {
     char* posX = 10;
     char* posY = 2;
+    int* nbMine = 15; //nombre de mines dans le champ de mines
 
     initialisation();
     lcd_init();
     initTabVue();
-    rempliMines(NB_MINES);
+    rempliMines(nbMine);
     metToucheCombien();
     afficheTabVue();
     
     while (1) 
     {  
         deplace(&posX, &posY);
+        if(PORT_SW==0)
+            if(demine(posX,posY)==false || gagne(&nbMine))
+            {
+                afficheTabMines();
+                while(PORT_SW==0);
+                initTabVue();
+                rempliMines(nbMine);
+                metToucheCombien();
+                afficheTabVue();
+            }
         __delay_ms(100);
     }
 }
@@ -259,6 +269,7 @@ void enleveTuilesAutour(char x, char y)
             if(m_tabMines[j][i]!=MINE)
                 m_tabVue[j][i]=m_tabMines[j][i];
     }
+    afficheTabVue();
 }
 
 /*

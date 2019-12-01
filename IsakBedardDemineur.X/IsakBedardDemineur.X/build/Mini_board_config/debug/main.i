@@ -4872,7 +4872,7 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 
-# 34 "main.c"
+# 33 "main.c"
 void initialisation(void);
 void initTabVue(void);
 void rempliMines(int nb);
@@ -4893,22 +4893,33 @@ void main(void)
 {
 char* posX = 10;
 char* posY = 2;
+int* nbMine = 15;
 
 initialisation();
 lcd_init();
 initTabVue();
-rempliMines(15);
+rempliMines(nbMine);
 metToucheCombien();
 afficheTabVue();
 
 while (1)
 {
 deplace(&posX, &posY);
+if(PORTBbits.RB1==0)
+if(demine(posX,posY)==0 || gagne(&nbMine))
+{
+afficheTabMines();
+while(PORTBbits.RB1==0);
+initTabVue();
+rempliMines(nbMine);
+metToucheCombien();
+afficheTabVue();
+}
 _delay((unsigned long)((100)*(1000000/4000.0)));
 }
 }
 
-# 74
+# 84
 void initialisation(void)
 {
 TRISD = 0;
@@ -4930,7 +4941,7 @@ ADCON2bits.ACQT = 0;
 ADCON2bits.ADCS = 0;
 }
 
-# 102
+# 112
 void initTabVue(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -4941,7 +4952,7 @@ m_tabVue[i][20] = 0;
 }
 }
 
-# 119
+# 129
 void rempliMines(int nb)
 {
 char x, y;
@@ -4961,7 +4972,7 @@ nb--;
 }
 }
 
-# 147
+# 157
 void metToucheCombien(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -4974,7 +4985,7 @@ m_tabMines[i][j] = ' ';
 }
 }
 
-# 164
+# 174
 char calculToucheCombien(int ligne, int colonne)
 {
 int i = ligne - 1;
@@ -4995,7 +5006,7 @@ nbMines++;
 return nbMines;
 }
 
-# 190
+# 200
 void deplace(char* x, char* y)
 {
 unsigned char analogX = getAnalog(7);
@@ -5027,7 +5038,7 @@ if ((*y) >= 5)
 lcd_gotoXY(*x, *y);
 }
 
-# 229
+# 239
 bool demine(char x, char y)
 {
 if (m_tabMines[x - 1][y - 1] == 2)
@@ -5035,10 +5046,11 @@ return 0;
 else
 {
 enleveTuilesAutour(x, y);
+return 1;
 }
 }
 
-# 245
+# 256
 void enleveTuilesAutour(char x, char y)
 {
 int i = x - 2;
@@ -5055,15 +5067,30 @@ for (j = j; j<=y && j < 4; j++)
 if(m_tabMines[j][i]!=2)
 m_tabVue[j][i]=m_tabMines[j][i];
 }
+afficheTabVue();
 }
 
-# 270
+# 282
 bool gagne(int* pMines)
 {
+char nbTuile=0;
 
+for (char i = 0; i < 4; i++) {
+for (char j = 0; j < 20; j++) {
+if(m_tabVue[i][j]==1)
+nbTuile++;
+}
+}
+if (nbTuile == *pMines)
+{
+(*pMines)++;
+return 1;
+}
+else
+return 0;
 }
 
-# 280
+# 306
 char getAnalog(char canal)
 {
 ADCON0bits.CHS = canal;
@@ -5073,7 +5100,7 @@ while (ADCON0bits.GO_DONE == 1);
 return ADRESH;
 }
 
-# 295
+# 321
 void afficheTabVue(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -5082,7 +5109,7 @@ lcd_putMessage(m_tabVue[i]);
 }
 }
 
-# 308
+# 334
 void afficheTabMines(void)
 {
 for (char i = 0; i < 4; i++) {
