@@ -59,6 +59,7 @@ void main(void)
     rempliMines(NB_MINES);
     metToucheCombien();
     afficheTabVue();
+    
     while (1) 
     {  
         deplace(&posX, &posY);
@@ -230,7 +231,8 @@ bool demine(char x, char y)
 {
     if (m_tabMines[x - 1][y - 1] == MINE)
         return false;
-    else {
+    else 
+    {
         enleveTuilesAutour(x, y);
     }
 }
@@ -243,7 +245,19 @@ bool demine(char x, char y)
  */
 void enleveTuilesAutour(char x, char y) 
 {
+    int i = x - 2;
+    int j = y - 2;
 
+    if (i < 0)
+        i = 0;
+    if (j < 0)
+        j = 0;
+
+    for (i = i; i <=x && i< NB_COL; i++) 
+    {
+        for (j = j; j<=y && j < NB_LIGNE; j++)
+            m_tabVue[j][i]=m_tabMines[j][i];
+    }
 }
 
 /*
@@ -287,7 +301,7 @@ void afficheTabVue(void)
 }
 
 /*
- * @brief Affiche le tableau m_tabVue.
+ * @brief Affiche le tableau m_tabMines.
  * @param rien
  * @return rien
  */
