@@ -238,7 +238,7 @@ void deplace(char* x, char* y)
  */
 bool demine(char x, char y) 
 {
-    if (m_tabMines[x - 1][y - 1] == MINE)
+    if (m_tabMines[y - 1][x - 1] == MINE)
         return false;
     else 
     {
@@ -262,12 +262,16 @@ void enleveTuilesAutour(char x, char y)
         i = 0;
     if (j < 0)
         j = 0;
-
-    for (i = i; i <=x && i< NB_COL; i++) 
+    
+    while(j <= y && j<NB_LIGNE)
     {
-        for (j = j; j<=y && j < NB_LIGNE; j++)
+        while(i<=x && i<NB_COL)
+        {
             if(m_tabMines[j][i]!=MINE)
                 m_tabVue[j][i]=m_tabMines[j][i];
+            i++;
+        }
+        j++;
     }
     afficheTabVue();
 }

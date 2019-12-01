@@ -5041,7 +5041,7 @@ lcd_gotoXY(*x, *y);
 # 239
 bool demine(char x, char y)
 {
-if (m_tabMines[x - 1][y - 1] == 2)
+if (m_tabMines[y - 1][x - 1] == 2)
 return 0;
 else
 {
@@ -5061,16 +5061,20 @@ i = 0;
 if (j < 0)
 j = 0;
 
-for (i = i; i <=x && i< 20; i++)
+while(j <= y && j<4)
 {
-for (j = j; j<=y && j < 4; j++)
+while(i<=x && i<20)
+{
 if(m_tabMines[j][i]!=2)
 m_tabVue[j][i]=m_tabMines[j][i];
+i++;
+}
+j++;
 }
 afficheTabVue();
 }
 
-# 282
+# 286
 bool gagne(int* pMines)
 {
 char nbTuile=0;
@@ -5090,7 +5094,7 @@ else
 return 0;
 }
 
-# 306
+# 310
 char getAnalog(char canal)
 {
 ADCON0bits.CHS = canal;
@@ -5100,7 +5104,7 @@ while (ADCON0bits.GO_DONE == 1);
 return ADRESH;
 }
 
-# 321
+# 325
 void afficheTabVue(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -5109,7 +5113,7 @@ lcd_putMessage(m_tabVue[i]);
 }
 }
 
-# 334
+# 338
 void afficheTabMines(void)
 {
 for (char i = 0; i < 4; i++) {

@@ -5,7 +5,7 @@ Linker command line:
 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt -cs \
   -h+dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.sym \
   --cmf=dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.cmf -z \
-  -Q18F45K20 -oC:\Users\Drago\AppData\Local\Temp\s9ik.2 \
+  -Q18F45K20 -oC:\Users\Drago\AppData\Local\Temp\sdss.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/Mini_board_config/debug/IsakBedardDemineur.X.debug.map -E1 \
   -ver=XC8 --acfsm=1493 -ASTACK=0194h-05EEh -pstack=STACK -ACODE=00h-07D3Fh \
@@ -24,7 +24,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -pparam0=BANK0 \
-  C:\Users\Drago\AppData\Local\Temp\s9ik.o \
+  C:\Users\Drago\AppData\Local\Temp\sdss.o \
   dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o 
 
 Object code version is 3.11
@@ -37,7 +37,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Drago\AppData\Local\Temp\s9ik.o
+C:\Users\Drago\AppData\Local\Temp\sdss.o
                 init                                  0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
@@ -1158,7 +1158,7 @@ Total ram usage:        4 bytes
 
  *************** function _gagne *****************
  Defined at:
-		line 282 in file "main.c"
+		line 286 in file "main.c"
  Parameters:    Size  Location     Type
   pMines          2    0[BANK0 ] PTR int 
 		 -> main@nbMine(2), 
@@ -1225,7 +1225,7 @@ Total ram usage:        7 bytes
 
  *************** function _getAnalog *****************
  Defined at:
-		line 306 in file "main.c"
+		line 310 in file "main.c"
  Parameters:    Size  Location     Type
   canal           1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1319,7 +1319,7 @@ Total ram usage:       10 bytes
 
  *************** function _afficheTabVue *****************
  Defined at:
-		line 321 in file "main.c"
+		line 325 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1382,7 +1382,7 @@ Total ram usage:        6 bytes
 
  *************** function _afficheTabMines *****************
  Defined at:
-		line 334 in file "main.c"
+		line 338 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
