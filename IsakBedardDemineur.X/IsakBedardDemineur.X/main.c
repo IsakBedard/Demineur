@@ -46,7 +46,6 @@ void afficheTabMines(void);
 /****************** VARIABLES GLOBALES ****************************************/
 char m_tabVue[NB_LIGNE][NB_COL + 1]; //Tableau des caractères affichés au LCD
 char m_tabMines[NB_LIGNE][NB_COL + 1]; //Tableau contenant les mines, les espaces et les chiffres
-
 /******************** PROGRAMME PRINCPAL **************************************/
 void main(void) 
 {
@@ -256,7 +255,8 @@ void enleveTuilesAutour(char x, char y)
     for (i = i; i <=x && i< NB_COL; i++) 
     {
         for (j = j; j<=y && j < NB_LIGNE; j++)
-            m_tabVue[j][i]=m_tabMines[j][i];
+            if(m_tabMines[j][i]!=MINE)
+                m_tabVue[j][i]=m_tabMines[j][i];
     }
 }
 
@@ -269,7 +269,7 @@ void enleveTuilesAutour(char x, char y)
  */
 bool gagne(int* pMines) 
 {
-
+    
 }
 
 /*
@@ -312,4 +312,3 @@ void afficheTabMines(void)
         lcd_putMessage(m_tabMines[i]);
     }
 }
-
