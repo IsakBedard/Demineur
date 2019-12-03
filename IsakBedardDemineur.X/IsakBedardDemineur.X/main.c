@@ -255,16 +255,20 @@ bool demine(char x, char y)
  */
 void enleveTuilesAutour(char x, char y) 
 {
-    int i = x - 2;
-    int j = y - 2;
+    signed char i = x - 2;
+    signed char j = y - 2;
+    char mem;
 
     if (i < 0)
         i = 0;
     if (j < 0)
         j = 0;
+    mem=i;
+    
     
     while(j <= y && j<NB_LIGNE)
     {
+        i=mem;
         while(i<=x && i<NB_COL)
         {
             if(m_tabMines[j][i]!=MINE)
