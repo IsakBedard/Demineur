@@ -5045,12 +5045,18 @@ if (m_tabMines[y - 1][x - 1] == 2)
 return 0;
 else
 {
+if (m_tabMines[y-1][x-1]==' ')
 enleveTuilesAutour(x, y);
+else
+{
+m_tabVue[y-1][x-1]=m_tabMines[y-1][x-1];
+afficheTabVue();
+}
 return 1;
 }
 }
 
-# 256
+# 262
 void enleveTuilesAutour(char x, char y)
 {
 signed char i = x - 2;
@@ -5078,7 +5084,7 @@ j++;
 afficheTabVue();
 }
 
-# 290
+# 296
 bool gagne(int* pMines)
 {
 char nbTuile=0;
@@ -5098,7 +5104,7 @@ else
 return 0;
 }
 
-# 314
+# 320
 char getAnalog(char canal)
 {
 ADCON0bits.CHS = canal;
@@ -5108,7 +5114,7 @@ while (ADCON0bits.GO_DONE == 1);
 return ADRESH;
 }
 
-# 329
+# 335
 void afficheTabVue(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -5117,7 +5123,7 @@ lcd_putMessage(m_tabVue[i]);
 }
 }
 
-# 342
+# 348
 void afficheTabMines(void)
 {
 for (char i = 0; i < 4; i++) {

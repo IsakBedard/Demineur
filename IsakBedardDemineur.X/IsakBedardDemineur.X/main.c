@@ -242,7 +242,13 @@ bool demine(char x, char y)
         return false;
     else 
     {
-        enleveTuilesAutour(x, y);
+        if (m_tabMines[y-1][x-1]==' ')
+            enleveTuilesAutour(x, y);
+        else
+        {
+            m_tabVue[y-1][x-1]=m_tabMines[y-1][x-1];
+            afficheTabVue();
+        }
         return true;
     }
 }
