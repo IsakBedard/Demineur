@@ -4893,7 +4893,7 @@ void main(void)
 {
 char* posX = 10;
 char* posY = 2;
-int* nbMine = 1;
+int* nbMine = 9;
 
 initialisation();
 lcd_init();

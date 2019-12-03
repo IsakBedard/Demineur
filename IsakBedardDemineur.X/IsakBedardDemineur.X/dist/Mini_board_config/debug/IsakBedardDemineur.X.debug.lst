@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Tue Dec 03 15:05:59 2019
+                                                                                               Tue Dec 03 15:55:09 2019
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F45K20
@@ -590,8 +590,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    576  00730E  0E00               	movlw	0
    577  007310  6FD7               	movwf	(main@posY+1)& (0+255),b
    578                           
-   579                           ;main.c: 53: int* nbMine = 1;
-   580  007312  0E01               	movlw	1
+   579                           ;main.c: 53: int* nbMine = 9;
+   580  007312  0E09               	movlw	9
    581  007314  0100               	movlb	0	; force () banked
    582  007316  6FD2               	movwf	main@nbMine& (0+255),b
    583  007318  0E00               	movlw	0
@@ -4913,7 +4913,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Tue Dec 03 15:05:59 2019
+Symbol Table                                                                                   Tue Dec 03 15:55:09 2019
 
  __end_of_calculToucheCombien 7D40                            l91 724A                            l84 6CBC  
                           l76 73A0          ??_enleveTuilesAutour 00BE           ___wmul@multiplicand 00B6  
