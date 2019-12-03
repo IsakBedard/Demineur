@@ -3204,8 +3204,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _posY -> -> 2 `i `*uc ]
 "53
 [v _nbMine `*i ~T0 @X0 1 a ]
-[; ;main.c: 53: int* nbMine = 15;
-[e = _nbMine -> -> 15 `i `*i ]
+[; ;main.c: 53: int* nbMine = 1;
+[e = _nbMine -> -> 1 `i `*i ]
 [; ;main.c: 55: initialisation();
 "55
 [e ( _initialisation ..  ]

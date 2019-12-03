@@ -50,7 +50,7 @@ void main(void)
 {
     char* posX = 10;
     char* posY = 2;
-    int* nbMine = 15; //nombre de mines dans le champ de mines
+    int* nbMine = 1; //nombre de mines dans le champ de mines. Augmente de 1 lorsqu'on gagne
 
     initialisation();
     lcd_init();
