@@ -4,7 +4,10 @@
  * @date   28 novembre 2019
  * @brief  Jeu : Démineur.
  * 
- * Le joueur doit trouver l'emplacement de mines.
+ * L'écran LCD 4x20 devient un champ de mines. Les mines, placées aléatoirement,
+ * sont cachées par des tuiles. Il est possible de découvrir ce qui a en dessous des 
+ * tuiles en s'y déplaçant avec le joystick XY et en appuyant sur le bouton inclut
+ * avec le joystick. 
  *
  * @version 1.0
  * Environnement:
