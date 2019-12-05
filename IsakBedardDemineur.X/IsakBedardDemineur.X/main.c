@@ -27,8 +27,10 @@
 #define AXE_X 7  //canal analogique de l'axe x de la manette
 #define AXE_Y 6
 #define PORT_SW PORTBbits.RB1 //sw de la manette
+#define SW0 PORTBbits.RB0 //bouton sur la carte noire
 #define TUILE 1 //caractère cgram d'une tuile
 #define MINE 2 //caractère cgram d'une mine
+#define DRAPEAU 3 //caractère cgram d'un drapeau
 /********************** PROTOTYPES *******************************************/
 void initialisation(void);
 void initTabVue(void);
@@ -42,6 +44,7 @@ bool gagne(int* pMines);
 char getAnalog(char canal);
 void afficheTabVue(void);
 void afficheTabMines(void);
+void metOuEnleveDrapeau(char x, char y);
 /****************** VARIABLES GLOBALES ****************************************/
 char m_tabVue[NB_LIGNE][NB_COL + 1]; //Tableau des caractères affichés au LCD
 char m_tabMines[NB_LIGNE][NB_COL + 1]; //Tableau contenant les mines, les espaces et les chiffres
@@ -58,6 +61,7 @@ void main(void)
     rempliMines(nbMine);
     metToucheCombien();
     afficheTabVue();
+    
     
     while (1) 
     {  
@@ -351,4 +355,15 @@ void afficheTabMines(void)
         lcd_gotoXY(1, i + 1);
         lcd_putMessage(m_tabMines[i]);
     }
+}
+
+/*
+ * @brief Remplace la tuile sélectionnée avec un drapeau dans m_tabVue. Si la case sélectionnée
+ * est un drapeau, on l'enlève. Les drapeaux ne sont pas enlevés par enleveTuilesAutour.
+ * @param char x, char y la position du curseur sur le LCD
+ * @return rien
+ */
+void metOuEnleveDrapeau(char x, char y) 
+{
+    
 }

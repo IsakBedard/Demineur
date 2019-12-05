@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Drago\AppData\Local\Temp\sf6g.o
+$C:\Users\Drago\AppData\Local\Temp\s2ts.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 0 0 4 1
 config CONFIG 0 300000 300000 E 1
@@ -436,52 +436,52 @@ $dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 73BE text0 CODE >72:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 73C2 text0 CODE >73:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 73C6 text0 CODE >75:C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
-6EEC cinit CODE >1527:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6EEC cinit CODE >1529:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6EEC cinit CODE >1532:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6EEC cinit CODE >1566:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6EEE cinit CODE >1567:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6EF0 cinit CODE >1568:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6EF2 cinit CODE >1569:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6EF4 cinit CODE >1570:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6EF6 cinit CODE >1571:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6EF8 cinit CODE >1572:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6EFC cinit CODE >1573:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F00 cinit CODE >1574:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F00 cinit CODE >1575:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F02 cinit CODE >1576:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F06 cinit CODE >1577:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F08 cinit CODE >1578:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F0A cinit CODE >1579:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F0C cinit CODE >1583:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F0E cinit CODE >1584:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F10 cinit CODE >1585:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F12 cinit CODE >1586:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F14 cinit CODE >1587:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F16 cinit CODE >1588:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F18 cinit CODE >1589:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F1C cinit CODE >1590:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F20 cinit CODE >1591:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F20 cinit CODE >1592:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F22 cinit CODE >1593:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F26 cinit CODE >1594:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F28 cinit CODE >1595:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F2A cinit CODE >1596:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F2C cinit CODE >1600:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F30 cinit CODE >1601:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F32 cinit CODE >1602:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F32 cinit CODE >1603:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F34 cinit CODE >1604:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F36 cinit CODE >1605:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F38 cinit CODE >1608:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F3C cinit CODE >1609:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F3E cinit CODE >1610:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F3E cinit CODE >1611:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F40 cinit CODE >1612:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F42 cinit CODE >1613:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F44 cinit CODE >1619:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F44 cinit CODE >1621:C:\Users\Drago\AppData\Local\Temp\sf6g.s
-6F46 cinit CODE >1622:C:\Users\Drago\AppData\Local\Temp\sf6g.s
+6EEC cinit CODE >1527:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6EEC cinit CODE >1529:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6EEC cinit CODE >1532:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6EEC cinit CODE >1566:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6EEE cinit CODE >1567:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6EF0 cinit CODE >1568:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6EF2 cinit CODE >1569:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6EF4 cinit CODE >1570:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6EF6 cinit CODE >1571:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6EF8 cinit CODE >1572:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6EFC cinit CODE >1573:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F00 cinit CODE >1574:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F00 cinit CODE >1575:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F02 cinit CODE >1576:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F06 cinit CODE >1577:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F08 cinit CODE >1578:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F0A cinit CODE >1579:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F0C cinit CODE >1583:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F0E cinit CODE >1584:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F10 cinit CODE >1585:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F12 cinit CODE >1586:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F14 cinit CODE >1587:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F16 cinit CODE >1588:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F18 cinit CODE >1589:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F1C cinit CODE >1590:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F20 cinit CODE >1591:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F20 cinit CODE >1592:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F22 cinit CODE >1593:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F26 cinit CODE >1594:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F28 cinit CODE >1595:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F2A cinit CODE >1596:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F2C cinit CODE >1600:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F30 cinit CODE >1601:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F32 cinit CODE >1602:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F32 cinit CODE >1603:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F34 cinit CODE >1604:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F36 cinit CODE >1605:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F38 cinit CODE >1608:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F3C cinit CODE >1609:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F3E cinit CODE >1610:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F3E cinit CODE >1611:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F40 cinit CODE >1612:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F42 cinit CODE >1613:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F44 cinit CODE >1619:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F44 cinit CODE >1621:C:\Users\Drago\AppData\Local\Temp\s2ts.s
+6F46 cinit CODE >1622:C:\Users\Drago\AppData\Local\Temp\s2ts.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -509,18 +509,18 @@ __HidataBANK0 0 0 ABS 0 idataBANK0 dist/Mini_board_config/debug\IsakBedardDemine
 __HidataBANK1 0 0 ABS 0 idataBANK1 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 _lcd_ecrireDonnees 6BBE 0 CODE 0 text28 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Drago\AppData\Local\Temp\sf6g.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Drago\AppData\Local\Temp\s2ts.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 _T1CONbits FCD 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 _RCIF 7CF5 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 _TMR1 FCE 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
-___sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\sf6g.o
+___sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\s2ts.o
 _main 72FE 0 CODE 0 text0 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 _rand 6DE2 0 CODE 0 text2 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 getAnalog@canal B5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
-start 0 0 CODE 0 init C:\Users\Drago\AppData\Local\Temp\sf6g.o
+start 0 0 CODE 0 init C:\Users\Drago\AppData\Local\Temp\s2ts.o
 __size_of___awmod 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __size_of_main 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __size_of_rand 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
@@ -543,11 +543,11 @@ __end_of_lcd_wrCom 7020 0 CODE 0 text26 dist/Mini_board_config/debug\IsakBedardD
 __size_of_metToucheCombien 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 _lcd_curseurHome 6BA6 0 CODE 0 text11 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 _lcd_wrData 6C56 0 CODE 0 text24 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
-__accesstop 60 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\sf6g.o
-intlevel0 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\sf6g.o
-intlevel1 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\sf6g.o
-intlevel2 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\sf6g.o
-intlevel3 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\sf6g.o
+__accesstop 60 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\s2ts.o
+intlevel0 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\s2ts.o
+intlevel1 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\s2ts.o
+intlevel2 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\s2ts.o
+intlevel3 0 0 CODE 0 text C:\Users\Drago\AppData\Local\Temp\s2ts.o
 __size_of_lcd_wrCom 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 _lcd_resetSequence 6F4A 0 CODE 0 text9 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __size_of_initTabVue 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
@@ -570,8 +570,8 @@ _ADCON1 FC1 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 _ADRESH FC4 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 _ANSELH F7F 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __end_of_enleveTuilesAutour 7A24 0 CODE 0 text19 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\sf6g.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\sf6g.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\s2ts.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\Drago\AppData\Local\Temp\s2ts.o
 __size_of_lcd_putMessage 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 _initialisation 6C8A 0 CODE 0 text12 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
@@ -642,7 +642,7 @@ __size_of_afficheTabMines 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDem
 _m_tabVue 100 0 BANK1 1 bssBANK1 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Hbigram 0 0 ABS 0 bigram dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Drago\AppData\Local\Temp\sf6g.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Drago\AppData\Local\Temp\s2ts.o
 __size_of_lcd_busy 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __size_of_lcd_init 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Hcomram 0 0 ABS 0 comram dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
@@ -798,8 +798,8 @@ __Lfarbss 0 0 FARRAM 0 farbss dist/Mini_board_config/debug\IsakBedardDemineur.X.
 _lcd_putMessage 6D40 0 CODE 0 text22 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 srand@x B4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Lfardata 0 0 FARRAM 0 fardata dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
-stackhi 5EE 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\sf6g.o
-stacklo 194 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\sf6g.o
+stackhi 5EE 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\s2ts.o
+stacklo 194 0 ABS 0 - C:\Users\Drago\AppData\Local\Temp\s2ts.o
 __Lintcode 0 0 CODE 0 intcode dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Lintret 0 0 ABS 0 intret dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Lirdata 0 0 CODE 0 irdata dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
@@ -864,7 +864,7 @@ __Ltext27 0 0 ABS 0 text27 dist/Mini_board_config/debug\IsakBedardDemineur.X.deb
 __Ltext28 0 0 ABS 0 text28 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Ltext29 0 0 ABS 0 text29 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Ltext30 0 0 ABS 0 text30 dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
-__ramtop 600 0 RAM 0 ramtop C:\Users\Drago\AppData\Local\Temp\sf6g.o
+__ramtop 600 0 RAM 0 ramtop C:\Users\Drago\AppData\Local\Temp\s2ts.o
 __size_of_afficheTabVue 0 0 ABS 0 - dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Lpowerup 0 0 CODE 0 powerup dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/Mini_board_config/debug\IsakBedardDemineur.X.debug.o
