@@ -61,35 +61,37 @@
 [v _lcd_initCGRam lcd_initCGRam `A(v  1 s 1 lcd_initCGRam ]
 "431
 [v _lcd_strobeEnableBit lcd_strobeEnableBit `A(v  1 s 1 lcd_strobeEnableBit ]
-"49 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"52 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _main main `A(v  1 e 1 0 ]
-"84
+"90
 [v _initialisation initialisation `A(v  1 e 1 0 ]
-"112
+"118
 [v _initTabVue initTabVue `A(v  1 e 1 0 ]
-"129
+"135
 [v _rempliMines rempliMines `A(v  1 e 1 0 ]
-"157
+"163
 [v _metToucheCombien metToucheCombien `A(v  1 e 1 0 ]
-"174
+"180
 [v _calculToucheCombien calculToucheCombien `A(uc  1 e 1 0 ]
-"200
+"206
 [v _deplace deplace `A(v  1 e 1 0 ]
-"239
+"245
 [v _demine demine `A(uc  1 e 1 0 ]
-"262
+"269
 [v _enleveTuilesAutour enleveTuilesAutour `A(v  1 e 1 0 ]
-"296
+"303
 [v _gagne gagne `A(uc  1 e 1 0 ]
-"320
+"327
 [v _getAnalog getAnalog `A(uc  1 e 1 0 ]
-"335
+"342
 [v _afficheTabVue afficheTabVue `A(v  1 e 1 0 ]
-"348
+"355
 [v _afficheTabMines afficheTabMines `A(v  1 e 1 0 ]
+"370
+[v _metOuEnleveDrapeau metOuEnleveDrapeau `A(v  1 e 1 0 ]
 "446 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f45k20.h
 [v _ANSEL ANSEL `VEuc  1 e 1 @3966 ]
-[s S225 . 1 `uc 1 ANS0 1 0 :1:0 
+[s S231 . 1 `uc 1 ANS0 1 0 :1:0 
 `uc 1 ANS1 1 0 :1:1 
 `uc 1 ANS2 1 0 :1:2 
 `uc 1 ANS3 1 0 :1:3 
@@ -99,11 +101,11 @@
 `uc 1 ANS7 1 0 :1:7 
 ]
 "463
-[u S234 . 1 `S225 1 . 1 0 ]
-[v _ANSELbits ANSELbits `VES234  1 e 1 @3966 ]
+[u S240 . 1 `S231 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES240  1 e 1 @3966 ]
 "508
 [v _ANSELH ANSELH `VEuc  1 e 1 @3967 ]
-[s S479 . 1 `uc 1 RA0 1 0 :1:0 
+[s S489 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -113,49 +115,49 @@
 `uc 1 RA7 1 0 :1:7 
 ]
 "618
-[s S488 . 1 `uc 1 AN0 1 0 :1:0 
+[s S498 . 1 `uc 1 AN0 1 0 :1:0 
 `uc 1 AN1 1 0 :1:1 
 `uc 1 AN2 1 0 :1:2 
 `uc 1 AN3 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
 `uc 1 AN4 1 0 :1:5 
 ]
-[s S495 . 1 `uc 1 C12IN0M 1 0 :1:0 
+[s S505 . 1 `uc 1 C12IN0M 1 0 :1:0 
 `uc 1 C12IN1M 1 0 :1:1 
 `uc 1 C2INP 1 0 :1:2 
 `uc 1 C1INP 1 0 :1:3 
 `uc 1 C1OUT 1 0 :1:4 
 `uc 1 C2OUT 1 0 :1:5 
 ]
-[s S502 . 1 `uc 1 C12IN0N 1 0 :1:0 
+[s S512 . 1 `uc 1 C12IN0N 1 0 :1:0 
 `uc 1 C12IN1N 1 0 :1:1 
 `uc 1 VREFM 1 0 :1:2 
 `uc 1 VREFP 1 0 :1:3 
 `uc 1 T0CKI 1 0 :1:4 
 `uc 1 SS 1 0 :1:5 
 ]
-[s S509 . 1 `uc 1 . 1 0 :5:0 
+[s S519 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_SS 1 0 :1:5 
 ]
-[s S512 . 1 `uc 1 . 1 0 :2:0 
+[s S522 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 VREFN 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nSS 1 0 :1:5 
 ]
-[s S517 . 1 `uc 1 . 1 0 :2:0 
+[s S527 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 CVREF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 LVDIN 1 0 :1:5 
 ]
-[s S522 . 1 `uc 1 . 1 0 :5:0 
+[s S532 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 HLVDIN 1 0 :1:5 
 ]
-[s S525 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+[s S535 . 1 `uc 1 ULPWUIN 1 0 :1:0 
 `uc 1 . 1 0 :6:1 
 `uc 1 RJPU 1 0 :1:7 
 ]
-[u S529 . 1 `S479 1 . 1 0 `S488 1 . 1 0 `S495 1 . 1 0 `S502 1 . 1 0 `S509 1 . 1 0 `S512 1 . 1 0 `S517 1 . 1 0 `S522 1 . 1 0 `S525 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES529  1 e 1 @3968 ]
+[u S539 . 1 `S489 1 . 1 0 `S498 1 . 1 0 `S505 1 . 1 0 `S512 1 . 1 0 `S519 1 . 1 0 `S522 1 . 1 0 `S527 1 . 1 0 `S532 1 . 1 0 `S535 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES539  1 e 1 @3968 ]
 [s S55 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
@@ -205,7 +207,7 @@
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "2254
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S675 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S685 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -215,7 +217,7 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "2508
-[s S684 . 1 `uc 1 RC0 1 0 :1:0 
+[s S694 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -224,11 +226,11 @@
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S693 . 1 `S675 1 . 1 0 `S684 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES693  1 e 1 @3988 ]
+[u S703 . 1 `S685 1 . 1 0 `S694 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES703  1 e 1 @3988 ]
 "2698
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S811 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S821 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -238,23 +240,23 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "3796
-[s S820 . 1 `uc 1 . 1 0 :3:0 
+[s S830 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S823 . 1 `uc 1 . 1 0 :5:0 
+[s S833 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[s S826 . 1 `uc 1 . 1 0 :6:0 
+[s S836 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S829 . 1 `uc 1 . 1 0 :6:0 
+[s S839 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S832 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S842 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S834 . 1 `S811 1 . 1 0 `S820 1 . 1 0 `S823 1 . 1 0 `S826 1 . 1 0 `S829 1 . 1 0 `S832 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES834  1 e 1 @4011 ]
-[s S759 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S844 . 1 `S821 1 . 1 0 `S830 1 . 1 0 `S833 1 . 1 0 `S836 1 . 1 0 `S839 1 . 1 0 `S842 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES844  1 e 1 @4011 ]
+[s S769 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -264,7 +266,7 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "4004
-[s S768 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S778 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
 `uc 1 SENDB1 1 0 :1:3 
@@ -273,13 +275,13 @@
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S777 . 1 `uc 1 . 1 0 :6:0 
+[s S787 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S780 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S790 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S782 . 1 `S759 1 . 1 0 `S768 1 . 1 0 `S777 1 . 1 0 `S780 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES782  1 e 1 @4012 ]
+[u S792 . 1 `S769 1 . 1 0 `S778 1 . 1 0 `S787 1 . 1 0 `S790 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES792  1 e 1 @4012 ]
 "4221
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "4233
@@ -288,7 +290,7 @@
 [v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
 "4257
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @4016 ]
-[s S717 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S727 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -298,73 +300,73 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "4689
-[s S726 . 1 `uc 1 . 1 0 :4:0 
+[s S736 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 SCKP 1 0 :1:4 
 ]
-[s S729 . 1 `uc 1 . 1 0 :5:0 
+[s S739 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RXCKP 1 0 :1:5 
 ]
-[s S732 . 1 `uc 1 . 1 0 :1:0 
+[s S742 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 W4E 1 0 :1:1 
 ]
-[u S735 . 1 `S717 1 . 1 0 `S726 1 . 1 0 `S729 1 . 1 0 `S732 1 . 1 0 ]
-[v _BAUDCONbits BAUDCONbits `VES735  1 e 1 @4024 ]
-[s S315 . 1 `uc 1 ADCS 1 0 :3:0 
+[u S745 . 1 `S727 1 . 1 0 `S736 1 . 1 0 `S739 1 . 1 0 `S742 1 . 1 0 ]
+[v _BAUDCONbits BAUDCONbits `VES745  1 e 1 @4024 ]
+[s S321 . 1 `uc 1 ADCS 1 0 :3:0 
 `uc 1 ACQT 1 0 :3:3 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "5074
-[s S320 . 1 `uc 1 ADCS0 1 0 :1:0 
+[s S326 . 1 `uc 1 ADCS0 1 0 :1:0 
 `uc 1 ADCS1 1 0 :1:1 
 `uc 1 ADCS2 1 0 :1:2 
 `uc 1 ACQT0 1 0 :1:3 
 `uc 1 ACQT1 1 0 :1:4 
 `uc 1 ACQT2 1 0 :1:5 
 ]
-[u S327 . 1 `S315 1 . 1 0 `S320 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES327  1 e 1 @4032 ]
+[u S333 . 1 `S321 1 . 1 0 `S326 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES333  1 e 1 @4032 ]
 "5124
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-[s S246 . 1 `uc 1 . 1 0 :1:0 
+[s S252 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "5219
-[s S249 . 1 `uc 1 ADON 1 0 :1:0 
+[s S255 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S253 . 1 `uc 1 . 1 0 :1:0 
+[s S259 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S260 . 1 `uc 1 . 1 0 :1:0 
+[s S266 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S263 . 1 `uc 1 . 1 0 :1:0 
+[s S269 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S266 . 1 `uc 1 . 1 0 :1:0 
+[s S272 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[s S269 . 1 `uc 1 . 1 0 :1:0 
+[s S275 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[s S272 . 1 `uc 1 . 1 0 :1:0 
+[s S278 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S275 . 1 `S246 1 . 1 0 `S249 1 . 1 0 `S253 1 . 1 0 `S260 1 . 1 0 `S263 1 . 1 0 `S266 1 . 1 0 `S269 1 . 1 0 `S272 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES275  1 e 1 @4034 ]
+[u S281 . 1 `S252 1 . 1 0 `S255 1 . 1 0 `S259 1 . 1 0 `S266 1 . 1 0 `S269 1 . 1 0 `S272 1 . 1 0 `S275 1 . 1 0 `S278 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES281  1 e 1 @4034 ]
 "5308
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
-[s S169 . 1 `uc 1 . 1 0 :2:0 
+[s S175 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T1SYNC 1 0 :1:2 
 ]
 "5907
-[s S172 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S178 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 TMR1CS 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -372,19 +374,19 @@
 `uc 1 T1RUN 1 0 :1:6 
 `uc 1 RD16 1 0 :1:7 
 ]
-[s S180 . 1 `uc 1 . 1 0 :2:0 
+[s S186 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[s S186 . 1 `uc 1 . 1 0 :3:0 
+[s S192 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SOSCEN 1 0 :1:3 
 `uc 1 . 1 0 :3:4 
 `uc 1 T1RD16 1 0 :1:7 
 ]
-[u S191 . 1 `S169 1 . 1 0 `S172 1 . 1 0 `S180 1 . 1 0 `S186 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES191  1 e 1 @4045 ]
+[u S197 . 1 `S175 1 . 1 0 `S178 1 . 1 0 `S186 1 . 1 0 `S192 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES197  1 e 1 @4045 ]
 "5977
 [v _TMR1 TMR1 `VEus  1 e 2 @4046 ]
 "8630
@@ -393,34 +395,34 @@
 [v _randx randx `l  1 s 4 randx ]
 "66 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
 [v _matCGRAM matCGRAM `A[8][8]uc  1 e 64 0 ]
-"46 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"49 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _m_tabVue m_tabVue `A[4][21]uc  1 e 84 0 ]
-"47
+"50
 [v _m_tabMines m_tabMines `A[4][21]uc  1 e 84 0 ]
-"49
+"52
 [v _main main `A(v  1 e 1 0 ]
 {
-"52
+"55
 [v main@posY posY `*.39uc  1 a 2 34 ]
-"51
+"54
 [v main@posX posX `*.39uc  1 a 2 32 ]
-"53
+"56
 [v main@nbMine nbMine `*.39i  1 a 2 30 ]
-"77
+"83
 } 0
-"129
+"135
 [v _rempliMines rempliMines `A(v  1 e 1 0 ]
 {
-"134
+"140
 [v rempliMines@j j `uc  1 a 1 28 ]
-"133
+"139
 [v rempliMines@i i `uc  1 a 1 27 ]
-"131
+"137
 [v rempliMines@y y `uc  1 a 1 26 ]
 [v rempliMines@x x `uc  1 a 1 25 ]
-"129
+"135
 [v rempliMines@nb nb `i  1 p 2 20 ]
-"146
+"152
 } 0
 "12 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
 [v _rand rand `(i  1 e 2 0 ]
@@ -448,28 +450,28 @@
 [v ___awmod@divisor divisor `i  1 p 2 16 ]
 "34
 } 0
-"157 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"163 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _metToucheCombien metToucheCombien `A(v  1 e 1 0 ]
 {
-"160
+"166
 [v metToucheCombien@j j `uc  1 a 1 22 ]
-"159
+"165
 [v metToucheCombien@i i `uc  1 a 1 21 ]
-"167
+"173
 } 0
-"174
+"180
 [v _calculToucheCombien calculToucheCombien `A(uc  1 e 1 0 ]
 {
-"177
+"183
 [v calculToucheCombien@j j `i  1 a 2 16 ]
-"176
+"182
 [v calculToucheCombien@i i `i  1 a 2 14 ]
-"178
+"184
 [v calculToucheCombien@nbMines nbMines `uc  1 a 1 13 ]
-"174
+"180
 [v calculToucheCombien@ligne ligne `i  1 p 2 6 ]
 [v calculToucheCombien@colonne colonne `i  1 p 2 8 ]
-"192
+"198
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -480,6 +482,16 @@
 [v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
+} 0
+"370 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+[v _metOuEnleveDrapeau metOuEnleveDrapeau `A(v  1 e 1 0 ]
+{
+[v metOuEnleveDrapeau@x x `uc  1 a 1 wreg ]
+[v metOuEnleveDrapeau@x x `uc  1 a 1 wreg ]
+[v metOuEnleveDrapeau@y y `uc  1 p 1 9 ]
+"372
+[v metOuEnleveDrapeau@x x `uc  1 a 1 15 ]
+"378
 } 0
 "258 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
 [v _lcd_init lcd_init `A(v  1 e 1 0 ]
@@ -504,10 +516,10 @@
 {
 "291
 } 0
-"84 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"90 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _initialisation initialisation `A(v  1 e 1 0 ]
 {
-"103
+"109
 } 0
 "6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
 [v _srand srand `(v  1 e 1 0 ]
@@ -515,89 +527,89 @@
 [v srand@x x `ui  1 p 2 0 ]
 "9
 } 0
-"112 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"118 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _initTabVue initTabVue `A(v  1 e 1 0 ]
 {
-"115
+"121
 [v initTabVue@j j `uc  1 a 1 2 ]
-"114
-[v initTabVue@i i `uc  1 a 1 3 ]
 "120
+[v initTabVue@i i `uc  1 a 1 3 ]
+"126
 } 0
-"296
+"303
 [v _gagne gagne `A(uc  1 e 1 0 ]
 {
-"301
+"308
 [v gagne@j j `uc  1 a 1 8 ]
-"300
+"307
 [v gagne@i i `uc  1 a 1 7 ]
-"298
-[v gagne@nbTuile nbTuile `uc  1 a 1 6 ]
-"296
+"305
+[v gagne@nbTuileEtDrapeau nbTuileEtDrapeau `uc  1 a 1 6 ]
+"303
 [v gagne@pMines pMines `*.39i  1 p 2 0 ]
-"313
+"320
 } 0
-"200
+"206
 [v _deplace deplace `A(v  1 e 1 0 ]
 {
-"203
+"209
 [v deplace@analogY analogY `uc  1 a 1 11 ]
-"202
+"208
 [v deplace@analogX analogX `uc  1 a 1 10 ]
-"200
+"206
 [v deplace@x x `*.39uc  1 p 2 5 ]
 [v deplace@y y `*.39uc  1 p 2 7 ]
-"229
+"235
 } 0
-"320
+"327
 [v _getAnalog getAnalog `A(uc  1 e 1 0 ]
 {
 [v getAnalog@canal canal `uc  1 a 1 wreg ]
 [v getAnalog@canal canal `uc  1 a 1 wreg ]
-"322
+"329
 [v getAnalog@canal canal `uc  1 a 1 1 ]
-"327
+"334
 } 0
-"239
+"245
 [v _demine demine `A(uc  1 e 1 0 ]
 {
 [v demine@x x `uc  1 a 1 wreg ]
 [v demine@x x `uc  1 a 1 wreg ]
 [v demine@y y `uc  1 p 1 18 ]
-"241
+"247
 [v demine@x x `uc  1 a 1 27 ]
-"254
+"260
 } 0
-"262
+"269
 [v _enleveTuilesAutour enleveTuilesAutour `A(v  1 e 1 0 ]
 {
 [v enleveTuilesAutour@x x `uc  1 a 1 wreg ]
-"264
+"271
 [v enleveTuilesAutour@i i `c  1 a 1 17 ]
-"265
+"272
 [v enleveTuilesAutour@j j `c  1 a 1 16 ]
-"266
+"273
 [v enleveTuilesAutour@mem mem `uc  1 a 1 14 ]
-"262
+"269
 [v enleveTuilesAutour@x x `uc  1 a 1 wreg ]
 [v enleveTuilesAutour@y y `uc  1 p 1 9 ]
-"264
+"271
 [v enleveTuilesAutour@x x `uc  1 a 1 15 ]
-"287
+"294
 } 0
-"335
+"342
 [v _afficheTabVue afficheTabVue `A(v  1 e 1 0 ]
 {
-"337
+"344
 [v afficheTabVue@i i `uc  1 a 1 8 ]
-"341
-} 0
 "348
+} 0
+"355
 [v _afficheTabMines afficheTabMines `A(v  1 e 1 0 ]
 {
-"350
+"357
 [v afficheTabMines@i i `uc  1 a 1 8 ]
-"354
+"361
 } 0
 "387 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
 [v _lcd_putMessage lcd_putMessage `A(v  1 e 1 0 ]

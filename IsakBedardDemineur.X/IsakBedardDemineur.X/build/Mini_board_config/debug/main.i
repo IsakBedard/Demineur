@@ -4872,7 +4872,7 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 
-# 33 "main.c"
+# 35 "main.c"
 void initialisation(void);
 void initTabVue(void);
 void rempliMines(int nb);
@@ -4885,6 +4885,7 @@ bool gagne(int* pMines);
 char getAnalog(char canal);
 void afficheTabVue(void);
 void afficheTabMines(void);
+void metOuEnleveDrapeau(char x, char y);
 
 char m_tabVue[4][20 + 1];
 char m_tabMines[4][20 + 1];
@@ -4902,6 +4903,7 @@ rempliMines(nbMine);
 metToucheCombien();
 afficheTabVue();
 
+
 while (1)
 {
 deplace(&posX, &posY);
@@ -4915,11 +4917,13 @@ rempliMines(nbMine);
 metToucheCombien();
 afficheTabVue();
 }
+if(PORTBbits.RB0==0)
+metOuEnleveDrapeau(posX,posY);
 _delay((unsigned long)((100)*(1000000/4000.0)));
 }
 }
 
-# 84
+# 90
 void initialisation(void)
 {
 TRISD = 0;
@@ -4941,7 +4945,7 @@ ADCON2bits.ACQT = 0;
 ADCON2bits.ADCS = 0;
 }
 
-# 112
+# 118
 void initTabVue(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -4952,7 +4956,7 @@ m_tabVue[i][20] = 0;
 }
 }
 
-# 129
+# 135
 void rempliMines(int nb)
 {
 char x, y;
@@ -4972,7 +4976,7 @@ nb--;
 }
 }
 
-# 157
+# 163
 void metToucheCombien(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -4985,7 +4989,7 @@ m_tabMines[i][j] = ' ';
 }
 }
 
-# 174
+# 180
 char calculToucheCombien(int ligne, int colonne)
 {
 int i = ligne - 1;
@@ -5006,7 +5010,7 @@ nbMines++;
 return nbMines;
 }
 
-# 200
+# 206
 void deplace(char* x, char* y)
 {
 unsigned char analogX = getAnalog(7);
@@ -5038,7 +5042,7 @@ if ((*y) >= 5)
 lcd_gotoXY(*x, *y);
 }
 
-# 239
+# 245
 bool demine(char x, char y)
 {
 if (m_tabMines[y - 1][x - 1] == 2)
@@ -5047,7 +5051,7 @@ else
 {
 if (m_tabMines[y-1][x-1]==' ')
 enleveTuilesAutour(x, y);
-else
+else if (m_tabVue[y-1][x-1]!=3)
 {
 m_tabVue[y-1][x-1]=m_tabMines[y-1][x-1];
 afficheTabVue();
@@ -5056,7 +5060,7 @@ return 1;
 }
 }
 
-# 262
+# 269
 void enleveTuilesAutour(char x, char y)
 {
 signed char i = x - 2;
@@ -5075,7 +5079,7 @@ while(j <= y && j<4)
 i=mem;
 while(i<=x && i<20)
 {
-if(m_tabMines[j][i]!=2)
+if(m_tabMines[j][i]!=2 && m_tabVue[j][i]!=3)
 m_tabVue[j][i]=m_tabMines[j][i];
 i++;
 }
@@ -5084,18 +5088,18 @@ j++;
 afficheTabVue();
 }
 
-# 296
+# 303
 bool gagne(int* pMines)
 {
-char nbTuile=0;
+char nbTuileEtDrapeau=0;
 
 for (char i = 0; i < 4; i++) {
 for (char j = 0; j < 20; j++) {
-if(m_tabVue[i][j]==1)
-nbTuile++;
+if(m_tabVue[i][j]==1||m_tabVue[i][j]==3)
+nbTuileEtDrapeau++;
 }
 }
-if (nbTuile == *pMines)
+if (nbTuileEtDrapeau == *pMines)
 {
 (*pMines)++;
 return 1;
@@ -5104,7 +5108,7 @@ else
 return 0;
 }
 
-# 320
+# 327
 char getAnalog(char canal)
 {
 ADCON0bits.CHS = canal;
@@ -5114,7 +5118,7 @@ while (ADCON0bits.GO_DONE == 1);
 return ADRESH;
 }
 
-# 335
+# 342
 void afficheTabVue(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -5123,11 +5127,22 @@ lcd_putMessage(m_tabVue[i]);
 }
 }
 
-# 348
+# 355
 void afficheTabMines(void)
 {
 for (char i = 0; i < 4; i++) {
 lcd_gotoXY(1, i + 1);
 lcd_putMessage(m_tabMines[i]);
 }
+}
+
+# 370
+void metOuEnleveDrapeau(char x, char y)
+{
+if (m_tabVue[y-1][x-1]==1)
+m_tabVue[y-1][x-1]=3;
+else if (m_tabVue[y-1][x-1]==3)
+m_tabVue[y-1][x-1]=1;
+afficheTabVue();
+while(PORTBbits.RB0==0);
 }

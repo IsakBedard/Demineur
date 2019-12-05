@@ -76,6 +76,8 @@ void main(void)
                 metToucheCombien();
                 afficheTabVue();
             }
+        if(SW0==0)
+            metOuEnleveDrapeau(posX,posY);
         __delay_ms(100);
     }
 }
@@ -236,7 +238,7 @@ void deplace(char* x, char* y)
  * @brief Dévoile une tuile (case) de m_tabVue. 
  * S'il y a une mine, retourne Faux. Sinon remplace la case et les cases autour
  * par ce qu'il y a derrière les tuiles (m_tabMines).
- * Utilise enleveTuileAutour().
+ * Utilise enleveTuileAutour(). Ne dévoile rien si la case sélectionnée est un drapeau.
  * @param char x, char y Les positions X et y sur l'afficheur LCD
  * @return faux s'il y avait une mine, vrai sinon
  */
@@ -247,8 +249,8 @@ bool demine(char x, char y)
     else 
     {
         if (m_tabMines[y-1][x-1]==' ')
-            enleveTuilesAutour(x, y);
-        else
+            enleveTuilesAutour(x, y);    
+        else if (m_tabVue[y-1][x-1]!=DRAPEAU)
         {
             m_tabVue[y-1][x-1]=m_tabMines[y-1][x-1];
             afficheTabVue();
@@ -259,7 +261,8 @@ bool demine(char x, char y)
 
 /*
  * @brief Dévoile les cases non minées autour de la tuile reçue en paramètre.
- * Cette méthode est appelée par demine().
+ * Cette méthode est appelée par demine(). Ne devoile pas non plus les cases avec
+ * drapeaux.
  * @param char x, char y Les positions X et y sur l'afficheur LCD.
  * @return rien
  */
@@ -281,7 +284,7 @@ void enleveTuilesAutour(char x, char y)
         i=mem;
         while(i<=x && i<NB_COL)
         {
-            if(m_tabMines[j][i]!=MINE)
+            if(m_tabMines[j][i]!=MINE && m_tabVue[j][i]!=DRAPEAU)
                 m_tabVue[j][i]=m_tabMines[j][i];
             i++;
         }
@@ -299,15 +302,15 @@ void enleveTuilesAutour(char x, char y)
  */
 bool gagne(int* pMines) 
 {
-    char nbTuile=0;
+    char nbTuileEtDrapeau=0;
     
     for (char i = 0; i < NB_LIGNE; i++) {
         for (char j = 0; j < NB_COL; j++) {
-            if(m_tabVue[i][j]==TUILE)
-                nbTuile++;
+            if(m_tabVue[i][j]==TUILE||m_tabVue[i][j]==DRAPEAU)
+                nbTuileEtDrapeau++;
         }
     }
-    if (nbTuile == *pMines)
+    if (nbTuileEtDrapeau == *pMines)
     {
         (*pMines)++;
         return true;
@@ -360,10 +363,16 @@ void afficheTabMines(void)
 /*
  * @brief Remplace la tuile sélectionnée avec un drapeau dans m_tabVue. Si la case sélectionnée
  * est un drapeau, on l'enlève. Les drapeaux ne sont pas enlevés par enleveTuilesAutour.
+ * On peut placer un drapeau seulement sur une tuile (pas une case vide ou chiffrée).
  * @param char x, char y la position du curseur sur le LCD
  * @return rien
  */
 void metOuEnleveDrapeau(char x, char y) 
 {
-    
+    if (m_tabVue[y-1][x-1]==TUILE)
+        m_tabVue[y-1][x-1]=DRAPEAU;
+    else if (m_tabVue[y-1][x-1]==DRAPEAU)
+        m_tabVue[y-1][x-1]=TUILE;
+    afficheTabVue();
+    while(SW0==0);
 }
