@@ -4872,7 +4872,7 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 
-# 35 "main.c"
+# 38 "main.c"
 void initialisation(void);
 void initTabVue(void);
 void rempliMines(int nb);
@@ -4911,7 +4911,7 @@ if(PORTBbits.RB1==0)
 if(demine(posX,posY)==0 || gagne(&nbMine))
 {
 afficheTabMines();
-while(PORTBbits.RB1==0);
+while(PORTBbits.RB1==1);
 initTabVue();
 rempliMines(nbMine);
 metToucheCombien();
@@ -4923,7 +4923,7 @@ _delay((unsigned long)((100)*(1000000/4000.0)));
 }
 }
 
-# 90
+# 93
 void initialisation(void)
 {
 TRISD = 0;
@@ -4945,7 +4945,7 @@ ADCON2bits.ACQT = 0;
 ADCON2bits.ADCS = 0;
 }
 
-# 118
+# 121
 void initTabVue(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -4956,7 +4956,7 @@ m_tabVue[i][20] = 0;
 }
 }
 
-# 135
+# 138
 void rempliMines(int nb)
 {
 char x, y;
@@ -4976,7 +4976,7 @@ nb--;
 }
 }
 
-# 163
+# 166
 void metToucheCombien(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -4989,7 +4989,7 @@ m_tabMines[i][j] = ' ';
 }
 }
 
-# 180
+# 183
 char calculToucheCombien(int ligne, int colonne)
 {
 int i = ligne - 1;
@@ -5010,7 +5010,7 @@ nbMines++;
 return nbMines;
 }
 
-# 206
+# 209
 void deplace(char* x, char* y)
 {
 unsigned char analogX = getAnalog(7);
@@ -5042,9 +5042,10 @@ if ((*y) >= 5)
 lcd_gotoXY(*x, *y);
 }
 
-# 245
+# 248
 bool demine(char x, char y)
 {
+while(PORTBbits.RB1==1);
 if (m_tabMines[y - 1][x - 1] == 2)
 return 0;
 else
@@ -5060,7 +5061,7 @@ return 1;
 }
 }
 
-# 269
+# 273
 void enleveTuilesAutour(char x, char y)
 {
 signed char i = x - 2;
@@ -5088,7 +5089,7 @@ j++;
 afficheTabVue();
 }
 
-# 303
+# 307
 bool gagne(int* pMines)
 {
 char nbTuileEtDrapeau=0;
@@ -5108,7 +5109,7 @@ else
 return 0;
 }
 
-# 327
+# 331
 char getAnalog(char canal)
 {
 ADCON0bits.CHS = canal;
@@ -5118,7 +5119,7 @@ while (ADCON0bits.GO_DONE == 1);
 return ADRESH;
 }
 
-# 342
+# 346
 void afficheTabVue(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -5127,7 +5128,7 @@ lcd_putMessage(m_tabVue[i]);
 }
 }
 
-# 355
+# 359
 void afficheTabMines(void)
 {
 for (char i = 0; i < 4; i++) {
@@ -5136,7 +5137,7 @@ lcd_putMessage(m_tabMines[i]);
 }
 }
 
-# 370
+# 374
 void metOuEnleveDrapeau(char x, char y)
 {
 if (m_tabVue[y-1][x-1]==1)

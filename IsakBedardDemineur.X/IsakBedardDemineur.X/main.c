@@ -28,7 +28,7 @@
 #define NB_LIGNE 4  //afficheur LCD 4x20
 #define NB_COL 20
 #define AXE_X 7  //canal analogique de l'axe x de la manette
-#define AXE_Y 6
+#define AXE_Y 6 //canal analogique de l'axe y de la manette
 #define PORT_SW PORTBbits.RB1 //sw de la manette
 #define SW0 PORTBbits.RB0 //bouton sur la carte noire
 #define TUILE 1 //caractère cgram d'une tuile
@@ -54,34 +54,34 @@ char m_tabMines[NB_LIGNE][NB_COL + 1]; //Tableau contenant les mines, les espace
 /******************** PROGRAMME PRINCPAL **************************************/
 void main(void) 
 {
-    char* posX = 10;
-    char* posY = 2;
+    char* posX = 10; //pointeur pour la position en X du curseur sur le LCD. Initialisé environ au centre.
+    char* posY = 2; //pointeur pour la position en Y du curseur sur le LCD. Initialisé environ au centre.
     int* nbMine = 9; //nombre de mines dans le champ de mines. Augmente de 1 lorsqu'on gagne
 
-    initialisation();
-    lcd_init();
-    initTabVue();
-    rempliMines(nbMine);
-    metToucheCombien();
-    afficheTabVue();
+    initialisation(); //initialisations diverses
+    lcd_init(); //permet la fonctionnalité du LCD
+    initTabVue(); //initialise la matrice m_tabVue avec des tuiles (caractère cgram)
+    rempliMines(nbMine); //initialise partiellement m_tabMines pour placer les mines
+    metToucheCombien(); //place les nombres dans m_tabMines selon l'emplacement des mines
+    afficheTabVue(); //affiche la matrice m_tabVue
     
     
-    while (1) 
+    while (1) //boucle infinie
     {  
-        deplace(&posX, &posY);
-        if(PORT_SW==0)
-            if(demine(posX,posY)==false || gagne(&nbMine))
+        deplace(&posX, &posY); //on déplace le curseur
+        if(PORT_SW==0)//si le bouton du joystick est enfoncé
+            if(demine(posX,posY)==false || gagne(&nbMine)) //si on a gagné ou perdu (trouvé toutes les mines ou touché une mine)
             {
                 afficheTabMines();
-                while(PORT_SW==0);
-                initTabVue();
+                while(PORT_SW==1); //on affiche m_tabMines jusqu'à ce que le bouton du joystick soit réenfoncé
+                initTabVue(); 
                 rempliMines(nbMine);
                 metToucheCombien();
-                afficheTabVue();
+                afficheTabVue(); //on réinitialise les deux matrices.
             }
-        if(SW0==0)
-            metOuEnleveDrapeau(posX,posY);
-        __delay_ms(100);
+        if(SW0==0) //si le bouton sur la carte noire est enfoncé
+            metOuEnleveDrapeau(posX,posY); //appel de la fonction qui gère les drapeaux
+        __delay_ms(100); //délai de la boucle principale. détermine la vitesse de déplacement
     }
 }
 
@@ -121,10 +121,10 @@ void initialisation(void)
 void initTabVue(void) 
 {
     for (char i = 0; i < NB_LIGNE; i++) {
-        for (char j = 0; j < NB_COL; j++) {
-            m_tabVue[i][j] = TUILE;
+        for (char j = 0; j < NB_COL; j++) { 
+            m_tabVue[i][j] = TUILE; //on met des tuiles
         }
-        m_tabVue[i][NB_COL] = 0;
+        m_tabVue[i][NB_COL] = 0; //le dernier caractère de la ligne est 0 ou '\0'
     }
 }
 
@@ -137,19 +137,19 @@ void initTabVue(void)
  */
 void rempliMines(int nb) 
 {
-    char x, y;
+    char x, y; //les caractères pour la position en XY de la mine
 
     for (char i = 0; i < NB_LIGNE; i++) {
         for (char j = 0; j < NB_COL; j++) {
-            m_tabMines[i][j] = ' ';
+            m_tabMines[i][j] = ' '; //on met tout le tableau vide (avec des espaces)
         }
     }
-    while (nb > 0) {
+    while (nb > 0) { //tant que le nombre de mines voulu n'a pas été atteint
         x = rand() % 20;
-        y = rand() % 4;
-        if (m_tabMines[y][x] != MINE) {
-            m_tabMines[y][x] = MINE;
-            nb--;
+        y = rand() % 4; //on assigne des valeurs XY aléatoires
+        if (m_tabMines[y][x] != MINE) { //si la position aléatoire est diponible
+            m_tabMines[y][x] = MINE; //on place une mine
+            nb--; //il reste une mine de moins à placer
         }
     }
 }
@@ -183,21 +183,22 @@ void metToucheCombien(void)
 char calculToucheCombien(int ligne, int colonne) 
 {
     int i = ligne - 1;
-    int j = colonne - 1;
-    char nbMines = 0;
+    int j = colonne - 1;//variables pour faire un 3x3 autour de la case voulue
+    char nbMines = 0; //valeur de retour
 
     if (i < 0)
         i = 0;
     if (j < 0)
-        j = 0;
+        j = 0;//si on dépasse le LCD, on remet à la limite
 
-    for (i = i; (i <= (ligne + 1))&&(i < NB_LIGNE); i++) {
-        for (j = j = colonne - 1; (j <= (colonne + 1))&&(j < NB_COL); j++) {
-            if (m_tabMines[i][j] == MINE)
-                nbMines++;
+    for (i = i; (i <= (ligne + 1))&&(i < NB_LIGNE); i++) {//
+        for (j = j = colonne - 1; (j <= (colonne + 1))&&(j < NB_COL); j++) { //on fait le 3x3 autour de la case voulue.
+                                                                     //on ne le fait pas si on dépasse du LCD
+            if (m_tabMines[i][j] == MINE)//Si c'est une mine                               
+                nbMines++;//incrémentation du nombre de mines
         }
     }
-    return nbMines;
+    return nbMines; //on retourne le nombre de mines autour
 }
 
 /**
@@ -208,8 +209,8 @@ char calculToucheCombien(int ligne, int colonne)
  */
 void deplace(char* x, char* y) 
 {
-    unsigned char analogX = getAnalog(AXE_X);
-    unsigned char analogY = getAnalog(AXE_Y);
+    unsigned char analogX = getAnalog(AXE_X);//valeur entre 0 et 255 qui représente la position X du joystick
+    unsigned char analogY = getAnalog(AXE_Y);//valeur entre 0 et 255 qui représente la position Y du joystick
 
     if (0 <= analogX && analogX <= 80) //si le joystick est vers la gauche
     {
@@ -247,18 +248,19 @@ void deplace(char* x, char* y)
  */
 bool demine(char x, char y) 
 {
-    if (m_tabMines[y - 1][x - 1] == MINE)
-        return false;
+    while(PORT_SW==true); //pour laisser le temps de voir si on a gagné ou perdu
+    if (m_tabMines[y - 1][x - 1] == MINE)//si la case sélectionnée est une mine
+        return false;//retourne faux (on a perdu)
     else 
     {
-        if (m_tabMines[y-1][x-1]==' ')
-            enleveTuilesAutour(x, y);    
-        else if (m_tabVue[y-1][x-1]!=DRAPEAU)
+        if (m_tabMines[y-1][x-1]==' ')//si c'est un espace (donc pas une mine ou pas un chiffre)
+            enleveTuilesAutour(x, y);//on enlève les tuiles autour
+        else if (m_tabVue[y-1][x-1]!=DRAPEAU)//si ce n'est pas un drapeau (donc un chiffre)
         {
-            m_tabVue[y-1][x-1]=m_tabMines[y-1][x-1];
-            afficheTabVue();
+            m_tabVue[y-1][x-1]=m_tabMines[y-1][x-1];//on actualise seulement la case sélectionnée, pas celles autour
+            afficheTabVue();//actualise le LCD pour afficher la nouvelle matrice
         }
-        return true;
+        return true;//retourne vrai (on a pas perdu)
     }
 }
 
@@ -272,28 +274,28 @@ bool demine(char x, char y)
 void enleveTuilesAutour(char x, char y) 
 {
     signed char i = x - 2;
-    signed char j = y - 2;
-    char mem;
+    signed char j = y - 2;//variables pour faire un 3x3 autour de la case sélectionnée
+    char mem; //variable mémoire pour réinitialisation ultérieure
 
     if (i < 0)
         i = 0;
     if (j < 0)
-        j = 0;
-    mem=i;
+        j = 0;//si on dépasse du LCD, on revient à la limite du LCD
+    mem=i;//mémoire de la variable i
     
     
     while(j <= y && j<NB_LIGNE)
     {
-        i=mem;
-        while(i<=x && i<NB_COL)
-        {
-            if(m_tabMines[j][i]!=MINE && m_tabVue[j][i]!=DRAPEAU)
-                m_tabVue[j][i]=m_tabMines[j][i];
+        i=mem;//on remet i à sa valeur initiale
+        while(i<=x && i<NB_COL) //on fait le 3x3 autour de la case voulue
+        { 
+            if(m_tabMines[j][i]!=MINE && m_tabVue[j][i]!=DRAPEAU) //si la case vérifiée dans le 3x3 n'est ni une mine, ni un drapeau
+                m_tabVue[j][i]=m_tabMines[j][i]; //on la dévoile
             i++;
         }
         j++;
     }
-    afficheTabVue();
+    afficheTabVue(); //on actualise le LCD avec la nouvelle matrice
 }
 
 /*
@@ -305,21 +307,21 @@ void enleveTuilesAutour(char x, char y)
  */
 bool gagne(int* pMines) 
 {
-    char nbTuileEtDrapeau=0;
+    char nbTuileEtDrapeau=0; //valeur de comparaison. doit être égale à la somme du nombre de drapeaux et du nombre de tuiles dans m_tabVue
     
     for (char i = 0; i < NB_LIGNE; i++) {
-        for (char j = 0; j < NB_COL; j++) {
-            if(m_tabVue[i][j]==TUILE||m_tabVue[i][j]==DRAPEAU)
-                nbTuileEtDrapeau++;
+        for (char j = 0; j < NB_COL; j++) {//on parcourt le LCD au complet
+            if(m_tabVue[i][j]==TUILE||m_tabVue[i][j]==DRAPEAU) //si c'est un drapeau ou une tuile
+                nbTuileEtDrapeau++;//on incrémente
         }
     }
-    if (nbTuileEtDrapeau == *pMines)
+    if (nbTuileEtDrapeau == *pMines)//si la valeur comptée précédemment correspond au nombre de mines
     {
-        (*pMines)++;
-        return true;
+        (*pMines)++; //on augmente le nombre de mines à placer pour la prochaine partie
+        return true;//retourne vrai (on a gagné)
     }
     else
-        return false;
+        return false;//retourne faux (on a pas gagné)
 }
 
 /*
@@ -344,9 +346,9 @@ char getAnalog(char canal)
  */
 void afficheTabVue(void) 
 {
-    for (char i = 0; i < NB_LIGNE; i++) {
-        lcd_gotoXY(1, i + 1);
-        lcd_putMessage(m_tabVue[i]);
+    for (char i = 0; i < NB_LIGNE; i++) {//pour toutes les lignes à écrire
+        lcd_gotoXY(1, i + 1);//on se déplace au début de la ligne à écrire
+        lcd_putMessage(m_tabVue[i]);//on écrit la ligne
     }
 }
 
@@ -357,9 +359,9 @@ void afficheTabVue(void)
  */
 void afficheTabMines(void) 
 {
-    for (char i = 0; i < NB_LIGNE; i++) {
-        lcd_gotoXY(1, i + 1);
-        lcd_putMessage(m_tabMines[i]);
+    for (char i = 0; i < NB_LIGNE; i++) {//pour toutes les lignes à écrire
+        lcd_gotoXY(1, i + 1);//on se déplace au début de la ligne à écrire
+        lcd_putMessage(m_tabMines[i]);//on écrit la ligne
     }
 }
 
@@ -372,10 +374,10 @@ void afficheTabMines(void)
  */
 void metOuEnleveDrapeau(char x, char y) 
 {
-    if (m_tabVue[y-1][x-1]==TUILE)
-        m_tabVue[y-1][x-1]=DRAPEAU;
-    else if (m_tabVue[y-1][x-1]==DRAPEAU)
-        m_tabVue[y-1][x-1]=TUILE;
-    afficheTabVue();
-    while(SW0==0);
+    if (m_tabVue[y-1][x-1]==TUILE)//si la case sélectionnée est une tuile
+        m_tabVue[y-1][x-1]=DRAPEAU;//on la remplace par un drapeau
+    else if (m_tabVue[y-1][x-1]==DRAPEAU)//sinon, si c'est un drapeau
+        m_tabVue[y-1][x-1]=TUILE;//on le remplace avec une tuile
+    afficheTabVue();//on actualise le LCD pour affiche la nouvelle matrice
+    while(SW0==0);//boucle antirebond qui attend que le bouton de la carte noire soit relâché
 }

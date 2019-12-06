@@ -61,33 +61,33 @@
 [v _lcd_initCGRam lcd_initCGRam `A(v  1 s 1 lcd_initCGRam ]
 "431
 [v _lcd_strobeEnableBit lcd_strobeEnableBit `A(v  1 s 1 lcd_strobeEnableBit ]
-"52 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"55 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _main main `A(v  1 e 1 0 ]
-"90
+"93
 [v _initialisation initialisation `A(v  1 e 1 0 ]
-"118
+"121
 [v _initTabVue initTabVue `A(v  1 e 1 0 ]
-"135
+"138
 [v _rempliMines rempliMines `A(v  1 e 1 0 ]
-"163
+"166
 [v _metToucheCombien metToucheCombien `A(v  1 e 1 0 ]
-"180
+"183
 [v _calculToucheCombien calculToucheCombien `A(uc  1 e 1 0 ]
-"206
+"209
 [v _deplace deplace `A(v  1 e 1 0 ]
-"245
+"248
 [v _demine demine `A(uc  1 e 1 0 ]
-"269
+"273
 [v _enleveTuilesAutour enleveTuilesAutour `A(v  1 e 1 0 ]
-"303
+"307
 [v _gagne gagne `A(uc  1 e 1 0 ]
-"327
+"331
 [v _getAnalog getAnalog `A(uc  1 e 1 0 ]
-"342
+"346
 [v _afficheTabVue afficheTabVue `A(v  1 e 1 0 ]
-"355
+"359
 [v _afficheTabMines afficheTabMines `A(v  1 e 1 0 ]
-"370
+"374
 [v _metOuEnleveDrapeau metOuEnleveDrapeau `A(v  1 e 1 0 ]
 "446 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f45k20.h
 [v _ANSEL ANSEL `VEuc  1 e 1 @3966 ]
@@ -395,34 +395,34 @@
 [v _randx randx `l  1 s 4 randx ]
 "66 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
 [v _matCGRAM matCGRAM `A[8][8]uc  1 e 64 0 ]
-"49 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"52 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _m_tabVue m_tabVue `A[4][21]uc  1 e 84 0 ]
-"50
+"53
 [v _m_tabMines m_tabMines `A[4][21]uc  1 e 84 0 ]
-"52
+"55
 [v _main main `A(v  1 e 1 0 ]
 {
-"55
+"58
 [v main@posY posY `*.39uc  1 a 2 34 ]
-"54
+"57
 [v main@posX posX `*.39uc  1 a 2 32 ]
-"56
+"59
 [v main@nbMine nbMine `*.39i  1 a 2 30 ]
-"83
+"86
 } 0
-"135
+"138
 [v _rempliMines rempliMines `A(v  1 e 1 0 ]
 {
-"140
+"143
 [v rempliMines@j j `uc  1 a 1 28 ]
-"139
+"142
 [v rempliMines@i i `uc  1 a 1 27 ]
-"137
+"140
 [v rempliMines@y y `uc  1 a 1 26 ]
 [v rempliMines@x x `uc  1 a 1 25 ]
-"135
+"138
 [v rempliMines@nb nb `i  1 p 2 20 ]
-"152
+"155
 } 0
 "12 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
 [v _rand rand `(i  1 e 2 0 ]
@@ -450,28 +450,28 @@
 [v ___awmod@divisor divisor `i  1 p 2 16 ]
 "34
 } 0
-"163 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"166 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _metToucheCombien metToucheCombien `A(v  1 e 1 0 ]
 {
-"166
+"169
 [v metToucheCombien@j j `uc  1 a 1 22 ]
-"165
+"168
 [v metToucheCombien@i i `uc  1 a 1 21 ]
-"173
+"176
 } 0
-"180
+"183
 [v _calculToucheCombien calculToucheCombien `A(uc  1 e 1 0 ]
 {
-"183
+"186
 [v calculToucheCombien@j j `i  1 a 2 16 ]
-"182
+"185
 [v calculToucheCombien@i i `i  1 a 2 14 ]
-"184
+"187
 [v calculToucheCombien@nbMines nbMines `uc  1 a 1 13 ]
-"180
+"183
 [v calculToucheCombien@ligne ligne `i  1 p 2 6 ]
 [v calculToucheCombien@colonne colonne `i  1 p 2 8 ]
-"198
+"201
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -483,15 +483,15 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
-"370 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"374 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _metOuEnleveDrapeau metOuEnleveDrapeau `A(v  1 e 1 0 ]
 {
 [v metOuEnleveDrapeau@x x `uc  1 a 1 wreg ]
 [v metOuEnleveDrapeau@x x `uc  1 a 1 wreg ]
 [v metOuEnleveDrapeau@y y `uc  1 p 1 9 ]
-"372
+"376
 [v metOuEnleveDrapeau@x x `uc  1 a 1 15 ]
-"378
+"382
 } 0
 "258 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
 [v _lcd_init lcd_init `A(v  1 e 1 0 ]
@@ -516,10 +516,10 @@
 {
 "291
 } 0
-"90 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"93 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _initialisation initialisation `A(v  1 e 1 0 ]
 {
-"109
+"112
 } 0
 "6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
 [v _srand srand `(v  1 e 1 0 ]
@@ -527,89 +527,88 @@
 [v srand@x x `ui  1 p 2 0 ]
 "9
 } 0
-"118 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
+"121 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\main.c
 [v _initTabVue initTabVue `A(v  1 e 1 0 ]
 {
-"121
+"124
 [v initTabVue@j j `uc  1 a 1 2 ]
-"120
+"123
 [v initTabVue@i i `uc  1 a 1 3 ]
-"126
+"129
 } 0
-"303
+"307
 [v _gagne gagne `A(uc  1 e 1 0 ]
 {
-"308
+"312
 [v gagne@j j `uc  1 a 1 8 ]
-"307
+"311
 [v gagne@i i `uc  1 a 1 7 ]
-"305
+"309
 [v gagne@nbTuileEtDrapeau nbTuileEtDrapeau `uc  1 a 1 6 ]
-"303
+"307
 [v gagne@pMines pMines `*.39i  1 p 2 0 ]
-"320
+"324
 } 0
-"206
+"209
 [v _deplace deplace `A(v  1 e 1 0 ]
 {
-"209
+"212
 [v deplace@analogY analogY `uc  1 a 1 11 ]
-"208
+"211
 [v deplace@analogX analogX `uc  1 a 1 10 ]
-"206
+"209
 [v deplace@x x `*.39uc  1 p 2 5 ]
 [v deplace@y y `*.39uc  1 p 2 7 ]
-"235
+"238
 } 0
-"327
+"331
 [v _getAnalog getAnalog `A(uc  1 e 1 0 ]
 {
 [v getAnalog@canal canal `uc  1 a 1 wreg ]
 [v getAnalog@canal canal `uc  1 a 1 wreg ]
-"329
+"333
 [v getAnalog@canal canal `uc  1 a 1 1 ]
-"334
+"338
 } 0
-"245
+"248
 [v _demine demine `A(uc  1 e 1 0 ]
 {
 [v demine@x x `uc  1 a 1 wreg ]
 [v demine@x x `uc  1 a 1 wreg ]
 [v demine@y y `uc  1 p 1 18 ]
-"247
 [v demine@x x `uc  1 a 1 27 ]
-"260
+"264
 } 0
-"269
+"273
 [v _enleveTuilesAutour enleveTuilesAutour `A(v  1 e 1 0 ]
 {
 [v enleveTuilesAutour@x x `uc  1 a 1 wreg ]
-"271
+"275
 [v enleveTuilesAutour@i i `c  1 a 1 17 ]
-"272
+"276
 [v enleveTuilesAutour@j j `c  1 a 1 16 ]
-"273
+"277
 [v enleveTuilesAutour@mem mem `uc  1 a 1 14 ]
-"269
+"273
 [v enleveTuilesAutour@x x `uc  1 a 1 wreg ]
 [v enleveTuilesAutour@y y `uc  1 p 1 9 ]
-"271
+"275
 [v enleveTuilesAutour@x x `uc  1 a 1 15 ]
-"294
+"298
 } 0
-"342
+"346
 [v _afficheTabVue afficheTabVue `A(v  1 e 1 0 ]
 {
-"344
-[v afficheTabVue@i i `uc  1 a 1 8 ]
 "348
+[v afficheTabVue@i i `uc  1 a 1 8 ]
+"352
 } 0
-"355
+"359
 [v _afficheTabMines afficheTabMines `A(v  1 e 1 0 ]
 {
-"357
-[v afficheTabMines@i i `uc  1 a 1 8 ]
 "361
+[v afficheTabMines@i i `uc  1 a 1 8 ]
+"365
 } 0
 "387 C:\Users\Drago\Desktop\allo\Travaux\Prog_Struct\lab6_IsakBedard\IsakBedardDemineur.X\IsakBedardDemineur.X\Lcd4Lignes.c
 [v _lcd_putMessage lcd_putMessage `A(v  1 e 1 0 ]
